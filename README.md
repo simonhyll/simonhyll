@@ -23,7 +23,7 @@
 
 📃**Description:** Full stack developer from Sweden
 
-💻**Job:** Chief Technical Officer at Adaptive Hedge Fund Management AB
+💻**Job:** -
 
 🕹**Hobbies:** Contributing to open source projects and helping others
 
