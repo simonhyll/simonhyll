@@ -63,21 +63,21 @@
 </p>
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=35&height=60&width=400&color=111111&lines=Statistics;Statistik;Statistiken;Estadística)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=35&height=60&width=400&color=FFFFFF&lines=Statistics;Statistik;Statistiken;Estadística)](https://github.com/adaptive-simon#gh-dark-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=35&height=60&width=400&color=FFFFFF&lines=Statistics;Statistik;Statistiken;Estadística)](https://github.com/simonhyll#gh-dark-mode-only)
 
-[![GitHub Snake Light](https://github.com/adaptive-simon/adaptive-simon/blob/output/github-snake.svg)](https://github.com/adaptive-simon#gh-light-mode-only)
-[![GitHub Snake Dark](https://github.com/adaptive-simon/adaptive-simon/blob/output/github-snake-dark.svg)](https://github.com/adaptive-simon#gh-dark-mode-only)
+[![GitHub Snake Light](https://github.com/simonhyll/simonhyll/blob/output/github-snake.svg)](https://github.com/simonhyll#gh-light-mode-only)
+[![GitHub Snake Dark](https://github.com/simonhyll/simonhyll/blob/output/github-snake-dark.svg)](https://github.com/simonhyll#gh-dark-mode-only)
 </div>
 
 <div align="center">
-<a href="https://github.com/adaptive-simon#gh-dark-mode-only">
-<img src="https://github.com/adaptive-simon/github-stats/blob/master/generated/overview.svg#gh-dark-mode-only" />
-<img src="https://github.com/adaptive-simon/github-stats/blob/master/generated/languages.svg#gh-dark-mode-only" />
+<a href="https://github.com/simonhyll#gh-dark-mode-only">
+<img src="https://github.com/simonhyll/github-stats/blob/master/generated/overview.svg#gh-dark-mode-only" />
+<img src="https://github.com/simonhyll/github-stats/blob/master/generated/languages.svg#gh-dark-mode-only" />
 </a>
-<a href="https://github.com/adaptive-simon/adaptive-simon#gh-light-mode-only">
-<img src="https://github.com/adaptive-simon/github-stats/blob/master/generated/overview.svg#gh-light-mode-only" />
-<img src="https://github.com/adaptive-simon/github-stats/blob/master/generated/languages.svg#gh-light-mode-only" />
+<a href="https://github.com/simonhyll/simonhyll#gh-light-mode-only">
+<img src="https://github.com/simonhyll/github-stats/blob/master/generated/overview.svg#gh-light-mode-only" />
+<img src="https://github.com/simonhyll/github-stats/blob/master/generated/languages.svg#gh-light-mode-only" />
 </a>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=12&height=20&width=400&color=FFFFFF&lines=Cool+people+use+dark+mode;You+are+cool+😀)](https://github.com/adaptive-simon#gh-dark-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=12&height=20&width=400&color=FFFFFF&lines=Cool+people+use+dark+mode;You+are+cool+😀)](https://github.com/simonhyll#gh-dark-mode-only)
 </div>
