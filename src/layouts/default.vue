@@ -6,3 +6,12 @@
     </v-main>
   </v-app>
 </template>
+
+<script lang="ts">
+export default {
+  mounted() {
+    /* @ts-ignore */
+    window.$nuxt = this;
+  },
+};
+</script>

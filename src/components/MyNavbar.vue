@@ -1,6 +1,16 @@
 <template>
   <v-navigation-drawer ref="navigation" permanent rail data-tauri-drag-region>
     <v-list density="compact" nav data-tauri-drag-region aria-label="Main Menu">
+      <v-tooltip :text="$t('profile')" aria-label="Tooltip">
+        <template v-slot:activator="{ props }">
+          <v-list-item v-bind="props" :to="localePath('index')" role="option">
+            <template #prepend>
+              <img style="width: 25px; margin: 0; padding: 0" src="/icon.png" />
+            </template>
+            {{ $t("profile") }}</v-list-item
+          >
+        </template>
+      </v-tooltip>
       <template v-for="item in items">
         <v-tooltip :text="item.title" aria-label="Tooltip">
           <template v-slot:activator="{ props }">
@@ -10,7 +20,7 @@
               :prepend-icon="item.icon"
               role="option"
             >
-              {{ item.title }}</v-list-item
+              {{ $t(item.title) }}</v-list-item
             >
           </template>
         </v-tooltip>
@@ -28,11 +38,6 @@ export default {
   data() {
     return {
       items: [
-        {
-          title: "profil",
-          icon: "mdi-face-man-profile",
-          to: "index",
-        },
         {
           title: "cv",
           icon: "mdi-text-box",
