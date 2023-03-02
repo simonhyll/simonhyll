@@ -11,7 +11,7 @@
     <v-container fluid class="pa-0 ma-0">
       <v-row no-gutters>
         <v-col :cols="minimize ? 12 : 4" v-if="!minimize">
-          <v-list density="compact" nav v-model="selected">
+          <v-list density="compact" nav color="primary">
             <v-list-item
               v-for="section in sections"
               :title="section.name"
@@ -22,7 +22,7 @@
           </v-list>
         </v-col>
         <v-col :cols="minimize ? 12 : 8">
-          <v-list density="compact" nav>
+          <v-list density="compact" nav color="primary">
             <v-list-item
               v-for="post in selected.posts"
               :title="post.read ? checkmark + ' ' + post.title : post.title"
@@ -54,23 +54,6 @@ const sections = [
         date: new Date(),
         read: false,
         to: "blog-tauri-2023-03-02-hello-world",
-      },
-      {
-        title: "Window Shadows",
-        date: new Date(),
-        read: false,
-        to: "blog-tauri-2023-03-02-window-shadows",
-      },
-    ],
-  },
-  {
-    name: "Rust",
-    posts: [
-      {
-        title: "Hello World",
-        date: new Date(),
-        read: false,
-        to: "blog-rust-2023-03-02-hello-world",
       },
     ],
   },

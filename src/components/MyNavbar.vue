@@ -1,6 +1,12 @@
 <template>
   <v-navigation-drawer ref="navigation" permanent rail data-tauri-drag-region>
-    <v-list density="compact" nav data-tauri-drag-region aria-label="Main Menu">
+    <v-list
+      density="compact"
+      nav
+      data-tauri-drag-region
+      aria-label="Main Menu"
+      color="primary"
+    >
       <v-tooltip :text="$t('profile')" aria-label="Tooltip">
         <template v-slot:activator="{ props }">
           <v-list-item v-bind="props" :to="localePath('index')" role="option">
