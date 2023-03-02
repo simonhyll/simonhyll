@@ -25,7 +25,7 @@ export default defineNuxtConfig({
         // workbox: { enabled: true },
         manifest: {
           enabled: true,
-          name: "Pacifist Editor",
+          name: "Simon Hyll",
           short_name: "pa-editor",
           lang: "en",
         },
