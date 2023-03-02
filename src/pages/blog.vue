@@ -3,7 +3,7 @@
     <template #prepend>
       <v-list density="compact" nav style="padding-bottom: 0">
         <v-list-item
-          prepend-icon="mdi-chevron-left"
+          :prepend-icon="minimize ? 'mdi-chevron-right' : 'mdi-chevron-left'"
           @click="minimize = !minimize"
         ></v-list-item>
       </v-list>

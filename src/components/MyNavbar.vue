@@ -1,5 +1,11 @@
 <template>
-  <v-navigation-drawer ref="navigation" permanent rail data-tauri-drag-region>
+  <v-navigation-drawer
+    ref="navigation"
+    permanent
+    rail
+    data-tauri-drag-region
+    class="my-navbar-base my-navbar"
+  >
     <v-list
       density="compact"
       nav
@@ -63,9 +69,27 @@ export default {
     };
   },
   mounted() {
-    const ref: any = this.$refs.navigation;
+    const self = this;
+    const ref: any = self.$refs.navigation;
     for (const element of ref.$el.nextElementSibling.children)
       element.setAttribute("data-tauri-drag-region", "true");
   },
 };
 </script>
+
+<style>
+.my-navbar .v-list--nav {
+  background: transparent !important;
+}
+.my-navbar {
+  background: rgba(20, 26, 33, 0.8) !important;
+  position: absolute;
+  left: 0;
+}
+.my-navbar-base {
+  transition: all 0.5s;
+  transition-duration: 0.5s;
+}
+.my-navbar-base * {
+}
+</style>
