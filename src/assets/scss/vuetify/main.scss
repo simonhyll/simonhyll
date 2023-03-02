@@ -1,0 +1,6 @@
+@use 'vuetify/lib/styles/main.sass' with (
+  $utilities: yes,
+  $color-pack: false,
+  $body-font-family: 'Fira Code'
+);
+@import './tooltip.scss';
