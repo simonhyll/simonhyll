@@ -26,7 +26,7 @@ export default defineNuxtConfig({
         manifest: {
           enabled: true,
           name: "Simon Hyll",
-          short_name: "pa-editor",
+          short_name: "simon-hyll",
           lang: "en",
         },
         icon: {
