@@ -11,7 +11,7 @@
       nav
       data-tauri-drag-region
       aria-label="Main Menu"
-      color="primary"
+      color="warning"
     >
       <v-tooltip :text="$t('profile')" aria-label="Tooltip">
         <template v-slot:activator="{ props }">

@@ -3,6 +3,25 @@
     <v-row>
       <v-col>
         <h1>What is Tauri</h1>
+        <h2>Recommendations</h2>
+        <p>
+          While you CAN technically develop a Tauri app without ever touching a
+          single line of Rust yourself, I wouldn't recommend it unless your app
+          is going to be entirely frontend based only using relatively basic
+          functionalities accessible through the Tauri JS API.
+        </p>
+        <p>
+          The way you should, in my opinion, look at Tauri as as a way of
+          developing a frontend for a Rust program. Tauri isn't a backend for a
+          web based app, the app is a frontend for a Rust based backend.
+        </p>
+        <p>
+          As such I highly recommend learning Rust before you learn Tauri, at
+          least the basics. Get a good grip on the ownership system and
+          asynchronous programming at least, they tend to be what new developers
+          struggle with the most because they skipped Rust and went straight for
+          Tauri.
+        </p>
         <h2>The basics</h2>
         <p>
           Tauri is an app framework that leverages web technologies to develop

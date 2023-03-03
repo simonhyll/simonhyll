@@ -1,7 +1,7 @@
 <template>
-  <v-navigation-drawer permanent :rail="minimize" width="300">
+  <v-navigation-drawer permanent :rail="minimize" rail-width="150" width="300">
     <template #prepend>
-      <v-list density="compact" nav style="padding-bottom: 0">
+      <v-list density="compact" nav>
         <v-list-item
           :prepend-icon="minimize ? 'mdi-chevron-right' : 'mdi-chevron-left'"
           @click="minimize = !minimize"
@@ -119,6 +119,34 @@ const sections = [
   },
   {
     name: "Terraform",
+    posts: [],
+  },
+  {
+    name: "Programming",
+    posts: [],
+  },
+  {
+    name: "Security",
+    posts: [],
+  },
+  {
+    name: "Git",
+    posts: [],
+  },
+  {
+    name: "SQL",
+    posts: [],
+  },
+  {
+    name: "DevOps",
+    posts: [],
+  },
+  {
+    name: "PNPM",
+    posts: [],
+  },
+  {
+    name: "Julia",
     posts: [],
   },
 ].sort((a: any, b: any) => {

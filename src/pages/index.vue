@@ -1,33 +1,35 @@
 <template>
   <v-container fluid class="pa-0 my-full-width">
-    <template v-for="i in 5">
-      <v-row no-gutters>
-        <v-col>
-          <v-parallax :src="zelda" style="max-height: 100vh">
+    <v-row no-gutters>
+      <v-col>
+        <v-parallax :src="fjallvattnet" style="max-height: 100vh">
+          <div
+            class="d-flex flex-column fill-height justify-center align-end text-white"
+          >
             <div
-              class="d-flex flex-column fill-height justify-center align-center text-white"
+              style="
+                background: rgba(20, 26, 33, 0.8);
+                padding: 1cm;
+                height: 100%;
+                width: 100%;
+                min-width: 10cm;
+                max-width: 35vw;
+              "
             >
-              <h1 class="text-h4 font-weight-thin mb-4">Under construction!</h1>
+              <h1 class="font-weight-thin mb-4">Simon Hyll</h1>
+              <h3 class="font-weight-thin mb-4">
+                Fullstack developer from Sweden
+              </h3>
             </div>
-          </v-parallax>
-        </v-col>
-      </v-row>
-      <v-row no-gutters>
-        <v-col>
-          <v-parallax :src="scotland" style="max-height: 100vh">
-            <div
-              class="d-flex flex-column fill-height justify-center align-center text-white"
-            >
-              <h1 class="text-h4 font-weight-thin mb-4">Under construction!</h1>
-            </div>
-          </v-parallax>
-        </v-col>
-      </v-row>
-    </template>
+          </div>
+        </v-parallax>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
+import fjallvattnet from "~/assets/images/fjallvattnet.jpg";
 import zelda from "~/assets/images/zelda.jpg";
 import scotland from "~/assets/images/skottland.jpg";
 export default {
@@ -35,6 +37,7 @@ export default {
     return {
       zelda,
       scotland,
+      fjallvattnet,
     };
   },
   mounted() {
