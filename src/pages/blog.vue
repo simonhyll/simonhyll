@@ -207,13 +207,15 @@ export default {
   },
   mounted() {
     const self = this;
-    const selected = self.$route.name?.split("-")[1];
-    if (selected) {
-      self.selected = self.sections.find(
-        (val) => val.name.toLowerCase() === selected
-      );
-    } else {
-      self.$router.push(self.localePath(self.selected.posts[0].to));
+    if (self.$route.name?.split("-").length !== 1) {
+      const selected = self.$route.name?.split("-")[1];
+      if (selected) {
+        self.selected = self.sections.find(
+          (val) => val.name.toLowerCase() === selected
+        );
+      } else {
+        self.$router.push(self.localePath(self.selected.posts[0].to));
+      }
     }
   },
   methods: {
@@ -221,7 +223,6 @@ export default {
       const self = this;
       self.selected = section;
       self.$router.push(self.localePath(self.selected.posts[0].to));
-      console.log("WTF", self.selected);
     },
   },
 };
