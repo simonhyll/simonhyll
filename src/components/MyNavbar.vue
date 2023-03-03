@@ -38,6 +38,22 @@
         </v-tooltip>
       </template>
     </v-list>
+    <template #append>
+      <v-list nav density="compact" color="pink">
+        <v-tooltip :text="$t('sponsor')" aria-label="Tooltip">
+          <template v-slot:activator="{ props }">
+            <v-list-item
+              v-bind="props"
+              prepend-icon="mdi-heart"
+              style="color: pink"
+              href="https://github.com/sponsors/simonhyll"
+              target="_blank"
+              >{{ $t("sponsor") }}</v-list-item
+            >
+          </template>
+        </v-tooltip>
+      </v-list>
+    </template>
   </v-navigation-drawer>
 </template>
 
@@ -51,9 +67,9 @@ export default {
     return {
       items: [
         {
-          title: "cv",
-          icon: "mdi-text-box",
-          to: "cv",
+          title: "blog",
+          icon: "mdi-post",
+          to: "blog",
         },
         {
           title: "portfolio",
@@ -61,9 +77,9 @@ export default {
           to: "portfolio",
         },
         {
-          title: "blog",
-          icon: "mdi-post",
-          to: "blog",
+          title: "cv",
+          icon: "mdi-text-box",
+          to: "cv",
         },
       ],
     };
@@ -89,7 +105,5 @@ export default {
 .my-navbar-base {
   transition: all 0.5s;
   transition-duration: 0.5s;
-}
-.my-navbar-base * {
 }
 </style>

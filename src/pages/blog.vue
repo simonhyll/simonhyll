@@ -10,18 +10,17 @@
     </template>
     <v-container fluid class="pa-0 ma-0">
       <v-row no-gutters>
-        <v-col :cols="minimize ? 12 : 4" v-if="!minimize">
-          <v-list density="compact" nav color="primary">
-            <v-list-item
-              v-for="section in sections"
-              :title="section.name"
-              :value="section"
-              @click="selected = section"
-              :active="selected.name === section.name"
-            ></v-list-item>
-          </v-list>
+        <v-col :cols="6" v-if="!minimize" v-for="section in sections">
+          <v-list-item
+            :title="section.name"
+            :subtitle="'Posts: ' + section.posts.length"
+            :value="section"
+            @click="selected = section"
+            :active="selected.name === section.name"
+          ></v-list-item>
         </v-col>
-        <v-col :cols="minimize ? 12 : 8">
+        <v-divider></v-divider>
+        <v-col :cols="12">
           <v-list density="compact" nav color="primary">
             <v-list-item
               v-for="post in selected.posts"
@@ -50,14 +49,85 @@ const sections = [
     name: "Tauri",
     posts: [
       {
+        title: "What is Tauri",
+        date: new Date("03 Mar 2023 00:00:00 UTC"),
+        read: false,
+        to: "blog-tauri-2023-03-03-what-is-tauri",
+      },
+      {
         title: "Hello World",
-        date: new Date(),
+        date: new Date("02 Mar 2023 00:00:00 UTC"),
         read: false,
         to: "blog-tauri-2023-03-02-hello-world",
       },
+      {
+        title: "Window styling",
+        date: new Date("02 Mar 2023 00:00:00 UTC"),
+        read: false,
+        to: "blog-tauri-2023-03-02-window-styling",
+      },
+      {
+        title: "Limitations",
+        date: new Date("02 Mar 2023 00:00:00 UTC"),
+        read: false,
+        to: "blog-tauri-2023-03-03-limitations",
+      },
     ],
   },
-].sort();
+  {
+    name: "Rust",
+    posts: [
+      {
+        title: "What is Rust",
+        date: new Date("03 Mar 2023 00:00:00 UTC"),
+        read: false,
+        to: "blog-rust-2023-03-03-what-is-rust",
+      },
+    ],
+  },
+  {
+    name: "Python",
+    posts: [],
+  },
+  {
+    name: "Typescript",
+    posts: [],
+  },
+  {
+    name: "Helm",
+    posts: [],
+  },
+  {
+    name: "Kubernetes",
+    posts: [],
+  },
+  {
+    name: "VSCode",
+    posts: [],
+  },
+  {
+    name: "Nuxt",
+    posts: [],
+  },
+  {
+    name: "Svelte",
+    posts: [],
+  },
+  {
+    name: "Ansible",
+    posts: [],
+  },
+  {
+    name: "Terraform",
+    posts: [],
+  },
+].sort((a: any, b: any) => {
+  if (a.posts.length < b.posts.length) return 1;
+  if (a.posts.length > b.posts.length) return -1;
+  if (a.name.substr(0, 1) < b.name.substr(0, 1)) return -1;
+  if (a.name.substr(0, 1) > b.name.substr(0, 1)) return 1;
+  return 0;
+});
 export default {
   data() {
     return {
@@ -66,6 +136,13 @@ export default {
       selected: sections[0],
       sections: sections,
     };
+  },
+  mounted() {
+    const self = this;
+    const selected = self.$route.name?.split("-")[1];
+    self.selected = self.sections.find(
+      (val) => val.name.toLowerCase() === selected
+    );
   },
 };
 </script>

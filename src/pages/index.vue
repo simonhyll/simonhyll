@@ -3,7 +3,7 @@
     <template v-for="i in 5">
       <v-row no-gutters>
         <v-col>
-          <v-parallax :src="zelda">
+          <v-parallax :src="zelda" style="max-height: 100vh">
             <div
               class="d-flex flex-column fill-height justify-center align-center text-white"
             >
@@ -14,7 +14,7 @@
       </v-row>
       <v-row no-gutters>
         <v-col>
-          <v-parallax :src="scotland">
+          <v-parallax :src="scotland" style="max-height: 100vh">
             <div
               class="d-flex flex-column fill-height justify-center align-center text-white"
             >
