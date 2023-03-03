@@ -15,7 +15,7 @@
             :title="section.name"
             :subtitle="'Posts: ' + section.posts.length"
             :value="section"
-            @click="selected = section"
+            @click="switchSection(section)"
             :active="selected.name === section.name"
           ></v-list-item>
         </v-col>
@@ -208,10 +208,21 @@ export default {
   mounted() {
     const self = this;
     const selected = self.$route.name?.split("-")[1];
-    if (selected)
+    if (selected) {
       self.selected = self.sections.find(
         (val) => val.name.toLowerCase() === selected
       );
+    } else {
+      self.$router.push(self.localePath(self.selected.posts[0].to));
+    }
+  },
+  methods: {
+    switchSection(section: any) {
+      const self = this;
+      self.selected = section;
+      self.$router.push(self.localePath(self.selected.posts[0].to));
+      console.log("WTF", self.selected);
+    },
   },
 };
 </script>

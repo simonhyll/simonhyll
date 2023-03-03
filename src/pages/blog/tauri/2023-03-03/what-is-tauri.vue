@@ -18,9 +18,9 @@
           functionalities accessible through the Tauri JS API.
         </p>
         <p>
-          The way you should, in my opinion, look at Tauri as as a way of
-          developing a frontend for a Rust program. Tauri isn't a backend for a
-          web based app, the app is a frontend for a Rust based backend.
+          The way you should, in my opinion, look at Tauri is as a way of
+          developing a frontend for a Rust program. Tauri isn't a backend for an
+          app, the app is a frontend for a Rust based backend.
         </p>
         <p>
           As such I highly recommend learning Rust before you learn Tauri, at
@@ -28,6 +28,11 @@
           asynchronous programming at least, they tend to be what new developers
           struggle with the most because they skipped Rust and went straight for
           Tauri.
+        </p>
+        <p>
+          Learn the basics of Rust first, then learn Tauri. I would recommend
+          making a simple Actix Web based REST API before you make a Tauri app,
+          it gets you familiar with Tokio and the ownership system nicely.
         </p>
         <h2>The basics</h2>
         <p>
