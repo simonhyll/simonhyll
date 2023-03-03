@@ -19,7 +19,7 @@
                 max-width: 35vw;
               "
             >
-              <h1 class="font-weight-thin mb-4">Simon Hyll</h1>
+              <h1 class="mb-4">Simon Hyll</h1>
 
               <p>Discord</p>
               <p>Github</p>

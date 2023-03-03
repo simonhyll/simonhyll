@@ -162,6 +162,26 @@ const sections = [
     posts: [],
   },
   {
+    name: "Kali",
+    posts: [],
+  },
+  {
+    name: "Flux",
+    posts: [],
+  },
+  {
+    name: "Tech stacks",
+    posts: [],
+  },
+  {
+    name: "GCP",
+    posts: [],
+  },
+  {
+    name: "Github",
+    posts: [],
+  },
+  {
     name: "Management",
     posts: [],
   },
@@ -172,8 +192,8 @@ const sections = [
 ].sort((a: any, b: any) => {
   if (a.posts.length < b.posts.length) return 1;
   if (a.posts.length > b.posts.length) return -1;
-  if (a.name.substr(0, 1) < b.name.substr(0, 1)) return -1;
-  if (a.name.substr(0, 1) > b.name.substr(0, 1)) return 1;
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
   return 0;
 });
 export default {
