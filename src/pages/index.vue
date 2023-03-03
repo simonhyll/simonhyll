@@ -2,7 +2,10 @@
   <v-container fluid class="pa-0 my-full-width">
     <v-row no-gutters>
       <v-col>
-        <v-parallax :src="fjallvattnet" style="max-height: 100vh">
+        <v-parallax
+          :src="fjallvattnet"
+          style="min-height: 100vh; max-height: 100vh"
+        >
           <div
             class="d-flex flex-column fill-height justify-center align-end text-white"
           >
@@ -17,9 +20,9 @@
               "
             >
               <h1 class="font-weight-thin mb-4">Simon Hyll</h1>
-              <h3 class="font-weight-thin mb-4">
-                Fullstack developer from Sweden
-              </h3>
+
+              <p>Discord</p>
+              <p>Github</p>
             </div>
           </div>
         </v-parallax>

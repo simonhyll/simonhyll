@@ -3,6 +3,13 @@
     <v-row>
       <v-col>
         <h1>What is Tauri</h1>
+        <h2>Disclaimer!!</h2>
+        <p>
+          While I am a part of the Working Group in Tauri, that doesn't mean
+          that any of my posts represent the opinions or recommendations of the
+          Tauri organization. This is my personal website and my personal
+          opinions, I'm just sharing my knowledge.
+        </p>
         <h2>Recommendations</h2>
         <p>
           While you CAN technically develop a Tauri app without ever touching a

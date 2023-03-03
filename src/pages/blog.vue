@@ -142,11 +142,31 @@ const sections = [
     posts: [],
   },
   {
-    name: "PNPM",
+    name: "Blender",
     posts: [],
   },
   {
-    name: "Julia",
+    name: "Inkscape",
+    posts: [],
+  },
+  {
+    name: "Gimp",
+    posts: [],
+  },
+  {
+    name: "Bash",
+    posts: [],
+  },
+  {
+    name: "Docker",
+    posts: [],
+  },
+  {
+    name: "Management",
+    posts: [],
+  },
+  {
+    name: "Babylon.js",
     posts: [],
   },
 ].sort((a: any, b: any) => {
