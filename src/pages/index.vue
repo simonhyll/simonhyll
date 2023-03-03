@@ -12,17 +12,19 @@
             <div
               style="
                 background: rgba(20, 26, 33, 0.8);
-                padding: 1cm;
                 height: 100%;
                 width: 100%;
                 min-width: 10cm;
-                max-width: 35vw;
+                max-width: 30vw;
               "
             >
-              <h1 class="mb-4">Simon Hyll</h1>
+              <v-img :src="mig"></v-img>
+              <div style="padding: 1cm">
+                <h1 class="mb-4">Simon Hyll</h1>
 
-              <p>Discord</p>
-              <p>Github</p>
+                <p>Discord</p>
+                <p>Github</p>
+              </div>
             </div>
           </div>
         </v-parallax>
@@ -33,14 +35,12 @@
 
 <script>
 import fjallvattnet from "~/assets/images/fjallvattnet.jpg";
-import zelda from "~/assets/images/zelda.jpg";
-import scotland from "~/assets/images/skottland.jpg";
+import mig from "~/assets/images/mig.jpg";
 export default {
   data() {
     return {
-      zelda,
-      scotland,
       fjallvattnet,
+      mig,
     };
   },
   mounted() {

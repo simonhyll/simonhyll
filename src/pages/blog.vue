@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer permanent :rail="minimize" rail-width="150" width="300">
+  <v-navigation-drawer permanent :rail="minimize" rail-width="200" width="300">
     <template #prepend>
       <v-list density="compact" nav>
         <v-list-item
@@ -170,10 +170,6 @@ const sections = [
     posts: [],
   },
   {
-    name: "Tech stacks",
-    posts: [],
-  },
-  {
     name: "GCP",
     posts: [],
   },
@@ -187,6 +183,58 @@ const sections = [
   },
   {
     name: "Babylon.js",
+    posts: [],
+  },
+  {
+    name: "Health",
+    posts: [],
+  },
+  {
+    name: "XML",
+    posts: [],
+  },
+  {
+    name: "Yaml",
+    posts: [],
+  },
+  {
+    name: "Toml",
+    posts: [],
+  },
+  {
+    name: "HTML",
+    posts: [],
+  },
+  {
+    name: "CSS",
+    posts: [],
+  },
+  {
+    name: "SCSS",
+    posts: [],
+  },
+  {
+    name: "Vuetify",
+    posts: [],
+  },
+  {
+    name: "Mdbook",
+    posts: [],
+  },
+  {
+    name: "Sphinx",
+    posts: [],
+  },
+  {
+    name: "Airflow",
+    posts: [],
+  },
+  {
+    name: "Cordova",
+    posts: [],
+  },
+  {
+    name: "Electron",
     posts: [],
   },
 ].sort((a: any, b: any) => {
