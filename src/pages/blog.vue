@@ -140,9 +140,10 @@ export default {
   mounted() {
     const self = this;
     const selected = self.$route.name?.split("-")[1];
-    self.selected = self.sections.find(
-      (val) => val.name.toLowerCase() === selected
-    );
+    if (selected)
+      self.selected = self.sections.find(
+        (val) => val.name.toLowerCase() === selected
+      );
   },
 };
 </script>
