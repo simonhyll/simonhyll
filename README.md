@@ -1,10 +1,10 @@
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?vCenter=true&duration=3000&font=Righteous&size=65&height=95&width=500&center=true&color=111111&lines=Greetings!;Välkommen!;Guten+tag!;¡Hola!)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?vCenter=true&duration=3000&font=Righteous&size=65&height=95&width=500&center=true&color=FFFFFF&lines=Greetings!;Välkommen!;Guten+tag!;¡Hola!)](https://github.com/simonhyll#gh-dark-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?vCenter=true&duration=1000&font=Righteous&size=65&height=95&width=500&center=true&color=111111&repeat=false&lines=Greetings!)](https://github.com/simonhyll#gh-light-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?vCenter=true&duration=1000&font=Righteous&size=65&height=95&width=500&center=true&color=FFFFFF&repeat=false&lines=Greetings!)](https://github.com/simonhyll#gh-dark-mode-only)
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=35&height=60&width=500&color=111111&lines=About+me;Om+mig;Über+mich;Sobre+mí)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&lines=About+me;Om+mig;Über+mich;Sobre+mí)](https://github.com/simonhyll#gh-dark-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=111111&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-light-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-dark-mode-only)
 </div>
 
 <table align="right">
@@ -31,8 +31,8 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=35&height=60&width=500&color=111111&lines=Tools+and+languages;Verktyg+och+språk;Werkzeuge+und+Sprachen;Instrumentos+y+linguas)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&lines=Tools+and+languages;Verktyg+och+språk;Werkzeuge+und+Sprachen;Instrumentos+y+linguas)](https://github.com/simonhyll#gh-dark-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=111111&repeat=false&lines=Tools+and+languages)](https://github.com/simonhyll#gh-light-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&repeat=false&lines=Tools+and+languages)](https://github.com/simonhyll#gh-dark-mode-only)
 
 <p align="center">
   <img alt="Git" width="40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">
@@ -62,8 +62,8 @@
   <img alt="CMake" width="40" src="https://cmake.org/wp-content/uploads/2018/11/cmake_logo_slider.png">
 </p>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=35&height=60&width=400&color=111111&lines=Statistics;Statistik;Statistiken;Estadística)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=35&height=60&width=400&color=FFFFFF&lines=Statistics;Statistik;Statistiken;Estadística)](https://github.com/simonhyll#gh-dark-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=400&color=111111&repeat=false&lines=Statistics)](https://github.com/simonhyll#gh-light-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=400&color=FFFFFF&repeat=false&lines=Statistics)](https://github.com/simonhyll#gh-dark-mode-only)
 
 [![GitHub Snake Light](https://github.com/simonhyll/simonhyll/blob/output/github-snake.svg)](https://github.com/simonhyll#gh-light-mode-only)
 [![GitHub Snake Dark](https://github.com/simonhyll/simonhyll/blob/output/github-snake-dark.svg)](https://github.com/simonhyll#gh-dark-mode-only)
