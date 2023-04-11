@@ -1,11 +1,4 @@
 <div align="center">
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?vCenter=true&duration=1000&font=Righteous&size=65&height=95&width=500&center=true&color=111111&repeat=false&lines=Greetings!)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?vCenter=true&duration=1000&font=Righteous&size=65&height=95&width=500&center=true&color=FFFFFF&repeat=false&lines=Greetings!)](https://github.com/simonhyll#gh-dark-mode-only)
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=111111&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-dark-mode-only)
-  
 <table>
   <tr>
     <td align="right">
@@ -22,7 +15,12 @@
     </td>
   </tr>
 </table>
+  
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?vCenter=true&duration=1000&font=Righteous&size=65&height=95&width=500&center=true&color=111111&repeat=false&lines=Greetings!)](https://github.com/simonhyll#gh-light-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?vCenter=true&duration=1000&font=Righteous&size=65&height=95&width=500&center=true&color=FFFFFF&repeat=false&lines=Greetings!)](https://github.com/simonhyll#gh-dark-mode-only)
 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=111111&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-light-mode-only)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-dark-mode-only) 
 </div>
 
 📃**Description:** Full stack developer from Sweden
