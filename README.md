@@ -15,7 +15,17 @@
   </tr>
   <tr>
     <td align="right">
-<a href="https://www.linkedin.com/in/simon-hyll/"><img src="https://img.shields.io/badge/linkedin-profile-blue?style=for-the-badge"></a>
+<a href="https://www.linkedin.com/in/simonhyll/"><img src="https://img.shields.io/badge/linkedin-profile-blue?style=for-the-badge"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="right">
+<a href="https://youtube.com/@hyllsimon"><img src="https://img.shields.io/badge/youtube-profile-red?style=for-the-badge"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="right">
+<a href="https://twitter.com/simonhyll"><img src="https://img.shields.io/badge/twitter-profile-blue?style=for-the-badge"></a>
     </td>
   </tr>
 </table>
