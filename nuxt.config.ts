@@ -74,7 +74,7 @@ export default defineNuxtConfig({
       strictPort: true,
       hmr: {
         protocol: "ws",
-        host: "192.168.50.222",
+        host: "127.0.0.1",
         port: 5183,
       },
     },

@@ -16,6 +16,7 @@
     "@kevinmarrec/nuxt-pwa": "^0.16.2",
     "@mdi/font": "^7.1.96",
     "@nuxtjs/i18n-edge": "8.0.0-beta.10-27955677.afd9ab2",
+    "@tauri-apps/api": "^1.2.0",
     "@tauri-apps/cli": "^1.2.3",
     "sass": "^1.58.3",
     "vite": "^4.1.4",
