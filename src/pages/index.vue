@@ -2,7 +2,9 @@
   <v-container fluid class="pa-0 my-full-width my-fill-height" justify="center" align="center">
     <v-row no-gutters justify="center" align="center" class="my-fill-height my-background">
       <v-col cols="12" sm="8" md="5" lg="4">
-        <v-img style="z-index: 2" :src="mig" class="my-portrait"></v-img>
+        <v-img style="z-index: 2" :src="mig" class="my-portrait">
+        </v-img>
+        <!--<div class="my-glow"></div>-->
       </v-col>
       <v-col cols="12" sm="3" md="4" lg="3" align="center" justify="center">
         <h1 style="z-index: 2;text-align:center">Simon Hyll</h1>
@@ -58,8 +60,8 @@ export default {
   methods: {
     mouseMove(e: MouseEvent) {
       const mouse: any = document.querySelector('.glowing-mouse');
-      mouse.style.left = e.clientX - 50 + 'px';
-      mouse.style.top = e.pageY - 50 + 'px';
+      mouse.style.left = e.clientX - 35 + 'px';
+      mouse.style.top = e.pageY - 35 + 'px';
     }
   }
 };
@@ -69,14 +71,16 @@ export default {
 .my-background {
   background-color: #000;
   background-size: 400px;
-  box-shadow: inset 0 0 50px rgba(13, 246, 219, 0.1);
+  box-shadow: inset 0 0 50px rgba(39, 130, 207, 0.3);
+  position: relative;
+  cursor: url('/ferris_tiny.png'), auto;
 }
 
 .glowing-mouse {
   height: 100px;
   width: 100px;
   z-index: 1;
-  background: radial-gradient(circle, rgb(13, 246, 219) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgb(39, 130, 207) 0%, rgba(255, 255, 255, 0) 70%);
   opacity: 0.2;
   background-size: 90% 90%;
   background-repeat: no-repeat;
@@ -112,7 +116,7 @@ export default {
 .my-portrait {
   margin: 2cm;
   border-radius: 100%;
-  box-shadow: 0px 0px 20px 0px #00ccff;
+  box-shadow: 0px 0px 20px 0px #2782cf;
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -120,20 +124,51 @@ export default {
   margin-top: 5px;
 }
 
+.my-glow {
+  content: '';
+  display: inline-block;
+  width: 5cm;
+  height: 5cm;
+  position: absolute;
+  background: radial-gradient(circle, #2782cf 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0.4;
+  left: calc(50% - 5cm);
+  bottom: 0;
+  transform: rotateX(70deg);
+  animation: gloglo 3s ease-in-out infinite;
+}
+
+@keyframes gloglo {
+  0% {
+    width: 5cm;
+    height: 5cm;
+  }
+
+  50% {
+    width: 4.8cm;
+    height: 4.8cm;
+  }
+
+  100% {
+    width: 5cm;
+    height: 5cm;
+  }
+}
+
 @keyframes floating {
   0% {
     transform: translate(0, 0px);
-    box-shadow: 0px 0px 20px 0px #00ccff;
+    box-shadow: 0px 0px 20px 0px #2782cf;
   }
 
   50% {
     transform: translate(0, 5px);
-    box-shadow: 0px 0px 20px 0px #00ffaa;
+    box-shadow: 0px 0px 20px 0px #fecb00;
   }
 
   100% {
     transform: translate(0, -0px);
-    box-shadow: 0px 0px 20px 0px #00ccff;
+    box-shadow: 0px 0px 20px 0px #2782cf;
   }
 }
 </style>
