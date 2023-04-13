@@ -12,19 +12,19 @@
         <v-row style="padding: 1cm">
           <v-col cols="6" sm="12" md="6">
             <v-btn prepend-icon="mdi-linkedin" width="100%" stacked style="z-index:2" target="_blank"
-              :href="links.linkedin">LinkedIn</v-btn>
+              :href="links.linkedin" color="#0a66c2">LinkedIn</v-btn>
           </v-col>
           <v-col cols="6" sm="12" md="6">
-            <v-btn prepend-icon="mdi-youtube" width="100%" stacked style="z-index:2" target="_blank"
-              :href="links.youtube">Youtube</v-btn>
+            <v-btn prepend-icon="mdi-youtube" width="100%" stacked style="z-index:2" target="_blank" :href="links.youtube"
+              color="#f00">Youtube</v-btn>
           </v-col>
           <v-col cols="6" sm="12" md="6">
-            <v-btn prepend-icon="mdi-twitter" width="100%" stacked style="z-index:2" target="_blank"
-              :href="links.twitter">Twitter</v-btn>
+            <v-btn prepend-icon="mdi-twitter" width="100%" stacked style="z-index:2" target="_blank" :href="links.twitter"
+              color="#1d9bf0">Twitter</v-btn>
           </v-col>
           <v-col cols="6" sm="12" md="6">
-            <v-btn prepend-icon="mdi-github" width="100%" stacked style="z-index:2" target="_blank"
-              :href="links.github">Github</v-btn>
+            <v-btn prepend-icon="mdi-github" width="100%" stacked style="z-index:2" target="_blank" :href="links.github"
+              color="#0d1117">Github</v-btn>
           </v-col>
         </v-row>
       </v-col>
@@ -81,7 +81,7 @@ export default {
   width: 100px;
   z-index: 1;
   background: radial-gradient(circle, rgb(39, 130, 207) 0%, rgba(255, 255, 255, 0) 70%);
-  opacity: 0.2;
+  opacity: 0.4;
   background-size: 90% 90%;
   background-repeat: no-repeat;
   background-position: center;

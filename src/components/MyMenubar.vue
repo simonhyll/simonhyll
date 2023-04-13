@@ -1,11 +1,17 @@
 <template>
-  <v-app-bar ref="bar" data-tauri-drag-region>
-    <v-row data-tauri-drag-region>
-      <v-col align="center" data-tauri-drag-region>
-        <v-btn :to="localePath('index')">Home</v-btn>
-        <v-btn :to="localePath('cv')">CV</v-btn>
-        <v-btn :to="localePath('portfolio')">Portfolio</v-btn>
-        <v-btn :to="localePath('blog')">Blog</v-btn>
+  <v-app-bar ref="bar" data-tauri-drag-region :height="$vuetify.display.mobile ? 150 : 75">
+    <v-row data-tauri-drag-region align="center" justify="center" no-gutters>
+      <v-col align="center" data-tauri-drag-region cols="6" sm="3">
+        <v-btn :to="localePath('index')" prepend-icon="mdi-home" width="100%" stacked>Home</v-btn>
+      </v-col>
+      <v-col align="center" data-tauri-drag-region cols="6" sm="3">
+        <v-btn :to="localePath('cv')" prepend-icon="mdi-timeline-text" width="100%" stacked>CV</v-btn>
+      </v-col>
+      <v-col align="center" data-tauri-drag-region cols="6" sm=3>
+        <v-btn :to="localePath('portfolio')" prepend-icon="mdi-briefcase" width="100%" stacked>Portfolio</v-btn>
+      </v-col>
+      <v-col align="center" data-tauri-drag-region cols="6" sm=3>
+        <v-btn :to="localePath('blog')" prepend-icon="mdi-file-multiple" width="100%" stacked>Blog</v-btn>
       </v-col>
     </v-row>
   </v-app-bar>
