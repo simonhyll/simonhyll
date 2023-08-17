@@ -54,11 +54,11 @@
       <td align="center">
       </td>
       <td align="center">
+  <img alt="Gitlab" src="https://img.shields.io/badge/GitLab-black?logo=gitlab">
       </td>
       <td align="center">
-  <img alt="Git" src="https://img.shields.io/badge/Git-black?logo=git">
+  <img alt="Git" src="https://img.shields.io/badge/Git-white?logo=git">
   <img alt="Github" src="https://img.shields.io/badge/GitHub-black?logo=github">
-  <img alt="Gitlab" src="https://img.shields.io/badge/GitLab-black?logo=gitlab">   
       </td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@
   <img alt="Node.js" src="https://img.shields.io/badge/Node.js-black?logo=node.js">
   <img alt="CSS3" src="https://img.shields.io/badge/CSS3-black?logo=css3">
   <img alt="HTML5" src="https://img.shields.io/badge/HTML5-black?logo=html5">
-  <img alt="Python" src="https://img.shields.io/badge/Python-black?logo=python">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=ffd343">
   <img alt="SASS" src="https://img.shields.io/badge/Sass-black?logo=sass">
       </td>
     </tr>
@@ -235,13 +235,16 @@
       <td align="center">
       </td>
       <td align="center">
-  <img alt="Cargo" src="https://img.shields.io/badge/Cargo-black?logo=rust">
-  <img alt="Vite" src="https://img.shields.io/badge/Vite-black?logo=vite">
-  <img alt="Babel" src="https://img.shields.io/badge/Babel-black?logo=babel">
+  <img alt="Cargo" src="https://img.shields.io/badge/Cargo-264323?logo=rust">
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-f5f5f5?logo=vite">
+  <img alt="Babel" src="https://img.shields.io/badge/Babel-323330?logo=babel">
+  <img alt="pip" src="https://img.shields.io/badge/pip-ffd343?logo=pypi&logoColor=3776AB">
+  <img alt="Anaconda" src="https://img.shields.io/badge/Anaconda-f5f5f5?logo=anaconda">
+  <img alt="npm" src="https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff">
       </td>
       <td align="center">
-  <img alt="CMake" src="https://img.shields.io/badge/CMake-black?logo=cmake">
-  <img alt="Webpack" src="https://img.shields.io/badge/Webpack-black?logo=webpack">
+  <img alt="CMake" src="https://img.shields.io/badge/CMake-b82027?logo=cmake">
+  <img alt="Webpack" src="https://img.shields.io/badge/Webpack-2b3a42?logo=webpack">
       </td>
     </tr>
     <tr>
@@ -249,12 +252,12 @@
       <td align="center">
       </td>
       <td align="center">
-  <img alt="Agile" src="https://img.shields.io/badge/Agile-black">
-  <img alt="Scrum" src="https://img.shields.io/badge/Scrum-black">
-  <img alt="TDD" src="https://img.shields.io/badge/Test%20Driven%20Development-black">
+  <img alt="Agile" src="https://img.shields.io/badge/Agile-f5f5f5">
+  <img alt="Scrum" src="https://img.shields.io/badge/Scrum-f5f5f5">
+  <img alt="TDD" src="https://img.shields.io/badge/Test%20Driven%20Development-f5f5f5">
       </td>
       <td align="center">
-  <img alt="SEO" src="https://img.shields.io/badge/Search%20Engine%20Optimization-black">
+  <img alt="SEO" src="https://img.shields.io/badge/Search%20Engine%20Optimization-f5f5f5">
       </td>
     </tr>
   </tbody>
