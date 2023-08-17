@@ -54,7 +54,7 @@
       <td align="center">
       </td>
       <td align="center">
-  <img alt="Gitlab" src="https://img.shields.io/badge/GitLab-black?logo=gitlab">
+  <img alt="Gitlab" src="https://img.shields.io/badge/GitLab-f5f5f5?logo=gitlab">
       </td>
       <td align="center">
   <img alt="Git" src="https://img.shields.io/badge/Git-white?logo=git">
@@ -68,7 +68,7 @@
   <img alt="Svelte" src="https://img.shields.io/badge/Svelte-black?logo=svelte">
       </td>
       <td align="center">
-  <img alt="Rust" src="https://img.shields.io/badge/Rust-black?logo=rust">
+  <img alt="Rust" src="https://img.shields.io/badge/Rust-333?logo=rust&logoColor=f67529">
   <img alt="Java" src="https://img.shields.io/badge/Java-black?logo=oracle">
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-black?logo=kotlin">
   <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-black?logo=jupyter">
@@ -197,7 +197,7 @@
     <tr>
       <td>CI/CD</td>
       <td align="center">
-  <img alt="GitLab CI" src="https://img.shields.io/badge/GitLab%20CI-black?logo=gitlab">
+  <img alt="GitLab CI" src="https://img.shields.io/badge/GitLab%20CI-f5f5f5?logo=gitlab">
       </td>
       <td align="center">
       </td>
@@ -208,14 +208,14 @@
     <tr>
       <td>Development Environments</td>
       <td align="center">
-  <img alt="Netbeans" src="https://img.shields.io/badge/Netbeans-black?logo=apache-netbeans-ide">
-  <img alt="Eclipse IDE" src="https://img.shields.io/badge/Eclipse-black?logo=eclipse-ide">
+  <img alt="Netbeans" src="https://img.shields.io/badge/Netbeans-a8cd37?logo=apache-netbeans-ide">
+  <img alt="Eclipse IDE" src="https://img.shields.io/badge/Eclipse-2b2152?logo=eclipse-ide">
       </td>
       <td align="center">
       </td>
       <td align="center">
-  <img alt="VSCode" src="https://img.shields.io/badge/VSCode-black?logo=visual-studio-code">
-  <img alt="IntelliJ" src="https://img.shields.io/badge/IntelliJ-black?logo=intellij-idea">
+  <img alt="VSCode" src="https://img.shields.io/badge/VSCode-23aaf2?logo=visual-studio-code">
+  <img alt="IntelliJ" src="https://img.shields.io/badge/IntelliJ-f62e5b?logo=intellij-idea">
       </td>
     <tr>
       <td>Platforms</td>
