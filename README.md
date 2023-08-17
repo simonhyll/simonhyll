@@ -39,9 +39,6 @@
 <table>
   <thead>
   <tr>
-    <td colspan="4" align="center">In order of preference</td>
-  </tr>
-  <tr>
     <td></td>
     <td><1 year</td>
     <td>1-3 years</td>
