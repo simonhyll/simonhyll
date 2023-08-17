@@ -220,14 +220,14 @@
     <tr>
       <td>Platforms</td>
       <td align="center">
-  <img alt="AWS" src="https://img.shields.io/badge/AWS-black?logo=amazon-aws">
-  <img alt="Azure" src="https://img.shields.io/badge/Azure-black?logo=microsoft-azure">
+  <img alt="AWS" src="https://img.shields.io/badge/AWS-131921?logo=amazon-aws&logoColor=FF9900">
+  <img alt="Azure" src="https://img.shields.io/badge/Azure-f5f5f5?logo=microsoft-azure&logoColor=0078D4">
       </td>
       <td align="center">
-  <img alt="DigitalOcean" src="https://img.shields.io/badge/DigitalOcean-black?logo=digitalocean">
+  <img alt="DigitalOcean" src="https://img.shields.io/badge/DigitalOcean-f5f5f5?logo=digitalocean">
       </td>
       <td align="center">
-  <img alt="GCP" src="https://img.shields.io/badge/GCP-black?logo=google-cloud">
+  <img alt="GCP" src="https://img.shields.io/badge/GCP-f5f5f5?logo=google-cloud">
       </td>
     </tr>
     <tr>
