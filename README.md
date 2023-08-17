@@ -260,12 +260,6 @@
   </tbody>
 </table>
 
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=400&color=111111&repeat=false&lines=Statistics)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=400&color=FFFFFF&repeat=false&lines=Statistics)](https://github.com/simonhyll#gh-dark-mode-only)
-
-[![GitHub Snake Light](https://github.com/simonhyll/simonhyll/blob/output/github-snake.svg)](https://github.com/simonhyll#gh-light-mode-only)
-[![GitHub Snake Dark](https://github.com/simonhyll/simonhyll/blob/output/github-snake-dark.svg)](https://github.com/simonhyll#gh-dark-mode-only)
 </div>
 
 <div align="center">
