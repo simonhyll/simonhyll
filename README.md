@@ -119,12 +119,12 @@
     <tr>
       <td>Databases</td>
       <td>
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-proficient-white?logo=postgresql&labelColor=fff">
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-proficient-black?logo=postgresql&labelColor=fff">
   <img alt="SQLite" src="https://img.shields.io/badge/SQLite-familiar-black?logo=sqlite&labelColor=fff&logoColor=000">
-  <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-expert-white?logo=mongodb&labelColor=fff">
+  <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-expert-black?logo=mongodb&labelColor=fff">
   <img alt="MariaDB" src="https://img.shields.io/badge/MariaDB-proficient-black?logo=mariadb&labelColor=fff&logoColor=000">
-  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-proficient-white?logo=mysql&labelColor=fff">
-  <img alt="BigQuery" src="https://img.shields.io/badge/BigQuery-proficient-white?logo=google-cloud&labelColor=fff">
+  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-proficient-black?logo=mysql&labelColor=fff">
+  <img alt="BigQuery" src="https://img.shields.io/badge/BigQuery-proficient-black?logo=google-cloud&labelColor=fff">
   <img alt="Redis" src="https://img.shields.io/badge/Redis-proficient-black?logo=redis&labelColor=fff">
       </td>
     </tr>
