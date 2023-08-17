@@ -46,17 +46,16 @@
     <td><1 year</td>
     <td>1-3 years</td>
     <td>3+ years</td>
-  </tr>
-    
+  </tr>    
   </thead>
   <tbody>
     <tr>
       <td>Version control</td>
-      <td>    
+      <td align="center">
       </td>
-      <td>
+      <td align="center">
       </td>
-      <td>
+      <td align="center">
   <img alt="Git" src="https://img.shields.io/badge/Git-black?logo=git">
   <img alt="Github" src="https://img.shields.io/badge/GitHub-black?logo=github">
   <img alt="Gitlab" src="https://img.shields.io/badge/GitLab-black?logo=gitlab">   
@@ -64,11 +63,11 @@
     </tr>
     <tr>
       <td>Languages</td>
-      <td>    
+      <td align="center">
   <img alt="Astro" src="https://img.shields.io/badge/Astro-black?logo=astro">
   <img alt="Svelte" src="https://img.shields.io/badge/Svelte-black?logo=svelte">
       </td>
-      <td>    
+      <td align="center">
   <img alt="Rust" src="https://img.shields.io/badge/Rust-black?logo=rust">
   <img alt="Java" src="https://img.shields.io/badge/Java-black?logo=oracle">
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-black?logo=kotlin">
@@ -77,7 +76,7 @@
   <img alt="C++" src="https://img.shields.io/badge/C++-black?logo=cplusplus">
   <img alt="MDX" src="https://img.shields.io/badge/MDX-black?logo=mdx">
       </td>
-      <td>
+      <td align="center">
   <img alt="Typescript" src="https://img.shields.io/badge/TypeScript-black?logo=typescript">
   <img alt="Javascript" src="https://img.shields.io/badge/JavaScript-black?logo=javascript">
   <img alt="Node.js" src="https://img.shields.io/badge/Node.js-black?logo=node.js">
@@ -89,90 +88,90 @@
     </tr>
     <tr>
       <td>Frontend Frameworks</td>
-      <td>
-  <img alt="React" src="https://img.shields.io/badge/Reactr-black?logo=react">
-  <img alt="Next" src="https://img.shields.io/badge/Next.jsr-black?logo=next.js">
-  <img alt="PyQt" src="https://img.shields.io/badge/PyQtr-black?logo=qt">
-  <img alt="Babylon.js" src="https://img.shields.io/badge/Babylon.jsr-black?logo=babylon.js">
+      <td align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-black?logo=react">
+  <img alt="Next" src="https://img.shields.io/badge/Next.js-black?logo=next.js">
+  <img alt="PyQt" src="https://img.shields.io/badge/PyQt-black?logo=qt">
+  <img alt="Babylon.js" src="https://img.shields.io/badge/Babylon.js-black?logo=babylon.js">
   <img alt="Three.js" src="https://img.shields.io/badge/Three.js-black?logo=three.js">        
       </td>
-      <td>
+      <td align="center">
       </td>
-      <td>
+      <td align="center">
   <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-black?logo=nuxt.js">
       </td>
     </tr>
     <tr>
       <td>Backend Frameworks</td>
-      <td>
+      <td align="center">
   <img alt="Electron" src="https://img.shields.io/badge/Electron-black?logo=electron">
       </td>
-      <td>
+      <td align="center">
   <img alt="Tauri" src="https://img.shields.io/badge/Tauri-black?logo=tauri">
   <img alt="Cordova" src="https://img.shields.io/badge/Cordova-black?logo=apache-cordova">
       </td>
-      <td>
+      <td align="center">
       </td>
     </tr>
     <tr>
       <td>Server Frameworks</td>
-      <td>
+      <td align="center">
   <img alt=".NET" src="https://img.shields.io/badge/.NET-black?logo=.net">
   <img alt="Nginx" src="https://img.shields.io/badge/Nginx-black?logo=nginx">
       </td>
-      <td>
+      <td align="center">
   <img alt="GraphQL" src="https://img.shields.io/badge/GraphQL-black?logo=graphql">
   <img alt="Apache" src="https://img.shields.io/badge/Apache-black?logo=apache">
   <img alt="Swagger" src="https://img.shields.io/badge/Swagger-black?logo=swagger">
   <img alt="Actix" src="https://img.shields.io/badge/actix-black?logo=rust">
       </td>
-      <td>
+      <td align="center">
   <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-black?logo=fastapi">
   <img alt="Express" src="https://img.shields.io/badge/Express-black?logo=express">
       </td>
     </tr>
     <tr>
       <td>Test frameworks</td>
-      <td>
+      <td align="center">
   <img alt="Puppeteer" src="https://img.shields.io/badge/Puppeteer-black?logo=puppeteer">
       </td>
-      <td>
+      <td align="center">
   <img alt="Cargo" src="https://img.shields.io/badge/Cargo%20Test-black?logo=rust">
   <img alt="Mocha" src="https://img.shields.io/badge/Mocha-black?logo=mocha">
   <img alt="Jest" src="https://img.shields.io/badge/Jest-black?logo=jest">
   <img alt="Chai" src="https://img.shields.io/badge/Chai-black?logo=chai">
   <img alt="Jasmine" src="https://img.shields.io/badge/Jasmine-black?logo=jasmine">
       </td>
-      <td>
+      <td align="center">
       </td>
     </tr>
     <tr>
       <td>Databases</td>
-      <td>
+      <td align="center">
   <img alt="SQLite" src="https://img.shields.io/badge/SQLite-black?logo=sqlite">
       </td>
-      <td>
+      <td align="center">
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-black?logo=postgresql">
   <img alt="MariaDB" src="https://img.shields.io/badge/MariaDB-black?logo=mariadb">
   <img alt="BigQuery" src="https://img.shields.io/badge/BigQuery-black?logo=google-cloud">
   <img alt="Redis" src="https://img.shields.io/badge/Redis-black?logo=redis">
       </td>
-      <td>
+      <td align="center">
   <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-black?logo=mongodb">
   <img alt="MySQL" src="https://img.shields.io/badge/MySQL-black?logo=mysql">
       </td>
     </tr>
     <tr>
       <td>Systems</td>
-      <td>
+      <td align="center">
   <img alt="Mac" src="https://img.shields.io/badge/Mac-black?logo=apple">
       </td>
-      <td>
+      <td align="center">
   <img alt="Android" src="https://img.shields.io/badge/Android-black?logo=android">
   <img alt="Raspberry Pi" src="https://img.shields.io/badge/Raspberry%20Pi-black?logo=raspberry-pi">
   <img alt="Kali" src="https://img.shields.io/badge/Kali-black?logo=kali-linux">
       </td>
-      <td>
+      <td align="center">
   <img alt="Linux" src="https://img.shields.io/badge/Linux-black?logo=linux">
   <img alt="Ubuntu" src="https://img.shields.io/badge/Ubuntu-black?logo=ubuntu">
   <img alt="WSL" src="https://img.shields.io/badge/WSL-black?logo=windows">
@@ -181,38 +180,38 @@
     </tr>
     <tr>
       <td>Infrastructure</td>
-      <td>
+      <td align="center">
   <img alt="Flux" src="https://img.shields.io/badge/Flux-black?logo=kubernetes">
       </td>
-      <td>
+      <td align="center">
   <img alt="Airflow" src="https://img.shields.io/badge/Airflow-black?logo=apache-airflow">
   <img alt="Helm" src="https://img.shields.io/badge/Helm-black?logo=helm">
   <img alt="Ansible" src="https://img.shields.io/badge/Ansible-black?logo=ansible">
   <img alt="Terraform" src="https://img.shields.io/badge/Terraform-black?logo=terraform">
       </td>
-      <td>
+      <td align="center">
   <img alt="Docker" src="https://img.shields.io/badge/Docker-black?logo=docker">
   <img alt="Kubernetes" src="https://img.shields.io/badge/Kubernetes-black?logo=kubernetes">
       </td>
     </tr>
     <tr>
       <td>CI/CD</td>
-      <td>
+      <td align="center">
   <img alt="GitLab CI" src="https://img.shields.io/badge/GitLab%20CI-black?logo=gitlab">
       </td>
-      <td>
+      <td align="center">
       </td>
-      <td>
+      <td align="center">
   <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-black?logo=github">
       </td>
     </tr>
     <tr>
       <td>Development Environments</td>
-      <td>
+      <td align="center">
   <img alt="Netbeans" src="https://img.shields.io/badge/Netbeans-black?logo=apache-netbeans-ide">
   <img alt="Eclipse IDE" src="https://img.shields.io/badge/Eclipse-black?logo=eclipse-ide">
       </td>
-      <td>
+      <td align="center">
       </td>
       <td align="center">
   <img alt="VSCode" src="https://img.shields.io/badge/VSCode-black?logo=visual-studio-code">
@@ -220,41 +219,41 @@
       </td>
     <tr>
       <td>Platforms</td>
-      <td>
+      <td align="center">
   <img alt="AWS" src="https://img.shields.io/badge/AWS-black?logo=amazon-aws">
   <img alt="Azure" src="https://img.shields.io/badge/Azure-black?logo=microsoft-azure">
       </td>
-      <td>
+      <td align="center">
   <img alt="DigitalOcean" src="https://img.shields.io/badge/DigitalOcean-black?logo=digitalocean">
       </td>
-      <td>
+      <td align="center">
   <img alt="GCP" src="https://img.shields.io/badge/GCP-black?logo=google-cloud">
       </td>
     </tr>
     <tr>
       <td>Compilers/Build tools</td>
-      <td>
+      <td align="center">
       </td>
-      <td>
+      <td align="center">
   <img alt="Cargo" src="https://img.shields.io/badge/Cargo-black?logo=rust">
   <img alt="Vite" src="https://img.shields.io/badge/Vite-black?logo=vite">
   <img alt="Babel" src="https://img.shields.io/badge/Babel-black?logo=babel">
       </td>
-      <td>
+      <td align="center">
   <img alt="CMake" src="https://img.shields.io/badge/CMake-black?logo=cmake">
   <img alt="Webpack" src="https://img.shields.io/badge/Webpack-black?logo=webpack">
       </td>
     </tr>
     <tr>
       <td>Methodologies/Skills</td>
-      <td>
+      <td align="center">
       </td>
-      <td>
+      <td align="center">
   <img alt="Agile" src="https://img.shields.io/badge/Agile-black">
   <img alt="Scrum" src="https://img.shields.io/badge/Scrum-black">
   <img alt="TDD" src="https://img.shields.io/badge/Test%20Driven%20Development-black">
       </td>
-      <td>
+      <td align="center">
   <img alt="SEO" src="https://img.shields.io/badge/Search%20Engine%20Optimization-black">
       </td>
     </tr>
