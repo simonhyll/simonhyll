@@ -16,6 +16,14 @@ export default defineConfig({
         stackOverflow: 'https://stackoverflow.com/users/5614602/simon-hyll',
         youtube: 'https://youtube.com/@hyllsimon',
       },
+      head: [
+        {
+          tag: 'script',
+          attrs: {
+            src: '/navigate.js',
+          },
+        },
+      ],
       plugins: [
         starlightUtils({
           multiSidebar: {

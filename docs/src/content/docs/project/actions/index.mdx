@@ -1,0 +1,17 @@
+---
+title: actions
+sidebar:
+  label: Overview
+---
+
+There's a variety of actions I perform quite often in projects. I decided to expose those via a general action. This action is a composite action that effectively just runs one of my other actions but with some default options or chaining for the sake of providing an easy default.
+
+```yaml frame=none
+- uses: simonhyll/simonhyll@0
+  with:
+    says: 'some-action'
+```
+
+All my actions are hosted in my personal GitHub repository [github.com/simonhyll/simonhyll](https://github.com/simonhyll/simonhyll) and are audited by me personally. While I allow pull requests to be made I'm the sole maintainer of that repository.
+
+If you have an advanced use-case you can read more about each individual action in their own segment on this site.
