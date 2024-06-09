@@ -59,4 +59,6 @@ jobs:
   #       with:
   #         fetch-depth: 0
   #     - name: Ping IndexNow
-  #       uses: ./.github/actions
+  #       uses: simonhyll/simonhyll
+  #       with:
+  #         says: index-now

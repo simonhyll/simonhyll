@@ -4,9 +4,9 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?vCenter=true&duration=1000&font=Righteous&size=65&height=95&width=500&center=true&color=FFFFFF&repeat=false&lines=Greetings!)](https://github.com/simonhyll#gh-dark-mode-only)
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=111111&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-dark-mode-only) 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-dark-mode-only)
 </div>
-      
+
 📃**Description:** Full Stack Developer from Sweden
 
 💻**Job:** Software Developer at Cygni, part of Accenture
@@ -26,14 +26,14 @@
     <td>Name</td>
     <td>Description</td>
     <td>Badges</td>
-  </tr>    
+  </tr>
   </thead>
   <tbody>
   <tr>
     <td><a href="https://github.com/simonhyll/simonhyll/tree/main/packages/create-simon" target="_blank">create-simon</a></td>
     <td>CLI for bootstrapping new projects.</td>
     <td>
-    
+
 [![Deploy: create-simon](https://github.com/simonhyll/simonhyll/actions/workflows/deploy-create-simon.yml/badge.svg)](https://github.com/simonhyll/simonhyll/actions/workflows/deploy-create-simon.yml)
     </td>
   </tr>
@@ -50,7 +50,7 @@
     <td><1 year</td>
     <td>1-3 years</td>
     <td>3+ years</td>
-  </tr>    
+  </tr>
   </thead>
   <tbody>
     <tr>
@@ -97,7 +97,7 @@
   <img alt="Next" src="https://img.shields.io/badge/Next.js-black?logo=next.js">
   <img alt="PyQt" src="https://img.shields.io/badge/PyQt-black?logo=qt">
   <img alt="Babylon.js" src="https://img.shields.io/badge/Babylon.js-black?logo=babylon.js">
-  <img alt="Three.js" src="https://img.shields.io/badge/Three.js-black?logo=three.js">        
+  <img alt="Three.js" src="https://img.shields.io/badge/Three.js-black?logo=three.js">
       </td>
       <td align="center">
       </td>
@@ -272,7 +272,7 @@
 <div align="center">
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=111111&repeat=false&lines=Statistics)](https://github.com/simonhyll#gh-light-mode-only)
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&repeat=false&lines=Statistics)](https://github.com/simonhyll#gh-dark-mode-only) 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&repeat=false&lines=Statistics)](https://github.com/simonhyll#gh-dark-mode-only)
 
 May be a bit misrepresentative regarding what I do and how much since it's solely based on public data.
 

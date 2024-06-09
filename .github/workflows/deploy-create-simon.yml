@@ -4,15 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - packages/create-simon/**
     tags-ignore:
       - '**'
-    paths-ignore:
-      - '**/*.md'
-      - LICENSE
-      - '**/*.gitignore'
-      - .editorconfig
-      - docs/**
-  pull_request: null
+  pull_request:
 
 env:
   DEBUG: napi:*
