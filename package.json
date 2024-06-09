@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "name": "simon",
+  "license": "MIT",
+  "description": "App creator.",
+  "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "ci:publish": "pnpm publish -r",
+    "simon": "pnpm -F simon-docs",
+    "doc": "cd docs && pnpm"
+  },
+  "engines": {
+    "node": ">=18.19.1"
+  },
+  "packageManager": "pnpm@9.2.0",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.5",
+    "@napi-rs/cli": "^2.18.3",
+    "husky": "^9.0.11"
+  }
+}

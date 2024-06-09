@@ -1,0 +1,28 @@
+{
+  "version": "0.1.0",
+  "name": "simon-docs",
+  "license": "MIT",
+  "description": "App creator.",
+  "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "engines": {
+    "node": ">=18.19.1"
+  },
+  "packageManager": "pnpm@9.2.0",
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/starlight": "^0.24.0",
+    "@tauri-apps/cli": "2.0.0-beta.20",
+    "astro": "^4.8.6",
+    "sharp": "^0.32.5",
+    "typescript": "^5.4.5"
+  }
+}

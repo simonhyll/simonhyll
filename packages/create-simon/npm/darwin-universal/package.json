@@ -1,0 +1,15 @@
+{
+  "name": "create-simon-darwin-universal",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "main": "create-simon.darwin-universal.node",
+  "files": [
+    "create-simon.darwin-universal.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
