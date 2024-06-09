@@ -1,4 +1,4 @@
-name: IndexNow for Starlight
+name: IndexNow
 description: Submit updated pages to IndexNow
 runs:
   using: 'node20'

@@ -5,6 +5,7 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=111111&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-light-mode-only)
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=1000&font=Righteous&size=35&height=60&width=500&color=FFFFFF&repeat=false&lines=About+me)](https://github.com/simonhyll#gh-dark-mode-only)
+
 </div>
 
 📃**Description:** Full Stack Developer from Sweden
@@ -35,7 +36,8 @@
     <td>
 
 [![Deploy: create-simon](https://github.com/simonhyll/simonhyll/actions/workflows/deploy-create-simon.yml/badge.svg)](https://github.com/simonhyll/simonhyll/actions/workflows/deploy-create-simon.yml)
-    </td>
+</td>
+
   </tr>
   </tbody>
 </table
@@ -284,4 +286,5 @@ May be a bit misrepresentative regarding what I do and how much since it's solel
 <a href="https://roadmap.sh/u/simonhyll#gh-light-mode-only"><img src="https://api.roadmap.sh/v1-badge/tall/64deb410ced78d293522ddb9?variant=light" alt="roadmap.sh"/></a>
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?center=true&vCenter=true&duration=3000&font=Righteous&size=12&height=20&width=400&color=FFFFFF&lines=Cool+people+use+dark+mode;You+are+cool+😀)](https://github.com/simonhyll#gh-dark-mode-only)
+
 </div>

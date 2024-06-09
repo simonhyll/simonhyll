@@ -1,7 +1,9 @@
 <div align="center">
 
 # create-simon
+
 CLI for bootstrapping new projects
+
 </div>
 
 ## Getting Started

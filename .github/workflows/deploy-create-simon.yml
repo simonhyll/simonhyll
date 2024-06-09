@@ -1,10 +1,11 @@
-name: "Deploy: create-simon"
+name: 'Deploy: create-simon'
 
 on:
   push:
     branches:
       - main
     paths:
+      - .github/workflows/deploy-create-simon.yml
       - packages/create-simon/**
     tags-ignore:
       - '**'

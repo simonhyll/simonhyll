@@ -1,13 +1,13 @@
 const { exec } = require('child_process');
 const https = require('https');
 
-const host = 'tauri.by.simon.hyll.nu';
+const host = 'simon.hyll.nu';
 const key = '10dd01d8da0f49a48f5e3163f16ddcfb'; // Your IndexNow key
 const keyLocation = `https://${host}/10dd01d8da0f49a48f5e3163f16ddcfb.txt`;
 
 function getChangedFiles() {
   return new Promise((resolve, reject) => {
-    exec("git diff --name-only HEAD HEAD~1", (error, stdout, stderr) => {
+    exec('git diff --name-only HEAD HEAD~1', (error, stdout, stderr) => {
       if (error) {
         reject(error);
         return;
@@ -16,23 +16,23 @@ function getChangedFiles() {
         reject(stderr);
         return;
       }
-      resolve(stdout.split('\n').filter(file => file));
+      resolve(stdout.split('\n').filter((file) => file));
     });
   });
 }
 
 function filterDocsFiles(files) {
-  return files.filter(file => file.startsWith('src/content/docs'));
+  return files.filter((file) => file.startsWith('src/content/docs'));
 }
 
 function convertFilesToUrls(files) {
   // Implement your own logic to convert file paths to URLs
-  return files.map(file => {
-    file = file.replace('src/content/docs', '')
-    file = file.replace('/index.mdx', '')
-    file = file.replace('.mdx', '')
+  return files.map((file) => {
+    file = file.replace('src/content/docs', '');
+    file = file.replace('/index.mdx', '');
+    file = file.replace('.mdx', '');
     return `https://${host}${file}`;
-  })
+  });
 }
 
 function postToIndexNow(urls) {
@@ -40,7 +40,7 @@ function postToIndexNow(urls) {
     host: host,
     key: key,
     keyLocation: keyLocation,
-    urlList: urls
+    urlList: urls,
   });
 
   const options = {
@@ -50,19 +50,19 @@ function postToIndexNow(urls) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Content-Length': data.length
-    }
+      'Content-Length': data.length,
+    },
   };
 
-  const req = https.request(options, res => {
+  const req = https.request(options, (res) => {
     console.log(`statusCode: ${res.statusCode}`);
 
-    res.on('data', d => {
+    res.on('data', (d) => {
       process.stdout.write(d);
     });
   });
 
-  req.on('error', error => {
+  req.on('error', (error) => {
     console.error(error);
   });
 
@@ -75,10 +75,10 @@ async function main() {
     const changedFiles = await getChangedFiles();
     const docFiles = filterDocsFiles(changedFiles);
     const urls = convertFilesToUrls(docFiles);
-    urls.forEach((url)=>{
-      console.log('Submitting: ', url)
-    })
-    return
+    urls.forEach((url) => {
+      console.log('Submitting: ', url);
+    });
+    return;
 
     if (urls.length > 0) {
       postToIndexNow(urls);

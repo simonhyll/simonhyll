@@ -22,7 +22,8 @@
   "scripts": {
     "ci:publish": "pnpm publish -r",
     "simon": "pnpm -F create-simon",
-    "doc": "cd docs && pnpm"
+    "doc": "cd docs && pnpm",
+    "format": "prettier -w --cache --plugin prettier-plugin-astro ."
   },
   "engines": {
     "node": ">=18.19.1"
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.27.5",
     "@napi-rs/cli": "^2.18.3",
-    "husky": "^9.0.11"
+    "husky": "^9.0.11",
+    "prettier-plugin-astro": "^0.14.0"
   }
 }

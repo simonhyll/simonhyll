@@ -1,3 +1,3 @@
-const { run } = require('./index')
+const { run } = require('./index');
 
-run()
+run();

@@ -1,16 +1,16 @@
 name: Simon Says
-description: "Make something amazing!"
+description: 'Make something amazing!'
 inputs:
   says:
-    description: "An action to be performed"
+    description: 'An action to be performed'
     required: true
     default: nothing
 outputs:
   response:
-    description: "Output of the action"
+    description: 'Output of the action'
     value: ${{ steps.random-number-generator.outputs.random-number }}
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: Set Greeting
       run: echo "Hello $INPUT_WHO_TO_GREET."
