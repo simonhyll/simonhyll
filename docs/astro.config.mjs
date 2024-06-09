@@ -24,6 +24,9 @@ export default defineConfig({
           },
         },
       ],
+      components: {
+        ThemeSelect: './src/components/overrides/ThemeSelect.astro',
+      },
       plugins: [
         starlightUtils({
           multiSidebar: {
@@ -38,14 +41,24 @@ export default defineConfig({
           autogenerate: { directory: 'project' },
         },
         {
-          label: 'References',
+          label: 'Handbook',
           collapsed: true,
           autogenerate: { directory: 'reference' },
         },
         {
           label: 'Blog',
           collapsed: true,
-          autogenerate: { directory: 'blog' },
+          items: [
+            {
+              label: 'Latest',
+              link: '/blog/',
+            },
+            {
+              label: 'All',
+              collapsed: true,
+              autogenerate: { directory: 'blog' },
+            },
+          ],
         },
       ],
     }),
