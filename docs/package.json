@@ -1,0 +1,42 @@
+{
+  "name": "simon-docs",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "App creator.",
+  "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonhyll/simonhyll"
+  },
+  "bugs": {
+    "url": "https://github.com/simonhyll/simonhyll/issues"
+  },
+  "homepage": "https://simon.hyll.nu",
+  "keywords": [
+    "simon",
+    "hyll",
+    "simonhyll"
+  ],
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "engines": {
+    "node": ">=18.19.1"
+  },
+  "packageManager": "pnpm@9.2.0",
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/starlight": "^0.24.0",
+    "@lorenzo_lewis/starlight-utils": "^0.1.1",
+    "@tauri-apps/cli": "2.0.0-beta.20",
+    "astro": "^4.8.6",
+    "sharp": "^0.32.5",
+    "typescript": "^5.4.5"
+  }
+}

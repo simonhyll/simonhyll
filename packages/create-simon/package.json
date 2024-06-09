@@ -1,0 +1,51 @@
+{
+  "name": "create-simon",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "App creator.",
+  "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonhyll/simonhyll"
+  },
+  "bugs": {
+    "url": "https://github.com/simonhyll/simonhyll/issues"
+  },
+  "homepage": "https://simon.hyll.nu",
+  "keywords": [
+    "simon",
+    "hyll",
+    "simonhyll"
+  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "ava",
+    "universal": "napi universal",
+    "version": "napi version"
+  },
+  "packageManager": "pnpm@9.2.0",
+  "engines": {
+    "node": ">=18.19.1"
+  },
+  "ava": {
+    "timeout": "3m"
+  },
+  "napi": {
+    "name": "create-simon",
+    "triples": {
+      "additional": [
+        "x86_64-unknown-linux-musl",
+        "universal-apple-darwin"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.3",
+    "ava": "^6.0.1"
+  }
+}

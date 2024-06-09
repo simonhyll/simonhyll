@@ -1,0 +1,36 @@
+{
+  "name": "create-simon-linux-x64-gnu",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "App creator.",
+  "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonhyll/simonhyll"
+  },
+  "bugs": {
+    "url": "https://github.com/simonhyll/simonhyll/issues"
+  },
+  "homepage": "https://simon.hyll.nu",
+  "keywords": [
+    "simon",
+    "hyll",
+    "simonhyll"
+  ],
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "create-simon.linux-x64-gnu.node",
+  "files": [
+    "create-simon.linux-x64-gnu.node"
+  ],
+  "engines": {
+    "node": ">= 10"
+  },
+  "libc": [
+    "glibc"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "create-simon-win32-x64-msvc",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "App creator.",
+  "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonhyll/simonhyll"
+  },
+  "bugs": {
+    "url": "https://github.com/simonhyll/simonhyll/issues"
+  },
+  "homepage": "https://simon.hyll.nu",
+  "keywords": [
+    "simon",
+    "hyll",
+    "simonhyll"
+  ],
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "create-simon.win32-x64-msvc.node",
+  "files": [
+    "create-simon.win32-x64-msvc.node"
+  ],
+  "engines": {
+    "node": ">= 10"
+  }
+}

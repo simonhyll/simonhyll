@@ -1,0 +1,30 @@
+{
+  "name": "create-simon-darwin-universal",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "App creator.",
+  "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonhyll/simonhyll"
+  },
+  "bugs": {
+    "url": "https://github.com/simonhyll/simonhyll/issues"
+  },
+  "homepage": "https://simon.hyll.nu",
+  "keywords": [
+    "simon",
+    "hyll",
+    "simonhyll"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "main": "create-simon.darwin-universal.node",
+  "files": [
+    "create-simon.darwin-universal.node"
+  ],
+  "engines": {
+    "node": ">= 10"
+  }
+}
