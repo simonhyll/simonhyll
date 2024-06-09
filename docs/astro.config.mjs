@@ -24,6 +24,7 @@ export default defineConfig({
           },
         },
       ],
+      customCss: ['./src/styles/main.scss'],
       components: {
         ThemeSelect: './src/components/overrides/ThemeSelect.astro',
       },
