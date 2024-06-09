@@ -22,7 +22,7 @@
     "@astrojs/starlight": "^0.24.0",
     "@tauri-apps/cli": "2.0.0-beta.20",
     "astro": "^4.8.6",
-    "sharp": "^0.32.5",
+    "sharp": "^0.33.4",
     "typescript": "^5.4.5"
   }
 }
