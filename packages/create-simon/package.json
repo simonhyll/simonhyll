@@ -1,6 +1,6 @@
 {
   "name": "create-simon",
-  "version": "0.1.0",
+  "version": "0.1.1-alpha",
   "license": "Apache-2.0",
   "description": "App creator.",
   "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
@@ -18,6 +18,9 @@
     "simonhyll"
   ],
   "main": "index.js",
+  "bin": {
+    "create-simon": "./main.js"
+  },
   "types": "index.d.ts",
   "scripts": {
     "artifacts": "napi artifacts",
