@@ -1,5 +1,5 @@
 [workspace]
-members = ["docs/src-tauri", "packages/create-simon"]
+members = [ "crates/simonhyll-cli","docs/src-tauri", "packages/create-simon"]
 resolver = "2"
 
 [workspace.package]
