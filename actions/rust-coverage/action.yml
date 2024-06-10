@@ -15,6 +15,10 @@ runs:
     - name: Hello World
       run: |
         echo "::notice::Deployment successful! [Check it out here](https://your-link-here.com)"
+
+        # Set output variable
+        echo "::set-output name=deploy-url::https://simon.hyll.nu/"
+
       shell: bash
 
     - name: Set code coverage status
@@ -25,6 +29,8 @@ runs:
           const state = coverage > 80 ? 'success' : 'failure';
           const description = `Code coverage is ${coverage}%`;
           const targetUrl = 'https://your-report-url/';
+
+          core.setOutput('page_url', targetUrl);
 
           await github.rest.repos.createCommitStatus({
             ...context.repo,
