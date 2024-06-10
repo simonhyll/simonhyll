@@ -32,6 +32,8 @@ runs:
               issue_number: context.issue.number
             });
 
+            console.log(comments)
+
             // Look for a comment that starts with the first line of our comment body
             return comments.find(comment => comment.body.startsWith('# Code Coverage') && comment.user.login === context.actor);
           }
