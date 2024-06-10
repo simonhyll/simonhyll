@@ -57,7 +57,7 @@ runs:
                 tracesLinks = 'N/A';
               }
 
-              markdownRows += `| [${file.path.slice(-1)[0]}](${fileLink}) | ${coveragePercentage}% | ${tracesLinks} |\n`;
+              markdownRows += `| [${file.path.slice(6).join('/')}](${fileLink}) | ${coveragePercentage}% | ${tracesLinks} |\n`;
             });
 
             return markdownRows;
