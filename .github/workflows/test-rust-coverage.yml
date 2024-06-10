@@ -16,3 +16,5 @@ jobs:
           lfs: true
           ref: ${{ github.head_ref }}
       - uses: ./actions/rust-coverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
