@@ -27,7 +27,7 @@ runs:
       id: parse_coverage
       shell: bash
       run: |
-        coverage=$(grep -o 'line-rate="[^"]*"' tarpaulin-report.xml | sed 's/line-rate="//' | sed 's/"//')
+        coverage=$(grep -oPm1 "(?<=<coverage\ line-rate=\")\d+\.\d+(?=\")" cobertura.xml)
         echo "COVERAGE=$coverage" >> $GITHUB_ENV
 
     - name: Set code coverage status
