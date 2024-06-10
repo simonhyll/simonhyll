@@ -12,18 +12,37 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - uses: dtolnay/rust-toolchain@stable
+
+    - name: Install cargo-tarpaulin
+      shell: bash
+      run: cargo install cargo-tarpaulin --locked
+
+    - name: Run tests with coverage
+      id: coverage
+      shell: bash
+      run: cargo tarpaulin --out Xml
+
+    - name: Parse coverage results
+      id: parse_coverage
+      shell: bash
+      run: |
+        coverage=$(grep -o 'line-rate="[^"]*"' tarpaulin-report.xml | sed 's/line-rate="//' | sed 's/"//')
+        echo "COVERAGE=$coverage" >> $GITHUB_ENV
+
     - name: Set code coverage status
       uses: actions/github-script@v7
       with:
         script: |
+          const coverage = process.env.COVERAGE;
           const commentBody = `# Code Coverage
           |File|Coverage|Lines|
           |:--|:--|:--|
-          |[crates/file/one.rs](https://github.com)|50%|15|
+          |[crates/file/one.rs](https://github.com)|${coverage}|15|
           # Audit
           |Dependency|Level|
           |:--|:--|
-          |tokio|Low|`;
+          |tokio|Critical|`;
 
           async function findExistingComment() {
             const { data: comments } = await github.rest.issues.listComments({
