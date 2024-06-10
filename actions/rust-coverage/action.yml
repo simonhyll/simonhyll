@@ -21,7 +21,7 @@ runs:
     - name: Run tests with coverage
       id: coverage
       shell: bash
-      run: cargo tarpaulin --out Xml
+      run: cargo tarpaulin --out Xml -p simonhyll-cli
 
     - name: Parse coverage results
       id: parse_coverage
