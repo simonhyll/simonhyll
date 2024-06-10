@@ -1,0 +1,17 @@
+name: RustCoverage
+description: Check for coverage and report the status as a comment on the PR
+inputs:
+  dashboard:
+    description: Whether a dashboard should be created
+    required: true
+    default: 'false'
+  comment:
+    description: Whether a comment should be created
+    required: true
+    default: 'true'
+runs:
+  using: 'composite'
+  steps:
+    - name: Hello World
+      run: echo HELLO
+      shell: bash
