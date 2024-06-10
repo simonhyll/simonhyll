@@ -30,11 +30,10 @@ runs:
           const fs = require('fs');
           const report = JSON.parse(fs.readFileSync('./tarpaulin-report.json'));
           console.log(report);
-          let coverage = '';
           const commentBody = `# Code Coverage
           |File|Coverage|Lines|
           |:--|:--|:--|
-          |[crates/file/one.rs](https://github.com)|${coverage}|15|
+          |[crates/file/one.rs](https://github.com)|${report.coverage}|15|
           # Audit
           |Dependency|Level|
           |:--|:--|
