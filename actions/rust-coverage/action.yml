@@ -9,6 +9,9 @@ inputs:
     description: Whether a comment should be created
     required: true
     default: 'true'
+outputs:
+  page_url:
+    description: 'URL to deployed GitHub Pages'
 runs:
   using: 'composite'
   steps:
