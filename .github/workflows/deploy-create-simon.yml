@@ -1,15 +1,16 @@
 name: 'Deploy: create-simon'
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/deploy-create-simon.yml
-      - packages/create-simon/**
-    tags-ignore:
-      - '**'
-  pull_request:
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - .github/workflows/deploy-create-simon.yml
+  #     - packages/create-simon/**
+  #   tags-ignore:
+  #     - '**'
+  # pull_request:
 
 env:
   DEBUG: napi:*

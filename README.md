@@ -36,6 +36,7 @@
     <td>
 
 [![Deploy: create-simon](https://github.com/simonhyll/simonhyll/actions/workflows/deploy-create-simon.yml/badge.svg)](https://github.com/simonhyll/simonhyll/actions/workflows/deploy-create-simon.yml)
+
 </td>
 
   </tr>
