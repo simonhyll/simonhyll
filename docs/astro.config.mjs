@@ -1,6 +1,10 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightUtils from '@lorenzo_lewis/starlight-utils';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+console.log(process.env.NODE_ENV);
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,11 +14,21 @@ export default defineConfig({
       title: 'Simon Hyll',
       social: {
         rss: 'https://simon.hyll.nu/feed.xml',
-        github: 'https://github.com/sponsors/simonhyll',
+        github: 'https://github.com/simonhyll',
         linkedin: 'https://linkedin.com/in/simonhyll',
         discord: 'https://discord.com/invite/tauri',
         stackOverflow: 'https://stackoverflow.com/users/5614602/simon-hyll',
         youtube: 'https://youtube.com/@hyllsimon',
+      },
+      lastUpdated: true,
+      editLink: {
+        baseUrl:
+          process.env.NODE_ENV === 'development'
+            ? `vscode://file/${path.dirname(fileURLToPath(import.meta.url))}`
+            : 'https://github.com/simonhyll/simonhyll/edit/main/docs/',
+      },
+      expressiveCode: {
+        styleOverrides: { borderRadius: '0.5rem' },
       },
       head: [
         {

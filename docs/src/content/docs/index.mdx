@@ -13,14 +13,11 @@ hero:
       variant: primary
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
+import CreateSimon from '@fragments/create-simon.mdx';
 
 <Card title="Create a Project" icon="pencil">
-
-```sh frame=none
-pnpm create simon
-```
-
+  <CreateSimon />
 </Card>
 <CardGrid>
   <Card title="Update content" icon="pencil">
