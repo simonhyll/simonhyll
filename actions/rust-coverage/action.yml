@@ -31,7 +31,7 @@ runs:
           const report = JSON.parse(fs.readFileSync('./tarpaulin-report.json'));
 
           const generateGithubLink = (pathArray) => {
-            const repoBaseUrl = 'https://github.com/your-username/your-repo/blob/main'; // Update with your repo URL
+            const repoBaseUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main`; // Update with your repo URL
             const filePath = pathArray.slice(6).join('/'); // Adjust the slicing based on the structure of your path
             return `${repoBaseUrl}/${filePath}`;
           };

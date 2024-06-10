@@ -75,7 +75,6 @@
   <img alt="Svelte" src="https://img.shields.io/badge/Svelte-black?logo=svelte">
       </td>
       <td align="center">
-  <img alt="Rust" src="https://img.shields.io/badge/Rust-333?logo=rust&logoColor=f67529">
   <img alt="Java" src="https://img.shields.io/badge/Java-black?logo=oracle">
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-black?logo=kotlin">
   <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-black?logo=jupyter">
@@ -84,6 +83,7 @@
   <img alt="MDX" src="https://img.shields.io/badge/MDX-black?logo=mdx">
       </td>
       <td align="center">
+  <img alt="Rust" src="https://img.shields.io/badge/Rust-333?logo=rust&logoColor=f67529">
   <img alt="Typescript" src="https://img.shields.io/badge/TypeScript-black?logo=typescript">
   <img alt="Javascript" src="https://img.shields.io/badge/JavaScript-black?logo=javascript">
   <img alt="Node.js" src="https://img.shields.io/badge/Node.js-black?logo=node.js">
