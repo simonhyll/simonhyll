@@ -20,7 +20,6 @@ runs:
       uses: actions/github-script@v6
       with:
         script: |
-          const { context } = require('@actions/github');
           const coverage = 90;
           const state = coverage > 80 ? 'success' : 'failure';
           const description = `Code coverage is ${coverage}%`;
