@@ -16,8 +16,6 @@ runs:
       uses: actions/github-script@v7
       with:
         script: |
-          const github = require('@actions/github');
-          const context = github.context;
           const commentBody = `# Code Coverage
           |File|Coverage|Lines|
           |:--|:--|:--|
