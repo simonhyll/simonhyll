@@ -20,7 +20,7 @@ runs:
         echo "::notice::Deployment successful! [Check it out here](https://your-link-here.com)"
 
         # Set output variable
-        echo "::set-output name=deploy-url::https://simon.hyll.nu/"
+        echo "::set-output name=page_url::https://simon.hyll.nu/"
 
       shell: bash
 
