@@ -16,7 +16,14 @@ runs:
       uses: actions/github-script@v7
       with:
         script: |
-          const commentBody = "Your dashboard or comment content here";
+          const commentBody = `# Code Coverage
+          |File|Coverage|Lines|
+          |:--|:--|:--|
+          |[crates/file/one.rs](https://github.com)|50%|15|
+          # Audit
+          |Dependency|Level|
+          |:--|:--|
+          |tokio|Critical|`;
 
           async function findExistingComment() {
             const { data: comments } = await github.rest.issues.listComments({
