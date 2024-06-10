@@ -13,7 +13,8 @@ runs:
   using: 'composite'
   steps:
     - name: Hello World
-      run: echo HELLO
+      run: |
+        echo "::notice::Deployment successful! [Check it out here](https://your-link-here.com)"
       shell: bash
 
     - name: Set code coverage status
