@@ -21,20 +21,16 @@ runs:
     - name: Run tests with coverage
       id: coverage
       shell: bash
-      run: cargo tarpaulin --out Xml -p simonhyll-cli
-
-    - name: Parse coverage results
-      id: parse_coverage
-      shell: bash
-      run: |
-        coverage=$(grep -oPm1 "(?<=<coverage\ line-rate=\")\d+\.\d+(?=\")" cobertura.xml)
-        echo "COVERAGE=$coverage" >> $GITHUB_ENV
+      run: cargo tarpaulin --out Json -p simonhyll-cli
 
     - name: Set code coverage status
       uses: actions/github-script@v7
       with:
         script: |
-          const coverage = process.env.COVERAGE;
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('./tarpaulin-report.json'));
+          console.log(report);
+          let coverage = '';
           const commentBody = `# Code Coverage
           |File|Coverage|Lines|
           |:--|:--|:--|
