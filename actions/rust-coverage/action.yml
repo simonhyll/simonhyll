@@ -15,3 +15,22 @@ runs:
     - name: Hello World
       run: echo HELLO
       shell: bash
+
+    - name: Set code coverage status
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const { context } = require('@actions/github');
+          const coverage = 90;
+          const state = coverage > 80 ? 'success' : 'failure';
+          const description = `Code coverage is ${coverage}%`;
+          const targetUrl = 'https://your-report-url/';
+
+          await github.repos.createCommitStatus({
+            ...context.repo,
+            sha: context.sha,
+            state: state,
+            context: 'code-coverage',
+            description: description,
+            target_url: targetUrl
+          });
