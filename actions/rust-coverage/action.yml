@@ -23,7 +23,7 @@ runs:
           # Audit
           |Dependency|Level|
           |:--|:--|
-          |tokio|Critical|`;
+          |tokio|Low|`;
 
           async function findExistingComment() {
             const { data: comments } = await github.rest.issues.listComments({
