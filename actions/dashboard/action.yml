@@ -1,5 +1,5 @@
-name: RustCoverage
-description: Check for coverage and report the status as a comment on the PR
+name: Dashboard
+description: Takes the output from other actions and creates a dashboard from it
 inputs:
   dashboard:
     description: Whether a dashboard should be created
@@ -9,13 +9,26 @@ inputs:
     description: Whether a comment should be created
     required: true
     default: 'true'
+outputs:
+  page_url:
+    description: 'URL to deployed GitHub Pages'
 runs:
   using: 'composite'
   steps:
+    - name: Hello World
+      run: |
+        echo "::notice::Deployment successful! [Check it out here](https://your-link-here.com)"
+
+        # Set output variable
+        echo "::set-output name=page_url::https://simon.hyll.nu/"
+
+      shell: bash
+
     - name: Set code coverage status
       uses: actions/github-script@v7
       with:
         script: |
+
           const commentBody = "Your dashboard or comment content here";
 
           async function findExistingComment() {
