@@ -2,5 +2,9 @@
   "terminal.integrated.env.linux": {
     "GTK_PATH": null,
     "GIO_MODULE_DIR": null
-  }
+  },
+  "rust-analyzer.server.extraEnv": {
+    "CARGO_TARGET_DIR": "target/analyzer"
+  },
+  "rust-analyzer.check.extraArgs": ["--target-dir=target/analyzer"]
 }

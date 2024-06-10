@@ -1,10 +1,10 @@
 [workspace]
-members = [ "crates/simonhyll-cli","docs/src-tauri", "packages/create-simon"]
+members = ["crates/simonhyll-cli", "docs/src-tauri", "packages/create-simon"]
 resolver = "2"
 
 [workspace.package]
 edition = "2021"
-rust-version = "1.80"
+rust-version = "1.78"
 
 [profile.dev]
 incremental = true # Compile your binary in smaller steps.
