@@ -31,6 +31,7 @@ runs:
               repo: context.repo.repo,
               issue_number: context.issue.number
             });
+
             // Look for a comment that starts with the first line of our comment body
             return comments.find(comment => comment.body.startsWith('# Code Coverage') && comment.user.type === 'Bot');
           }
