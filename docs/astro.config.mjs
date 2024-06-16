@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import starlightUtils from '@lorenzo_lewis/starlight-utils';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import serviceWorker from 'astrojs-service-worker';
 import starlightGlossary from '@simonhyll/starlight-glossary';
 import starlightEnhanced from '@simonhyll/starlight-enhanced';
 
@@ -100,6 +101,28 @@ export default defineConfig({
           ],
         },
       ],
+    }),
+    serviceWorker({
+      workbox: {
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        inlineWorkboxRuntime: true,
+        skipWaiting: true,
+        globIgnores: [],
+        globPatterns: ['**/*.js', '**/*.css'],
+        runtimeCaching: [
+          {
+            urlPattern: new RegExp('.*'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'runtime-assets',
+              expiration: {
+                maxAgeSeconds: 30 * 60, // 30 minutes
+              },
+            },
+          },
+        ],
+      },
     }),
   ],
 });
