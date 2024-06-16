@@ -37,6 +37,7 @@
     "@simonhyll/starlight-enhanced": "workspace:*",
     "@simonhyll/starlight-glossary": "workspace:*",
     "@tauri-apps/cli": "2.0.0-beta.20",
+    "@types/three": "^0.165.0",
     "astro": "^4.8.6",
     "sass": "^1.77.4",
     "sharp": "^0.32.6",
