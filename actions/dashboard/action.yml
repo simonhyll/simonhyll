@@ -1,0 +1,58 @@
+name: Dashboard
+description: Takes the output from other actions and creates a dashboard from it
+inputs:
+  dashboard:
+    description: Whether a dashboard should be created
+    required: true
+    default: 'false'
+  comment:
+    description: Whether a comment should be created
+    required: true
+    default: 'true'
+outputs:
+  page_url:
+    description: 'URL to deployed GitHub Pages'
+runs:
+  using: 'composite'
+  steps:
+    - name: Set code coverage status
+      uses: actions/github-script@v7
+      with:
+        script: |
+
+          const commentBody = "Your dashboard or comment content here";
+
+          async function findExistingComment() {
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number
+            });
+
+            return comments.find(comment => comment.user.login === context.actor);
+          }
+
+          async function createOrUpdateComment() {
+            const existingComment = await findExistingComment();
+
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody
+              });
+            }
+          }
+
+          createOrUpdateComment().catch(error => {
+            console.error(error);
+            process.exit(1);
+          });

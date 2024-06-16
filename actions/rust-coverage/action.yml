@@ -12,6 +12,93 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Hello World
-      run: echo HELLO
+    - uses: dtolnay/rust-toolchain@stable
+
+    - name: Install cargo-tarpaulin
       shell: bash
+      run: cargo install cargo-tarpaulin --locked
+
+    - name: Run tests with coverage
+      id: coverage
+      shell: bash
+      run: cargo tarpaulin --out Json -p simonhyll-cli
+
+    - name: Set code coverage status
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('./tarpaulin-report.json'));
+
+          const generateGithubLink = (pathArray) => {
+            const repoBaseUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main`; // Update with your repo URL
+            const filePath = pathArray.slice(6).join('/'); // Adjust the slicing based on the structure of your path
+            return `${repoBaseUrl}/${filePath}`;
+          };
+
+          const calculateCoveragePercentage = (covered, coverable) => {
+            return coverable > 0 ? ((covered / coverable) * 100).toFixed(1) : '0.0';
+          };
+
+          const generateMarkdownTableRows = (files) => {
+            let markdownRows = '| File | Coverage | Traces |\n| :-- | :-- | :-- |\n';
+
+            files.forEach(file => {
+              const fileLink = generateGithubLink(file.path);
+              const coveragePercentage = calculateCoveragePercentage(file.covered, file.coverable);
+
+              let tracesLinks = '';
+              if (file.traces && file.traces.length > 0) {
+                tracesLinks = file.traces.map(trace => {
+                  const line = trace.line;
+                  return `[Line ${line}](${fileLink}#L${line})`;
+                }).join(', ');
+              } else {
+                tracesLinks = 'N/A';
+              }
+
+              markdownRows += `| [${file.path.slice(6).join('/')}](${fileLink}) | ${coveragePercentage}% | ${tracesLinks} |\n`;
+            });
+
+            return markdownRows;
+          };
+
+          const markdownTable = generateMarkdownTableRows(report.files);
+          const commentBody = `# Code Coverage: ${report.coverage}%
+          ${markdownTable}`;
+
+          async function findExistingComment() {
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number
+            });
+
+            // Look for a comment that starts with the first line of our comment body
+            return comments.find(comment => comment.body.startsWith('# Code Coverage:') && comment.user.type === 'Bot');
+          }
+
+          async function createOrUpdateComment() {
+            const existingComment = await findExistingComment();
+
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody
+              });
+            }
+          }
+
+          createOrUpdateComment().catch(error => {
+            console.error(error);
+            process.exit(1);
+          });
