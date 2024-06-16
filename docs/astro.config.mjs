@@ -109,7 +109,7 @@ export default defineConfig({
         inlineWorkboxRuntime: true,
         skipWaiting: true,
         globIgnores: [],
-        globPatterns: ['**/*.js', '**/*.css'],
+        globPatterns: ['**/*.js', '**/*.css', '**/*.html'],
         runtimeCaching: [
           {
             urlPattern: new RegExp('.*'),
