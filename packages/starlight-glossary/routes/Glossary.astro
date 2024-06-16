@@ -1,0 +1,40 @@
+---
+import config from 'virtual:starlight-glossary/config';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+import MarkdownContent from '@astrojs/starlight/components/MarkdownContent.astro';
+
+import x from '../libs/content';
+
+export const prerender = true;
+
+const { entries, nextLink, prevLink } = Astro.props;
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { url: 'test' },
+      props: {
+        title: 'Semver',
+        text: `
+
+# This is some content
+
+Using Markdown formatting
+
+|A|B|
+|:--|:--|
+|x|y|
+    `,
+      },
+    },
+  ];
+}
+
+const { url } = Astro.params;
+const { title, text } = Astro.props;
+---
+
+<StarlightPage frontmatter={{ title }}>
+  <MarkdownContent>{text}<MarkdownContent /> </MarkdownContent>
+</StarlightPage>

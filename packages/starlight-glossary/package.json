@@ -1,0 +1,43 @@
+{
+  "name": "@simonhyll/starlight-glossary",
+  "version": "0.1.0-alpha",
+  "license": "Apache-2.0",
+  "description": "A plugin for Starlight for creating glossaries",
+  "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonhyll/simonhyll"
+  },
+  "bugs": {
+    "url": "https://github.com/simonhyll/simonhyll/issues"
+  },
+  "homepage": "https://simon.hyll.nu",
+  "keywords": [
+    "simon",
+    "hyll",
+    "simonhyll",
+    "starlight"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./components": "./components/index.ts",
+    "./routes/Glossary.astro": "./routes/Glossary.astro"
+  },
+  "scripts": {},
+  "packageManager": "pnpm@9.2.0",
+  "engines": {
+    "node": ">=18.19.1"
+  },
+  "peerDependencies": {
+    "@astrojs/starlight": ">=0.22.1",
+    "astro": ">=4.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/starlight": "^0.24.1",
+    "astro": "^4.8.6"
+  },
+  "dependencies": {
+    "astro-integration-kit": "^0.13.3"
+  }
+}

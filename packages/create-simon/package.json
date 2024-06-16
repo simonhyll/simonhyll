@@ -2,7 +2,7 @@
   "name": "create-simon",
   "version": "0.1.1-alpha",
   "license": "Apache-2.0",
-  "description": "App creator.",
+  "description": "Another app creator CLI tool",
   "author": "Simon Hyll <hyllsimon@gmail.com> (https://simon.hyll.nu)",
   "repository": {
     "type": "git",

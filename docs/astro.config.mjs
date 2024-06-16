@@ -3,6 +3,8 @@ import starlight from '@astrojs/starlight';
 import starlightUtils from '@lorenzo_lewis/starlight-utils';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import starlightGlossary from '@simonhyll/starlight-glossary';
+import starlightEnhanced from '@simonhyll/starlight-enhanced';
 
 // https://astro.build/config
 export default defineConfig({
@@ -37,13 +39,37 @@ export default defineConfig({
         },
       ],
       customCss: ['./src/styles/main.scss'],
-      components: {
-        ThemeSelect: './src/components/overrides/ThemeSelect.astro',
-      },
       plugins: [
         starlightUtils({
           multiSidebar: {
             switcherStyle: 'horizontalList',
+          },
+        }),
+        starlightGlossary({}),
+        starlightEnhanced({
+          header: {
+            links: [
+              {
+                title: 'Guides',
+                value: '/start/',
+                transfer: true,
+              },
+              {
+                title: 'References',
+                value: '/reference/acl/capability/',
+                transfer: true,
+              },
+              {
+                title: 'Blog',
+                value: '/blog/',
+                transfer: false,
+              },
+              {
+                title: 'Releases',
+                value: '/release/',
+                transfer: true,
+              },
+            ],
           },
         }),
       ],
@@ -56,7 +82,7 @@ export default defineConfig({
         {
           label: 'Handbook',
           collapsed: true,
-          autogenerate: { directory: 'reference' },
+          autogenerate: { directory: 'handbook' },
         },
         {
           label: 'Blog',
