@@ -4,8 +4,6 @@ import starlightUtils from '@lorenzo_lewis/starlight-utils';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-console.log(process.env.NODE_ENV);
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://simon.hyll.nu',
