@@ -64,7 +64,7 @@ runs:
           };
 
           const markdownTable = generateMarkdownTableRows(report.files);
-          const commentBody = `# Code Coverage ${report.coverage}%
+          const commentBody = `# Code Coverage: ${report.coverage}%
           ${markdownTable}`;
 
           async function findExistingComment() {
@@ -75,7 +75,7 @@ runs:
             });
 
             // Look for a comment that starts with the first line of our comment body
-            return comments.find(comment => comment.body.startsWith('# Code Coverage') && comment.user.type === 'Bot');
+            return comments.find(comment => comment.body.startsWith('# Code Coverage:') && comment.user.type === 'Bot');
           }
 
           async function createOrUpdateComment() {
