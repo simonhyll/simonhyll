@@ -5,7 +5,7 @@ template: splash
 hero:
   tagline: 'Simon says: make something amazing!'
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/icon.png
   actions:
     - text: Read More
       link: /project/start/
@@ -16,9 +16,11 @@ hero:
 import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
 import CreateSimon from '@fragments/create-simon.mdx';
 
+<div class="create-simon">
 <Card title="Create a Project" icon="pencil">
   <CreateSimon />
 </Card>
+</div>
 <CardGrid>
   <Card title="Update content" icon="pencil">
     Edit `src/content/docs/index.mdx` to see this page change.
