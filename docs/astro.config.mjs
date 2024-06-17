@@ -16,7 +16,7 @@ export default defineConfig({
       logo: {
         src: '@assets/me.jpg',
       },
-      favicon: './src/assets/icon.png',
+      favicon: '/favicon.png',
       social: {
         rss: 'https://simon.hyll.nu/feed.xml',
         github: 'https://github.com/simonhyll',
