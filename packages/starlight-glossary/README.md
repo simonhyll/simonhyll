@@ -10,10 +10,19 @@ A plugin for Starlight for creating glossaries
 
 Simply add the package then register it in Starlight.
 
-```sh
+```sh frame=none
 pnpm add @simonhyll/starlight-glossary
 ```
 
 ```js
-import glossary from '@simonhyll/starlight-glossary';
+// astro.config.mjs
+import starlightGlossary from '@simonhyll/starlight-glossary';
+
+// https://astro.build/config
+export default defineConfig({
+  integrations: [
+    starlight({
+        plugins: [starlightGlossary({})]
+    })
+})
 ```

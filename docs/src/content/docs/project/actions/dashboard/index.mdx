@@ -1,0 +1,13 @@
+---
+title: dashboard
+sidebar:
+  label: Overview
+  badge:
+    text: WIP
+---
+
+An action that allows you to chain together other actions in order to create a dashboard comment on PR's or as an issue on a repository.
+
+The way it works is pretty simple, other actions get ran that have a markdown formatted string as output and it gets added to the dashboard contents.
+
+In order to create actions for the dashboard you add another workflow that triggers in the issue being updated, which runs the action, parses which checkboxes are marked then dispatches workflow run events. So for each action you want to add you'll need to add a workflow for each of them.

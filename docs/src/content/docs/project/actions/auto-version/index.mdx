@@ -1,0 +1,30 @@
+---
+title: auto-version
+sidebar:
+  label: Overview
+  badge:
+    text: WIP
+---
+
+This is an opinionated way of handling your Git usage to enable powerful tooling for doing as much automated project management as possible. It is **not** made to fit into your existing workflow or adapt to it, if you don't handle Git the way I want you to then this will not work well for you. You have been warned.
+
+## Version
+
+Determining the necessary version bump is as simple as going down this list, once you say yes you stop and that's the version you need to bump:
+
+- Major:
+  - Did you change/delete the function signature of any public functions?
+- Minor:
+  - Did you add new public functions?
+- Patch:
+  - Did all public function signatures remain the same?
+
+## Changelog
+
+The changelogs get generated based on git commit messages.
+
+## Deploy
+
+Deploying projects happens by triggering workflows on a schedule. Deployments are handled using different channels.
+
+- `nightly`: Gets released at 00:00 every day. The version number is determined to be the highest currently available suffixed with `-nightly`.

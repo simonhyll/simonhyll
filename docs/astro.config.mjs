@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightUtils from '@lorenzo_lewis/starlight-utils';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import serviceWorker from 'astrojs-service-worker';
+import starlightUtils from '@lorenzo_lewis/starlight-utils';
 import starlightGlossary from '@simonhyll/starlight-glossary';
 import starlightEnhanced from '@simonhyll/starlight-enhanced';
 
@@ -13,6 +13,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Simon Hyll',
+      logo: {
+        src: '@assets/me.jpg',
+      },
+      favicon: './src/assets/icon.png',
       social: {
         rss: 'https://simon.hyll.nu/feed.xml',
         github: 'https://github.com/simonhyll',

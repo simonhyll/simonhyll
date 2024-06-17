@@ -10,6 +10,6 @@ CLI for bootstrapping new projects
 
 This project is an interactive prompt for creating new projects.
 
-```sh
+```sh frame=none
 pnpm create simon
 ```
