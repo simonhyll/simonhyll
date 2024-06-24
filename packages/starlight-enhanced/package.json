@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@astrojs/starlight": "^0.24.1",
-    "astro": "^4.8.6"
+    "astro": "^4.11.0"
   },
   "dependencies": {
     "@lorenzo_lewis/starlight-utils": "^0.1.1",
