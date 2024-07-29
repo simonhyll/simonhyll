@@ -38,6 +38,6 @@
     "astro": "^4.8.6"
   },
   "dependencies": {
-    "astro-integration-kit": "^0.13.3"
+    "astro-integration-kit": "^0.16.0"
   }
 }
