@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@astrojs/starlight": "^0.24.1",
-    "astro": "^4.8.6"
+    "astro": "^4.13.3"
   },
   "dependencies": {
     "astro-integration-kit": "^0.13.3"
