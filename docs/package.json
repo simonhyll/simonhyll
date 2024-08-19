@@ -32,7 +32,7 @@
   "packageManager": "pnpm@9.2.0",
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/starlight": "^0.24.1",
+    "@astrojs/starlight": "^0.26.1",
     "@lorenzo_lewis/starlight-utils": "^0.1.1",
     "@simonhyll/starlight-enhanced": "workspace:*",
     "@simonhyll/starlight-glossary": "workspace:*",
