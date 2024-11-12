@@ -161,7 +161,7 @@ export default defineConfig({
             icon: 'document',
             items: [],
           }]),
-        starlightGlossary({}),
+        // starlightGlossary({}),
         starlightEnhanced({
           header: {
             links: [
