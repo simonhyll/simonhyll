@@ -8,7 +8,7 @@ hero:
     file: ../../assets/icon.png
   actions:
     - text: Read More
-      link: /project/start/
+      link: /projects/start/
       icon: right-arrow
       variant: primary
 head:
@@ -20,25 +20,48 @@ import HeroBackground from "@components/HeroBackground.astro";
 
 <HeroBackground />
 
-import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card, CardGrid, Tabs, TabItem, LinkButton } from '@astrojs/starlight/components';
 import CreateSimon from '@fragments/create-simon.mdx';
+import { getCollection } from 'astro:content';
+
+export const articles = (await getCollection('docs')).filter(val=>val.data.title !== 'Overview' && val.slug !== 'index' && val.data.sidebar.label !== 'Overview').filter(val=>val.data.sidebar.badge?.text !== 'Planned' && val.data.sidebar.badge?.text !== 'WIP').sort((a, b) => a.data.sidebar.order - b.data.sidebar.order);
+
+export const wipArticles = (await getCollection('docs')).filter(val=>val.data.title !== 'Overview' && val.slug !== 'index' && val.data.sidebar.label !== 'Overview').filter(val=>val.data.sidebar.badge?.text === 'WIP').sort((a, b) => a.data.sidebar.order - b.data.sidebar.order);
 
 <div class="create-simon">
-<Card title="Create a Project" icon="pencil">
+<Card title="Create a Project">
   <CreateSimon />
 </Card>
 </div>
+
+
+{ articles.length > 0 ?
+<div>
+<br/><h2>Featured</h2><br/>
 <CardGrid>
-  <Card title="Update content" icon="pencil">
-    Edit `src/content/docs/index.mdx` to see this page change.
+{ articles.map(article=>(
+  <a href={article.slug} class="lp-card-link">
+  <Card title={article.data.title}>
+  {article.data.description}
   </Card>
-  <Card title="Add new content" icon="add-document">
-    Add Markdown or MDX files to `src/content/docs` to create new pages.
-  </Card>
-  <Card title="Configure your site" icon="setting">
-    Edit your `sidebar` and other config in `astro.config.mjs`.
-  </Card>
-  <Card title="Read the docs" icon="open-book">
-    Learn more in [the Starlight Docs](https://starlight.astro.build/).
-  </Card>
+  </a>
+)) }
 </CardGrid>
+</div> : null
+}
+
+{ wipArticles.length > 0 ?
+<div>
+<br/><h2>Work In Progress</h2><br/>
+
+<CardGrid>
+{ wipArticles.map(article=>(
+  <a href={article.slug} class="lp-card-link">
+  <Card title={article.data.title}>
+  {article.data.description}
+  </Card>
+  </a>
+)) }
+</CardGrid>
+</div> : null
+}

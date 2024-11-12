@@ -1,11 +1,22 @@
 import { AstroError } from 'astro/errors';
 import { z } from 'astro/zod';
 
-export const configSchema = z.object({}).optional();
+export const configSchema = z.object({
+  header: z.object({
+    links: z.array(
+      z.object({
+        title: z.string(),
+        value: z.string(),
+        transfer: z.boolean(),
+      })
+    ),
+  }),
+});
 
 export type StarlightEnhancedConfig = z.infer<typeof configSchema>;
 
 export function validateConfig(userConfig: unknown): StarlightEnhancedConfig {
+  console.log('WOOT: ', userConfig);
   const config = configSchema.safeParse(userConfig);
 
   if (!config.success) {

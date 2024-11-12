@@ -5,32 +5,9 @@ import Search from '@astrojs/starlight/components/Search.astro';
 import SiteTitle from './SiteTitle.astro';
 import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
 import ThemeSelect from './ThemeSelect.astro';
+import config from 'virtual:@simonhyll/starlight-enhanced/config'
 
 const curLocale = Astro.props.locale;
-
-type Link = {
-	title: string;
-	value: string;
-	transfer: boolean;
-};
-
-const links: Link[] = [
-	{
-		title: 'Projects',
-		value: '/project/start/',
-		transfer: true,
-	},
-	{
-		title: 'Handbook',
-		value: '/handbook/best-practices/',
-		transfer: true,
-	},
-	{
-		title: 'Blog',
-		value: '/blog/',
-		transfer: false,
-	},
-];
 ---
 
 <div class="header sl-flex" id="site-header">
@@ -43,7 +20,7 @@ const links: Link[] = [
 	<div class="sl-hidden md:sl-flex right-group">
 		<div class="desktop">
 			{
-				links.map((link) => (
+				config.header.links.map((link) => (
 					<a href={link.transfer && curLocale ? `/${curLocale}${link.value}` : link.value}>
 						{link.title}
 					</a>

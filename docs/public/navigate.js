@@ -25,7 +25,7 @@ async function chapterNavigation() {
         e.preventDefault();
         let nextButton = document.querySelector('a[rel="next"]');
         if (!nextButton && window.location.pathname === '/')
-          nextButton = { href: '/project/start/' };
+          nextButton = { href: '/projects/start/' };
 
         if (nextButton) {
           window.location.href = nextButton.href;
@@ -36,8 +36,26 @@ async function chapterNavigation() {
   });
 }
 
+async function interactiveCheckboxes() {
+  document.querySelectorAll('.contains-task-list .task-list-item').forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      event.stopPropagation();
+      if (event.target.tagName !== 'INPUT') {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        if (checkbox.hasAttribute('checked')) {
+          checkbox.removeAttribute('checked');
+        } else {
+          checkbox.setAttribute('checked', '');
+        }
+        checkbox.dispatchEvent(new Event('change'));
+      }
+    });
+  });
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   chapterNavigation();
+  interactiveCheckboxes();
 });
 
 window.onload = function () {

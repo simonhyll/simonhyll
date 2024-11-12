@@ -11,7 +11,7 @@ export default defineIntegration({
           addVirtualImports(params, {
             name,
             imports: {
-              'virtual:starlight-enhanced/config': `export default ${JSON.stringify(options)}`,
+              'virtual:@simonhyll/starlight-enhanced/config': `export default ${JSON.stringify(options)}`,
             },
           });
         },

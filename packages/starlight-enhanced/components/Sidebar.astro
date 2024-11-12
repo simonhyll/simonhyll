@@ -1,0 +1,13 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+import BlogSidebar from "starlight-blog/overrides/Sidebar.astro";
+import TopicsSidebar from "starlight-sidebar-topics/overrides/Sidebar.astro";
+import '../styles.css'
+
+const { slug } = Astro.props;
+const isBlog = slug.split("/")[0] === "blog";
+---
+
+<TopicsSidebar {...Astro.props} slug={isBlog ? "blog" : slug} />
+
+{isBlog && <BlogSidebar {...Astro.props} />}

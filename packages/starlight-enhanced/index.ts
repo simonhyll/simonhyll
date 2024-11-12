@@ -13,8 +13,9 @@ function plugin(userConfig?: StarlightEnhancedConfig): StarlightPlugin {
         componentOverrides.ThemeSelect =
           '@simonhyll/starlight-enhanced/components/ThemeSelect.astro';
         componentOverrides.SiteTitle = '@simonhyll/starlight-enhanced/components/SiteTitle.astro';
+        componentOverrides.Sidebar = '@simonhyll/starlight-enhanced/components/Sidebar.astro';
         componentOverrides.Header = '@simonhyll/starlight-enhanced/components/Header.astro';
-        componentOverrides.PageFrame = '@simonhyll/starlight-enhanced/components/PageFrame.astro';
+        // componentOverrides.PageFrame = '@simonhyll/starlight-enhanced/components/PageFrame.astro';
         updateConfig({
           components: {
             ...componentOverrides,

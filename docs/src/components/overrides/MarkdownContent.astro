@@ -1,0 +1,62 @@
+---
+import { createMarkdownProcessor } from "@astrojs/markdown-remark";
+import Default from "@astrojs/starlight/components/MarkdownContent.astro";
+import type { Props } from "@astrojs/starlight/props";
+import SimonSays from "@components/SimonSays.astro";
+import { getEntryBySlug } from "astro:content";
+const page = (await getEntryBySlug(
+  "docs",
+  Astro.params.slug ? Astro.params.slug : "index"
+)) as any;
+const summary = page.data.summary
+  ? page.data.summary.split("\n\n").filter((line: string) => line !== "")
+  : [];
+let references =
+  page.data.references?.map(async (ref: string) => {
+    if (!ref.startsWith("/")) {
+      return {
+        href: ref,
+        title: ref,
+        description: "",
+      };
+    }
+    const refPage = await getEntryBySlug("docs", ref);
+    return {
+      href: "/" + ref,
+      title: refPage?.data.title,
+      description: refPage?.data.description,
+    };
+  }) ?? null;
+const isLandingPage = !Astro.params.slug;
+if (references) references = await Promise.all(references);
+const procesor = await createMarkdownProcessor();
+const content = await procesor.render(summary.join("\n\n"));
+---
+
+<Default {...Astro.props}>
+  {
+    !isLandingPage ? (
+      <SimonSays title={page.data.description}>
+        <Fragment set:html={content.code} />
+      </SimonSays>
+    ) : (
+      ""
+    )
+  }
+  <slot />
+  {
+    references ? (
+      <>
+        <h2>References</h2>
+        <ul>
+          {references.map((reference: any) => (
+            <li>
+              <a href={reference.href}>{reference.title}</a>
+              {": " + reference.description}
+            </li>
+          ))}
+        </ul>
+      </>
+    ) : null
+  }
+</Default>

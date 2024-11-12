@@ -24,6 +24,7 @@
     "./components/index.ts": "./components/index.ts",
     "./components/ThemeSelect.astro": "./components/ThemeSelect.astro",
     "./components/SiteTitle.astro": "./components/SiteTitle.astro",
+    "./components/Sidebar.astro": "./components/Sidebar.astro",
     "./components/Header.astro": "./components/Header.astro",
     "./components/PageFrame.astro": "./components/PageFrame.astro"
   },
@@ -33,16 +34,17 @@
     "node": ">=18.19.1"
   },
   "peerDependencies": {
-    "@astrojs/starlight": ">=0.22.1",
-    "@lorenzo_lewis/starlight-utils": ">=0.1.1",
-    "astro": ">=4.2.0"
+    "@astrojs/starlight": ">=0.28.0",
+    "astro": ">=4.14.0",
+    "starlight-sidebar-topics": ">=0.2.0"
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.24.1",
-    "astro": "^4.8.6"
+    "@astrojs/starlight": "^0.29.0",
+    "astro": "^4.16.10"
   },
   "dependencies": {
     "@lorenzo_lewis/starlight-utils": "^0.1.1",
-    "astro-integration-kit": "^0.13.3"
+    "astro-integration-kit": "^0.13.3",
+    "starlight-blog": "^0.14.1"
   }
 }
