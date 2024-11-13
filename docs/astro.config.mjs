@@ -9,6 +9,7 @@ import starlightEnhanced from '@simonhyll/starlight-enhanced';
 import starlightBlog from 'starlight-blog'
 import vue from "@astrojs/vue";
 import lunaria from '@lunariajs/starlight';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -44,6 +45,12 @@ export default defineConfig({
           tag: 'script',
           attrs: {
             src: '/navigate.js',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            href: '/sitemap-index.xml',
           },
         },
       ],
@@ -257,6 +264,7 @@ export default defineConfig({
         ],
       },
     }),
-    vue()
+    vue(),
+    sitemap()
   ],
 });
