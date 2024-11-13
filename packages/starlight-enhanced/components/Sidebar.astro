@@ -3,6 +3,7 @@ import type { Props } from "@astrojs/starlight/props";
 import BlogSidebar from "starlight-blog/overrides/Sidebar.astro";
 import TopicsSidebar from "starlight-sidebar-topics/overrides/Sidebar.astro";
 import '../styles.css'
+import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
 
 const { slug } = Astro.props;
 const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
@@ -10,4 +11,9 @@ const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === 
 
 <TopicsSidebar {...Astro.props} slug={isBlog ? "blog" : slug} />
 
-{isBlog && <BlogSidebar {...Astro.props} />}
+{isBlog ?
+<BlogSidebar {...Astro.props} />
+: <div class="md:sl-hidden">
+	<MobileMenuFooter {...Astro.props} />
+</div>
+}

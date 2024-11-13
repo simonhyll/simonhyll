@@ -74,3 +74,12 @@ const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === 
 : <BlogContent {...Astro.props}>
   <slot />
 </BlogContent>}
+
+<style is:global>
+  #starlight__sidebar > div > div:nth-child(3) > div {
+    display: none !important;
+  }
+  #starlight__sidebar > div {
+    gap: 0.5rem !important;
+  }
+</style>
