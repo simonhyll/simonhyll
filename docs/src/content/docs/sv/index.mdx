@@ -1,14 +1,14 @@
 ---
 title: Simon Hyll
-description: 'Simon says: make something amazing!'
+description: 'Simon säger: skapa något fantastiskt!'
 template: splash
 hero:
-  tagline: 'Simon says: make something amazing!'
+  tagline: 'Simon säger: skapa något fantastiskt!'
   image:
-    file: ../../assets/icon.png
+    file: ../../../assets/icon.png
   actions:
-    - text: Read More
-      link: /projects/start/
+    - text: Läs vidare
+      link: /sv/projects/start/
       icon: right-arrow
       variant: primary
 head:
@@ -29,7 +29,7 @@ export const articles = (await getCollection('docs')).filter(val=>val.data.title
 export const wipArticles = (await getCollection('docs')).filter(val=>val.data.title !== 'Overview' && val.slug !== 'index' && val.data.sidebar.label !== 'Overview').filter(val=>val.data.sidebar.badge?.text === 'WIP').sort((a, b) => a.data.sidebar.order - b.data.sidebar.order);
 
 <div class="create-simon">
-<Card title="Create a project">
+<Card title="Skapa ett projekt">
   <CreateSimon />
 </Card>
 </div>
@@ -37,7 +37,7 @@ export const wipArticles = (await getCollection('docs')).filter(val=>val.data.ti
 
 { articles.length > 0 ?
 <div>
-<br/><h2>Featured</h2><br/>
+<br/><h2>Utvalt</h2><br/>
 <CardGrid>
 { articles.map(article=>(
   <a href={article.slug} class="lp-card-link">

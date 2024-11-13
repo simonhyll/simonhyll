@@ -1,13 +1,22 @@
 ---
 import { createMarkdownProcessor } from "@astrojs/markdown-remark";
 import Default from "@astrojs/starlight/components/MarkdownContent.astro";
+import BlogContent from 'starlight-blog/overrides/MarkdownContent.astro'
 import type { Props } from "@astrojs/starlight/props";
 import SimonSays from "@components/SimonSays.astro";
-import { getEntryBySlug } from "astro:content";
-const page = (await getEntryBySlug(
+import { getEntry } from "astro:content";
+const slug = Astro.params.slug ? Astro.params.slug : "index"
+let page = (await getEntry(
   "docs",
-  Astro.params.slug ? Astro.params.slug : "index"
+  slug
 )) as any;
+if (!page) {
+    page = (await getEntry(
+    "docs",
+    // @ts-ignore
+    Astro.params.slug.slice(3)
+  )) as any;
+}
 const summary = page.data.summary
   ? page.data.summary.split("\n\n").filter((line: string) => line !== "")
   : [];
@@ -20,19 +29,21 @@ let references =
         description: "",
       };
     }
-    const refPage = await getEntryBySlug("docs", ref);
+    const refPage = await getEntry("docs", ref);
     return {
       href: "/" + ref,
       title: refPage?.data.title,
       description: refPage?.data.description,
     };
   }) ?? null;
-const isLandingPage = !Astro.params.slug;
+const isLandingPage = !Astro.params.slug || ['sv'].includes(Astro.params.slug);
 if (references) references = await Promise.all(references);
 const procesor = await createMarkdownProcessor();
 const content = await procesor.render(summary.join("\n\n"));
+const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
 ---
 
+{!isBlog ?
 <Default {...Astro.props}>
   {
     !isLandingPage ? (
@@ -60,3 +71,6 @@ const content = await procesor.render(summary.join("\n\n"));
     ) : null
   }
 </Default>
+: <BlogContent {...Astro.props}>
+  <slot />
+</BlogContent>}

@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/@lunariajs/core/config.schema.json",
+  "repository": {
+    "name": "simonhyll/simonhyll",
+    "rootDir": "docs"
+  },
+  "defaultLocale": {
+    "label": "English",
+    "lang": "en"
+  },
+  "locales": [
+    {
+      "label": "Svenska",
+      "lang": "sv"
+    }
+  ],
+  "files": [
+    {
+      "location": "src/content/docs/**/*.{md,mdx}",
+      "pattern": "src/content/docs/@lang/@path",
+      "type": "universal"
+    },
+    {
+      "location": "src/content/docs/**/*.{mdx,md}",
+      "pattern": "src/content/docs/@lang/@path",
+      "type": "universal"
+    }
+  ]
+}

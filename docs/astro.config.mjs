@@ -8,6 +8,7 @@ import starlightGlossary from '@simonhyll/starlight-glossary';
 import starlightEnhanced from '@simonhyll/starlight-enhanced';
 import starlightBlog from 'starlight-blog'
 import vue from "@astrojs/vue";
+import lunaria from '@lunariajs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
@@ -50,10 +51,24 @@ export default defineConfig({
         Sidebar: '@simonhyll/starlight-enhanced/components/Sidebar.astro',
         MarkdownContent: './src/components/overrides/MarkdownContent.astro'
       },
+      defaultLocale: 'root',
+      locales: {
+        root: {
+          label: 'English',
+          lang: 'en', // lang is required for root locales
+        },
+        'sv': {
+          label: 'Svenska',
+          lang: 'sv-SE',
+        },
+      },
       plugins: [
         starlightSidebarTopics([
           {
-            label: 'Projects',
+            label: {
+              en: 'Projects',
+              'sv-SE': 'Projekt'
+            },
             link: '/projects/start/',
             icon: 'rocket',
             items: [{
@@ -131,7 +146,10 @@ export default defineConfig({
               }],
           },
           {
-            label: 'Cookbook',
+            label: {
+              en: 'Cookbook',
+              'sv-SE': 'Kokbok'
+            },
             link: '/cookbook/',
             icon: 'open-book',
             items: [
@@ -153,10 +171,19 @@ export default defineConfig({
                 label: 'Desserts',
                 collapsed: false,
                 autogenerate: { directory: 'cookbook/desserts' },
+              },
+              {
+                label: 'Snacks',
+                collapsed: false,
+                autogenerate: { directory: 'cookbook/snacks' },
               }],
           },
           {
-            label: 'Blog',
+            label: {
+              en: 'Blog',
+              'sv-SE': 'Blogg'
+            },
+            id: 'blog',
             link: '/blog/',
             icon: 'document',
             items: [],
@@ -189,6 +216,10 @@ export default defineConfig({
           },
         }),
         starlightBlog({
+          title: {
+            en: 'Blog',
+            sv: 'Blogg'
+          },
           authors: {
             simon: {
               name: 'Simon Hyll',
@@ -197,6 +228,9 @@ export default defineConfig({
               url: 'https://simon.hyll.nu',
             },
           },
+        }),
+        lunaria({
+          sync: true,
         })
       ],
     }),

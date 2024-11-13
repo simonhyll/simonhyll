@@ -25,7 +25,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lunaria:build": "lunaria build",
+    "lunaria:preview": "lunaria preview"
   },
   "engines": {
     "node": ">=18.19.1"
@@ -36,6 +38,8 @@
     "@astrojs/markdown-remark": "^5.3.0",
     "@astrojs/starlight": "^0.28.0",
     "@astrojs/vue": "^4.5.2",
+    "@lunariajs/core": "^0.1.1",
+    "@lunariajs/starlight": "^0.1.1",
     "@simonhyll/starlight-enhanced": "workspace:*",
     "@simonhyll/starlight-glossary": "workspace:*",
     "@tauri-apps/cli": "2.0.0-beta.20",

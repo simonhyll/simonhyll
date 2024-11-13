@@ -9,6 +9,7 @@ export const collections = {
         return blogSchema(context).extend({
           description: z.string().optional(), // TODO: Make non-optional
           summary: z.string().optional(),
+          topic: z.string().optional(),
         });
       },
     }),
