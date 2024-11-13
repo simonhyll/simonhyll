@@ -69,11 +69,11 @@ export default defineConfig({
               en: 'Projects',
               'sv-SE': 'Projekt'
             },
-            link: '/projects/start/',
+            link: '/projects/',
             icon: 'rocket',
             items: [{
               label: 'Welome',
-              link: '/projects/start/',
+              link: '/projects/',
             },{
               label: 'GitHub Actions',
               collapsed: true,
