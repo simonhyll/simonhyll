@@ -16,6 +16,11 @@ import webmanifest from 'astro-webmanifest';
 export default defineConfig({
   site: 'https://simon.hyll.nu',
   trailingSlash: 'ignore',
+  vite: {
+    build: {
+      assetsInlineLimit: 1
+    }
+  },
   integrations: [
     starlight({
       title: 'Simon Hyll',
@@ -52,6 +57,20 @@ export default defineConfig({
           tag: 'link',
           attrs: {
             href: '/sitemap-index.xml',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            'http-equiv':"Content-Security-Policy",
+            content: `default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data:;
+    connect-src 'self';
+    font-src 'self';
+    object-src 'none';
+    base-uri 'self';`
           },
         },
       ],
