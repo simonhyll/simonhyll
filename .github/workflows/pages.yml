@@ -30,7 +30,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: 'pnpm'
       - name: Setup Pages
         id: pages
@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: pnpm i -r
       - name: Build
-        run: pnpm doc build
+        run: pnpm --filter simon-docs build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

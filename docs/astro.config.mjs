@@ -13,6 +13,7 @@ import sitemap from '@astrojs/sitemap';
 import webmanifest from 'astro-webmanifest';
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import { build } from 'astro';
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,6 +23,9 @@ export default defineConfig({
     build: {
       assetsInlineLimit: 1
     }
+  },
+  build: {
+    format: 'file'
   },
 	markdown: {
 		remarkPlugins: [],
