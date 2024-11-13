@@ -194,17 +194,17 @@ export default defineConfig({
             links: [
               {
                 title: 'Projects',
-                value: '/projects/start/',
+                value: '/projects/',
                 transfer: true,
               },
               {
                 title: 'Handbook',
-                value: '/developer-handbook/best-practices/',
+                value: '/developer-handbook/',
                 transfer: true,
               },
               {
                 title: 'Tauri',
-                value: '/tauri-by-simon/best-practices/',
+                value: '/tauri-by-simon/',
                 transfer: true,
               },
               {
