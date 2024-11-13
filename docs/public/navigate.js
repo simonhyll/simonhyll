@@ -25,7 +25,7 @@ async function chapterNavigation() {
         e.preventDefault();
         let nextButton = document.querySelector('a[rel="next"]');
         if (!nextButton && window.location.pathname === '/')
-          nextButton = { href: '/projects/' };
+          nextButton = { href: '/projects' };
 
         if (nextButton) {
           window.location.href = nextButton.href;

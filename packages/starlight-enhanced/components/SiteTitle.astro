@@ -1,7 +1,7 @@
 ---
 import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/SiteTitle.astro';
-const href = '/' + (Astro.currentLocale && Astro.currentLocale != 'en' ? Astro.currentLocale.split('-')[0] + '/' : '');
+const href = '/' + (Astro.currentLocale && Astro.currentLocale != 'en' ? Astro.currentLocale.split('-')[0] : '');
 ---
 
 <Default {...Astro.props} siteTitleHref={href}><slot /></Default>

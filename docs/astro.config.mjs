@@ -4,23 +4,30 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import serviceWorker from 'astrojs-service-worker';
 import starlightSidebarTopics from 'starlight-sidebar-topics'
-import starlightGlossary from '@simonhyll/starlight-glossary';
+// import starlightGlossary from '@simonhyll/starlight-glossary';
 import starlightEnhanced from '@simonhyll/starlight-enhanced';
 import starlightBlog from 'starlight-blog'
 import vue from "@astrojs/vue";
 import lunaria from '@lunariajs/starlight';
 import sitemap from '@astrojs/sitemap';
 import webmanifest from 'astro-webmanifest';
+import { rehypeHeadingIds } from '@astrojs/markdown-remark';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://simon.hyll.nu',
-  trailingSlash: 'ignore',
+  trailingSlash: 'never',
   vite: {
     build: {
       assetsInlineLimit: 1
     }
   },
+	markdown: {
+		remarkPlugins: [],
+		rehypePlugins: [
+			rehypeHeadingIds, [rehypeAutolinkHeadings, { behavior: 'wrap', properties: { ariaHidden: true, tabIndex: -1, class: 'heading-link' } }]]
+	},
   integrations: [
     starlight({
       title: 'Simon Hyll',
@@ -45,6 +52,9 @@ export default defineConfig({
       },
       expressiveCode: {
         styleOverrides: { borderRadius: '0.5rem' },
+      },
+      tableOfContents: {
+        maxHeadingLevel: 6
       },
       head: [
         {
@@ -97,11 +107,11 @@ export default defineConfig({
               en: 'Projects',
               'sv-SE': 'Projekt'
             },
-            link: '/projects/',
+            link: '/projects',
             icon: 'rocket',
             items: [{
               label: 'Welome',
-              link: '/projects/',
+              link: '/projects',
             },{
               label: 'GitHub Actions',
               collapsed: true,
@@ -130,12 +140,12 @@ export default defineConfig({
           },
           {
             label: 'Developer Handbook',
-            link: '/developer-handbook/',
+            link: '/developer-handbook',
             icon: 'open-book',
             items: [
               {
                 label: 'Introduction',
-                link: '/developer-handbook/',
+                link: '/developer-handbook',
               },
               {
                 label: 'Best Practices',
@@ -160,12 +170,12 @@ export default defineConfig({
           },
           {
             label: 'Tauri by Simon',
-            link: '/tauri-by-simon/',
+            link: '/tauri-by-simon',
             icon: 'open-book',
             items: [
               {
                 label: 'Introduction',
-                link: '/tauri-by-simon/',
+                link: '/tauri-by-simon',
               },
               {
                 label: 'Best Practices',
@@ -178,12 +188,12 @@ export default defineConfig({
               en: 'Cookbook',
               'sv-SE': 'Kokbok'
             },
-            link: '/cookbook/',
+            link: '/cookbook',
             icon: 'open-book',
             items: [
               {
                 label: 'Introduction',
-                link: '/cookbook/',
+                link: '/cookbook',
               },
               {
                 label: 'Basics',
@@ -212,7 +222,7 @@ export default defineConfig({
               'sv-SE': 'Blogg'
             },
             id: 'blog',
-            link: '/blog/',
+            link: '/blog',
             icon: 'document',
             items: [],
           }]),
@@ -222,23 +232,23 @@ export default defineConfig({
             links: [
               {
                 title: 'Projects',
-                value: '/projects/',
+                value: '/projects',
                 transfer: true,
               },
               {
                 title: 'Handbook',
-                value: '/developer-handbook/',
+                value: '/developer-handbook',
                 transfer: true,
               },
               {
                 title: 'Tauri',
-                value: '/tauri-by-simon/',
+                value: '/tauri-by-simon',
                 transfer: true,
               },
               {
                 title: 'Blog',
-                value: '/blog/',
-                transfer: false,
+                value: '/blog',
+                transfer: true,
               },
             ],
           },

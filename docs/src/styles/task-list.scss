@@ -1,0 +1,65 @@
+.contains-task-list {
+  padding-inline-start: 2px;
+}
+
+.contains-task-list li {
+  list-style: none;
+  padding-left: 35px;
+}
+.contains-task-list ol li {
+  padding-left: 50px;
+  padding-bottom: 1rem;
+}
+
+/* Hide the default checkbox */
+.contains-task-list input[type='checkbox'] {
+  display: none;
+}
+
+/* Create a custom checkbox */
+.contains-task-list .task-list-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.contains-task-list ul .task-list-item:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--sl-color-gray-6);
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 12px;
+  transform: translateY(-50%);
+}
+
+/* Create the checkmark/indicator (hidden by default) */
+.contains-task-list ul .task-list-item:after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  display: none;
+  top: 12px;
+  width: 6px;
+  height: 12px;
+  border: solid var(--sl-color-accent-high);
+  border-width: 0 2px 2px 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Show the checkmark when the checkbox is checked */
+.contains-task-list .task-list-item:has(> input[checked]):after {
+  display: none !important;
+}
+/* Show the checkmark when the checkbox is checked */
+.contains-task-list .task-list-item:has(> input[checked]) {
+  display: none !important;
+}
+
+/* Optional: Hover effect */
+.contains-task-list .task-list-item:hover:before {
+  border-color: var(--sl-color-accent-high);
+}
