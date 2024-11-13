@@ -10,6 +10,7 @@ import starlightBlog from 'starlight-blog'
 import vue from "@astrojs/vue";
 import lunaria from '@lunariajs/starlight';
 import sitemap from '@astrojs/sitemap';
+import webmanifest from 'astro-webmanifest';
 
 // https://astro.build/config
 export default defineConfig({
@@ -265,6 +266,16 @@ export default defineConfig({
       },
     }),
     vue(),
-    sitemap()
+    sitemap(),
+    webmanifest({
+      name: 'Simon Hyll',
+      icon: 'src/assets/icon.png',
+      short_name: 'Simon',
+      description: 'My personal website',
+      start_url: '/',
+      theme_color: '#0069cd',
+      background_color: '#0069cd',
+      display: 'standalone',
+    }),
   ],
 });

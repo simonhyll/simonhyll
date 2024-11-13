@@ -16,7 +16,6 @@ export const configSchema = z.object({
 export type StarlightEnhancedConfig = z.infer<typeof configSchema>;
 
 export function validateConfig(userConfig: unknown): StarlightEnhancedConfig {
-  console.log('WOOT: ', userConfig);
   const config = configSchema.safeParse(userConfig);
 
   if (!config.success) {
