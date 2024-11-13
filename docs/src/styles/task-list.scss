@@ -52,11 +52,7 @@
 
 /* Show the checkmark when the checkbox is checked */
 .contains-task-list .task-list-item:has(> input[checked]):after {
-  display: none !important;
-}
-/* Show the checkmark when the checkbox is checked */
-.contains-task-list .task-list-item:has(> input[checked]) {
-  display: none !important;
+  display: block !important;
 }
 
 /* Optional: Hover effect */
