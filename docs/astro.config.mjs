@@ -13,6 +13,7 @@ import lunaria from '@lunariajs/starlight';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://simon.hyll.nu',
+  trailingSlash: 'ignore',
   integrations: [
     starlight({
       title: 'Simon Hyll',
