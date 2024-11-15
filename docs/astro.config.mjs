@@ -3,16 +3,16 @@ import starlight from '@astrojs/starlight';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import serviceWorker from 'astrojs-service-worker';
-import starlightSidebarTopics from 'starlight-sidebar-topics'
+import starlightSidebarTopics from 'starlight-sidebar-topics';
 // import starlightGlossary from '@simonhyll/starlight-glossary';
 import starlightEnhanced from '@simonhyll/starlight-enhanced';
-import starlightBlog from 'starlight-blog'
-import vue from "@astrojs/vue";
+import starlightBlog from 'starlight-blog';
+import vue from '@astrojs/vue';
 import lunaria from '@lunariajs/starlight';
 import sitemap from '@astrojs/sitemap';
 import webmanifest from 'astro-webmanifest';
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,17 +20,22 @@ export default defineConfig({
   trailingSlash: 'never',
   vite: {
     build: {
-      assetsInlineLimit: 1
-    }
+      assetsInlineLimit: 1,
+    },
   },
   build: {
-    format: 'file'
+    format: 'file',
   },
-	markdown: {
-		remarkPlugins: [],
-		rehypePlugins: [
-			rehypeHeadingIds, [rehypeAutolinkHeadings, { behavior: 'wrap', properties: { ariaHidden: true, tabIndex: -1, class: 'heading-link' } }]]
-	},
+  markdown: {
+    remarkPlugins: [],
+    rehypePlugins: [
+      rehypeHeadingIds,
+      [
+        rehypeAutolinkHeadings,
+        { behavior: 'wrap', properties: { ariaHidden: true, tabIndex: -1, class: 'heading-link' } },
+      ],
+    ],
+  },
   integrations: [
     starlight({
       title: 'Simon Hyll',
@@ -57,7 +62,7 @@ export default defineConfig({
         styleOverrides: { borderRadius: '0.5rem' },
       },
       tableOfContents: {
-        maxHeadingLevel: 6
+        maxHeadingLevel: 6,
       },
       head: [
         {
@@ -69,13 +74,31 @@ export default defineConfig({
         {
           tag: 'link',
           attrs: {
+            rel: 'alternate',
+            type: 'application/rss+xml',
+            title: 'Simon Says',
+            href: 'https://simon.hyll.nu/blog/rss.xml',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'alternate',
+            type: 'application/rss+xml',
+            title: 'Simon Säger',
+            href: 'https://simon.hyll.nu/sv/blog/rss.xml',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
             href: '/sitemap-index.xml',
           },
         },
         {
           tag: 'meta',
           attrs: {
-            'http-equiv':"Content-Security-Policy",
+            'http-equiv': 'Content-Security-Policy',
             content: `default-src 'self';
     script-src 'self' 'unsafe-inline' 'unsafe-eval';
     style-src 'self' 'unsafe-inline';
@@ -83,14 +106,14 @@ export default defineConfig({
     connect-src 'self';
     font-src 'self';
     object-src 'none';
-    base-uri 'self';`
+    base-uri 'self';`,
           },
         },
       ],
       customCss: ['./src/styles/main.scss'],
       components: {
         Sidebar: '@simonhyll/starlight-enhanced/components/Sidebar.astro',
-        MarkdownContent: './src/components/overrides/MarkdownContent.astro'
+        MarkdownContent: './src/components/overrides/MarkdownContent.astro',
       },
       defaultLocale: 'root',
       locales: {
@@ -98,7 +121,7 @@ export default defineConfig({
           label: 'English',
           lang: 'en', // lang is required for root locales
         },
-        'sv': {
+        sv: {
           label: 'Svenska',
           lang: 'sv-SE',
         },
@@ -108,42 +131,51 @@ export default defineConfig({
           {
             label: {
               en: 'Projects',
-              'sv-SE': 'Projekt'
+              'sv-SE': 'Projekt',
             },
             link: '/projects',
             icon: 'rocket',
-            items: [{
-              label: 'Welome',
-              link: '/projects',
-            },{
-              label: 'Tools',
-              collapsed: true,
-              autogenerate: { directory: 'projects/tools' },
-            },{
-              label: 'GitHub Actions',
-              collapsed: true,
-              autogenerate: { directory: 'projects/actions' },
-            },{
-              label: 'Docker Containers',
-              collapsed: true,
-              autogenerate: { directory: 'projects/docker' },
-            },{
-              label: 'Helm Charts',
-              collapsed: true,
-              autogenerate: { directory: 'projects/helm' },
-            },{
-              label: 'Python Packages',
-              collapsed: true,
-              autogenerate: { directory: 'projects/python' },
-            },{
-              label: 'Rust Crates',
-              collapsed: true,
-              autogenerate: { directory: 'projects/rust' },
-            },{
-              label: 'TypeScript Packages',
-              collapsed: true,
-              autogenerate: { directory: 'projects/typescript' },
-            }],
+            items: [
+              {
+                label: 'Welome',
+                link: '/projects',
+              },
+              {
+                label: 'Tools',
+                collapsed: true,
+                autogenerate: { directory: 'projects/tools' },
+              },
+              {
+                label: 'GitHub Actions',
+                collapsed: true,
+                autogenerate: { directory: 'projects/actions' },
+              },
+              {
+                label: 'Docker Containers',
+                collapsed: true,
+                autogenerate: { directory: 'projects/docker' },
+              },
+              {
+                label: 'Helm Charts',
+                collapsed: true,
+                autogenerate: { directory: 'projects/helm' },
+              },
+              {
+                label: 'Python Packages',
+                collapsed: true,
+                autogenerate: { directory: 'projects/python' },
+              },
+              {
+                label: 'Rust Crates',
+                collapsed: true,
+                autogenerate: { directory: 'projects/rust' },
+              },
+              {
+                label: 'TypeScript Packages',
+                collapsed: true,
+                autogenerate: { directory: 'projects/typescript' },
+              },
+            ],
           },
           {
             label: 'Developer Handbook',
@@ -173,7 +205,8 @@ export default defineConfig({
                 label: 'Buzz Words',
                 collapsed: true,
                 autogenerate: { directory: 'developer-handbook/buzz-words' },
-              }],
+              },
+            ],
           },
           {
             label: 'Tauri by Simon',
@@ -188,12 +221,13 @@ export default defineConfig({
                 label: 'Best Practices',
                 collapsed: true,
                 autogenerate: { directory: 'tauri-by-simon/best-practices' },
-              }],
+              },
+            ],
           },
           {
             label: {
               en: 'Cookbook',
-              'sv-SE': 'Kokbok'
+              'sv-SE': 'Kokbok',
             },
             link: '/cookbook',
             icon: 'open-book',
@@ -221,18 +255,20 @@ export default defineConfig({
                 label: 'Snacks',
                 collapsed: false,
                 autogenerate: { directory: 'cookbook/snacks' },
-              }],
+              },
+            ],
           },
           {
             label: {
               en: 'Blog',
-              'sv-SE': 'Blogg'
+              'sv-SE': 'Blogg',
             },
             id: 'blog',
             link: '/blog',
             icon: 'document',
             items: [],
-          }]),
+          },
+        ]),
         // starlightGlossary({}),
         starlightEnhanced({
           header: {
@@ -263,7 +299,7 @@ export default defineConfig({
         starlightBlog({
           title: {
             en: 'Blog',
-            sv: 'Blogg'
+            sv: 'Blogg',
           },
           authors: {
             simon: {
@@ -276,7 +312,7 @@ export default defineConfig({
         }),
         lunaria({
           sync: true,
-        })
+        }),
       ],
     }),
     serviceWorker({
@@ -302,7 +338,10 @@ export default defineConfig({
       },
     }),
     vue(),
-    sitemap(),
+    sitemap({
+      // TODO: Make sure it renders nicely
+      // xslURL: '/sitemap.xsl',
+    }),
     webmanifest({
       name: 'Simon Hyll',
       icon: 'src/assets/icon.png',
