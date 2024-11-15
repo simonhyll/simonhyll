@@ -1,9 +1,16 @@
 ---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/ThemeSelect.astro';
+---
+
+<Default {...Astro.props}><slot/></Default>
+
+<!-- ---
 import type { Props } from "@astrojs/starlight/props";
 import BlogSidebar from "starlight-blog/overrides/Sidebar.astro";
 import TopicsSidebar from "starlight-sidebar-topics/overrides/Sidebar.astro";
 import '../styles.css'
-import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
+import MobileMenuFooter from '@astrojs/starlight/components/MobileMenuFooter.astro';
 
 const { slug } = Astro.props;
 const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
@@ -16,4 +23,4 @@ const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === 
 : <div class="md:sl-hidden">
 	<MobileMenuFooter {...Astro.props} />
 </div>
-}
+} -->

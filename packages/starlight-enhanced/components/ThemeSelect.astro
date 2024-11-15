@@ -1,5 +1,12 @@
 ---
 import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/ThemeSelect.astro';
+---
+
+<Default {...Astro.props}><slot/></Default>
+
+<!-- ---
+import type { Props } from '@astrojs/starlight/props';
 import { Icon } from '@astrojs/starlight/components';
 ---
 
@@ -70,4 +77,4 @@ import { Icon } from '@astrojs/starlight/components';
       color: var(--sl-color-accent);
     }
   }
-</style>
+</style> -->

@@ -31,20 +31,21 @@
   "scripts": {},
   "packageManager": "pnpm@9.2.0",
   "engines": {
-    "node": ">=18.19.1"
+    "node": ">=20.18.0"
   },
   "peerDependencies": {
-    "@astrojs/starlight": "^0.29.0",
     "astro": "^4.16.10",
-    "starlight-sidebar-topics": ">=0.2.0"
+    "@astrojs/starlight": "^0.29.0",
+    "starlight-sidebar-topics": ">=0.2.0",
+    "starlight-blog": "^0.14.1"
   },
   "devDependencies": {
+    "astro": "^4.16.10",
     "@astrojs/starlight": "^0.29.0",
-    "astro": "^4.16.10"
+    "starlight-sidebar-topics": ">=0.2.0",
+    "starlight-blog": "^0.14.1"
   },
   "dependencies": {
-    "@lorenzo_lewis/starlight-utils": "^0.1.1",
-    "astro-integration-kit": "^0.13.3",
-    "starlight-blog": "^0.14.1"
+    "astro-integration-kit": "^0.13.3"
   }
 }

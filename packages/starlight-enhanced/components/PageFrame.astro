@@ -1,5 +1,12 @@
 ---
-import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/PageFrame.astro';
+---
+
+<Default {...Astro.props}><slot/></Default>
+
+<!-- ---
+import MobileMenuToggle from '@astrojs/starlight/components/MobileMenuToggle.astro';
 import type { Props } from '@astrojs/starlight/props';
 import Sidebar from './Sidebar.astro';
 ---
@@ -97,4 +104,4 @@ import Sidebar from './Sidebar.astro';
       border-inline-end: 1px solid var(--sl-color-hairline-shade);
     }
   }
-</style>
+</style> -->
