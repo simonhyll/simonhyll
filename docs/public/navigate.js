@@ -22,7 +22,11 @@ async function chapterNavigation() {
               previousButton = { href: '/cookbook/snacks/torkatjött' };              
             }
           } else if (["sv"].includes(parts[0]) && parts[1] === "blog") {
-            previousButton = { href: '/' + parts[0] + '/blog' };
+            if(parts.length > 2) {
+              previousButton = { href: '/' + parts[0] + '/blog' };
+            } else {
+              previousButton = { href: '/' + parts[0] + '/cookbook/snacks/torkatjött' };
+            }
           }
         }
         if (!previousButton && window.location.pathname !== '/')
