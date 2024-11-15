@@ -6,14 +6,19 @@ import '../styles.css'
 import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
 
 const { slug } = Astro.props;
-const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
+let useBlogSidebar = false;
+["blog", "feeds"].forEach((root: string)=>{
+	if (slug.split("/")[0] === root || slug.slice(3).split("/")[0] === root) {
+		useBlogSidebar = true;
+	}
+})
 ---
 
-<TopicsSidebar {...Astro.props} slug={isBlog ? "blog" : slug} />
+<TopicsSidebar {...Astro.props} slug={useBlogSidebar ? "blog" : slug} />
 
-{isBlog ?
-<BlogSidebar {...Astro.props} />
+{useBlogSidebar ?
+    <BlogSidebar {...Astro.props} slug={useBlogSidebar ? "blog" : slug} />
 : <div class="md:sl-hidden">
-	<MobileMenuFooter {...Astro.props} />
+    <MobileMenuFooter {...Astro.props} />
 </div>
 }
