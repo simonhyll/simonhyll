@@ -13,7 +13,20 @@ async function chapterNavigation() {
       case 'ArrowLeft':
         e.preventDefault();
         let previousButton = document.querySelector('a[rel="prev"]');
-        if (!previousButton && window.location.pathname !== '/') previousButton = { href: '/' };
+        if(!previousButton) {
+          const parts = window.location.pathname.split('/').slice(1);
+          if (parts[0] === "blog") {
+            if(parts.length > 1) {
+              previousButton = { href: '/blog' };
+            } else {
+              previousButton = { href: '/cookbook/snacks/torkatjött' };              
+            }
+          } else if (["sv"].includes(parts[0]) && parts[1] === "blog") {
+            previousButton = { href: '/' + parts[0] + '/blog' };
+          }
+        }
+        if (!previousButton && window.location.pathname !== '/')
+          previousButton = { href: '/' };
 
         if (document.referrer.includes(window.location.host))
           if (previousButton) {
@@ -23,7 +36,7 @@ async function chapterNavigation() {
         break;
       case 'ArrowRight':
         e.preventDefault();
-        let nextButton = document.querySelector('a[rel="next"]');
+        let nextButton = document.querySelector('a[rel="next"]') ?? document.querySelector('body > div > div > div > div > main > div:nth-child(2) > div > div > div > article:nth-child(1) > header > h2 > a');
         if (!nextButton && window.location.pathname === '/')
           nextButton = { href: '/projects' };
 
