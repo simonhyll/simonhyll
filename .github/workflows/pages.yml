@@ -62,6 +62,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: Ping IndexNow
-        uses: simonhyll/simonhyll/actions/index-now
+        uses: ./actions/index-now
         with:
           says: index-now
