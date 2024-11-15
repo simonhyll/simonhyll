@@ -1,0 +1,3 @@
+[submodule "docker/devcontainer-tauri"]
+	path = docker/devcontainer-tauri
+	url = git@github.com:simonhyll/devcontainer.git

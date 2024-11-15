@@ -41,18 +41,19 @@ if (references) references = await Promise.all(references);
 const procesor = await createMarkdownProcessor();
 const content = await procesor.render(summary.join("\n\n"));
 const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
+const simonShutsUp = page.data.simonShutsUp ?? false;
 ---
 
 {!isBlog ?
 <Default {...Astro.props}>
   {
-    !isLandingPage ? (
+    !isLandingPage ? 
+    !simonShutsUp ? 
       <SimonSays title={page.data.description}>
         <Fragment set:html={content.code} />
       </SimonSays>
-    ) : (
-      ""
-    )
+      : null
+     : null
   }
   <slot />
   {

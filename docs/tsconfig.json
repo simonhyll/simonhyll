@@ -6,7 +6,8 @@
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
       "@fragments/*": ["src/content/docs/_fragments/*"],
-      "@packages/*": ["../packages/*"]
+      "@packages/*": ["../packages/*"],
+      "@docker/*": ["../docker/*"]
     }
   }
 }

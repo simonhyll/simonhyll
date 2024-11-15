@@ -10,6 +10,7 @@ export const collections = {
           description: z.string().optional(), // TODO: Make non-optional
           summary: z.string().optional(),
           topic: z.string().optional(),
+          simonShutsUp: z.boolean().optional(),
         });
       },
     }),
