@@ -116,6 +116,10 @@ export default defineConfig({
               label: 'Welome',
               link: '/projects',
             },{
+              label: 'Tools',
+              collapsed: true,
+              autogenerate: { directory: 'projects/tools' },
+            },{
               label: 'GitHub Actions',
               collapsed: true,
               autogenerate: { directory: 'projects/actions' },
