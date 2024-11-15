@@ -25,6 +25,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           lfs: true
+          submodules: recursive
           fetch-depth: 0
       - uses: pnpm/action-setup@v4
       - name: Set up Node.js
@@ -61,6 +62,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          submodules: recursive
       - name: Ping IndexNow
         uses: ./actions/index-now
         with:
