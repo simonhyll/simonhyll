@@ -77,7 +77,7 @@ export default defineConfig({
           attrs: {
             'http-equiv':"Content-Security-Policy",
             content: `default-src 'self';
-    script-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval';
     style-src 'self' 'unsafe-inline';
     img-src 'self' data:;
     connect-src 'self';
@@ -305,8 +305,8 @@ export default defineConfig({
       short_name: 'Simon',
       description: 'My personal website',
       start_url: '/',
-      theme_color: '#0069cd',
-      background_color: '#0069cd',
+      theme_color: '#272727',
+      background_color: '#272727',
       display: 'standalone',
     }),
   ],
