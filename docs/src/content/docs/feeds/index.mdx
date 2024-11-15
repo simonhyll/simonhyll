@@ -1,0 +1,21 @@
+---
+title: RSS Feeds
+description: The various RSS feeds you have access to from me
+summary: |
+  While some consider RSS feeds to be an archaic format that nobody uses, it's super easy to add support for and can be sent to search engines as a supplement to having a sitemap.
+topic: blog
+---
+
+import { LinkCard } from '@astrojs/starlight/components'
+
+<LinkCard 
+  title='Blog'
+  href="/blog/rss.xml"
+  description="Read my blog in RSS format."
+ />
+
+<LinkCard 
+  title='All pages'
+  href="/feeds/pages.xml"
+  description="A complete list of all pages, keeps you updated when there's new or updated contents."
+/>

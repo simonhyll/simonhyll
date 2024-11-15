@@ -44,7 +44,7 @@ export default defineConfig({
       },
       favicon: '/favicon.png',
       social: {
-        rss: 'https://simon.hyll.nu/blog/rss.xml',
+        rss: 'https://simon.hyll.nu/feeds',
         github: 'https://github.com/simonhyll',
         linkedin: 'https://linkedin.com/in/simonhyll',
         discord: 'https://discord.com/invite/tauri',
