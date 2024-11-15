@@ -17,7 +17,6 @@ export async function GET(context: any) {
         title: post.data.title,
         pubDate: getNewestCommitDate(join('src', 'content', 'docs', post.id)),
         description: post.data.description,
-        customData: post.data.customData,
         link: `/${post.slug}`,
       }))
       .sort((a: any, b: any) => b.pubDate - a.pubDate),
