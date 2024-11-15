@@ -1,0 +1,20 @@
+{
+  "name": "calviz",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "tauri": "cd ../../crates/calviz && pnpm tauri dev",
+    "tauri:build": "cd ../../crates/calviz && pnpm tauri build"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "nuxt": "^3.14.159",
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}

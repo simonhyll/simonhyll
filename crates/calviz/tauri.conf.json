@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "calviz",
+  "version": "0.1.0",
+  "identifier": "nu.simon.hyll.calviz",
+  "build": {
+    "beforeDevCommand": "pnpm --filter calviz dev",
+    "devUrl": "http://localhost:3000",
+    "beforeBuildCommand": "pnpm --filter calviz build",
+    "frontendDist": "../../packages/calviz/dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "calviz",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
