@@ -42,11 +42,7 @@ const procesor = await createMarkdownProcessor();
 const content = await procesor.render(summary.join("\n\n"));
 const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
 const simonShutsUp = page.data.simonShutsUp ?? false;
-
-import Analytics from '../Analytics.astro'
 ---
-<Analytics/>
-
 {!isBlog ?
 <Default {...Astro.props}>
   {
