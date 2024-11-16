@@ -13,6 +13,7 @@ import sitemap from '@astrojs/sitemap';
 import webmanifest from 'astro-webmanifest';
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { getNewestCommitDate } from './src/lib/index.ts';
 
 // https://astro.build/config
 export default defineConfig({
@@ -339,8 +340,20 @@ export default defineConfig({
     }),
     vue(),
     sitemap({
-      // TODO: Make sure it renders nicely
-      // xslURL: '/sitemap.xsl',
+      xslURL: 'http://localhost:4321/sitemap.xsl',
+      serialize(item) {
+        item.changefreq = 'monthly'; // TODO: Calculate an average
+        let path = item.url.replace('https://simon.hyll.nu', '');
+        if (path.charAt(path.length - 1) === '/') path = `${path}index.mdx`;
+        path = `src/content/docs${path}`;
+        try {
+          item.lastmod = getNewestCommitDate(path);
+        } catch (e) {
+          item.lastmod = new Date();
+        }
+        item.priority = 0.9;
+        return item;
+      },
     }),
     webmanifest({
       name: 'Simon Hyll',
