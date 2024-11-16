@@ -1,24 +1,31 @@
 ---
-import type { Props } from "@astrojs/starlight/props";
-import BlogSidebar from "starlight-blog/overrides/Sidebar.astro";
-import TopicsSidebar from "starlight-sidebar-topics/overrides/Sidebar.astro";
-import '../styles.css'
+import type { Props } from '@astrojs/starlight/props';
+import BlogSidebar from 'starlight-blog/overrides/Sidebar.astro';
+import TopicsSidebar from 'starlight-sidebar-topics/overrides/Sidebar.astro';
+import '../styles.css';
 import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
 
 const { slug } = Astro.props;
 let useBlogSidebar = false;
-["blog", "feeds"].forEach((root: string)=>{
-	if (slug.split("/")[0] === root || slug.slice(3).split("/")[0] === root) {
-		useBlogSidebar = true;
-	}
-})
+let isFeedsPath = false;
+['blog', 'feeds'].forEach((root: string) => {
+  if (slug.split('/')[0] === root || slug.slice(3).split('/')[0] === root) {
+    useBlogSidebar = true;
+    if (slug.split('/')[0] === 'feeds' || slug.slice(3).split('/')[0] === 'feeds') {
+      isFeedsPath = true;
+    }
+  }
+});
 ---
 
-<TopicsSidebar {...Astro.props} slug={useBlogSidebar ? "blog" : slug} />
+<TopicsSidebar {...Astro.props} slug={useBlogSidebar ? 'blog' : slug} />
 
-{useBlogSidebar ?
-    <BlogSidebar {...Astro.props} slug={useBlogSidebar ? "blog" : slug} />
-: <div class="md:sl-hidden">
-    <MobileMenuFooter {...Astro.props} />
-</div>
+{
+  useBlogSidebar ? (
+    <BlogSidebar {...Astro.props} slug={isFeedsPath ? 'blog' : slug} />
+  ) : (
+    <div class="md:sl-hidden">
+      <MobileMenuFooter {...Astro.props} />
+    </div>
+  )
 }

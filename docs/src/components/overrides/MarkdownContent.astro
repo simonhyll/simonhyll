@@ -4,24 +4,21 @@ import Default from "@astrojs/starlight/components/MarkdownContent.astro";
 import BlogContent from 'starlight-blog/overrides/MarkdownContent.astro'
 import type { Props } from "@astrojs/starlight/props";
 import SimonSays from "@components/SimonSays.astro";
-import { getEntry } from "astro:content";
-const slug = Astro.params.slug ? Astro.params.slug : "index"
-let page = (await getEntry(
+import { getEntry, getCollection } from "astro:content";
+const slug = Astro.props.slug ?? "index"
+let page = (await getCollection(
   "docs",
-  slug
-)) as any;
+)).find(val=>val.slug === slug);
 if (!page) {
-    page = (await getEntry(
-    "docs",
-    // @ts-ignore
-    Astro.params.slug.slice(3)
-  )) as any;
+    page = (await getCollection(
+  "docs",
+)).find(val=>val.slug === slug.slice(3))
 }
-const summary = page.data.summary
+const summary = page?.data.summary
   ? page.data.summary.split("\n\n").filter((line: string) => line !== "")
   : [];
 let references =
-  page.data.references?.map(async (ref: string) => {
+  page?.data.references?.map(async (ref: string) => {
     if (!ref.startsWith("/")) {
       return {
         href: ref,
@@ -41,14 +38,16 @@ if (references) references = await Promise.all(references);
 const procesor = await createMarkdownProcessor();
 const content = await procesor.render(summary.join("\n\n"));
 const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
-const simonShutsUp = page.data.simonShutsUp ?? false;
+console.log(slug)
+console.log(isBlog)
+const simonShutsUp = page?.data.simonShutsUp ?? false;
 ---
 {!isBlog ?
 <Default {...Astro.props}>
   {
     !isLandingPage ? 
     !simonShutsUp ? 
-      <SimonSays title={page.data.description}>
+      <SimonSays title={page?.data.description}>
         <Fragment set:html={content.code} />
       </SimonSays>
       : null
@@ -75,11 +74,13 @@ const simonShutsUp = page.data.simonShutsUp ?? false;
   <slot />
 </BlogContent>}
 
+{isBlog ?
 <style is:global>
   #starlight__sidebar > div > div:nth-child(3) > div {
     display: none !important;
   }
   #starlight__sidebar > div {
-    gap: 0.5rem !important;
+    gap: 0.25rem !important;
   }
 </style>
+: null }

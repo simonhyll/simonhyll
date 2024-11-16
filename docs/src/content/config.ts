@@ -8,6 +8,7 @@ export const collections = {
       extend: (context) => {
         return blogSchema(context).extend({
           description: z.string().optional(), // TODO: Make non-optional
+          references: z.array(z.string()).optional(),
           summary: z.string().optional(),
           topic: z.string().optional(),
           simonShutsUp: z.boolean().optional(),
