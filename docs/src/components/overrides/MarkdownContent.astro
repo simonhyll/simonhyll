@@ -1,6 +1,7 @@
 ---
 import { createMarkdownProcessor } from "@astrojs/markdown-remark";
 import Default from "@astrojs/starlight/components/MarkdownContent.astro";
+import Footer from "@astrojs/starlight/components/Pagination.astro";
 import BlogContent from 'starlight-blog/overrides/MarkdownContent.astro'
 import type { Props } from "@astrojs/starlight/props";
 import SimonSays from "@components/SimonSays.astro";
@@ -38,9 +39,12 @@ if (references) references = await Promise.all(references);
 const procesor = await createMarkdownProcessor();
 const content = await procesor.render(summary.join("\n\n"));
 const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
-console.log(slug)
-console.log(isBlog)
+const isRootBlog = (slug.split("/")[0] === "blog" && slug.split("/").length === 1) || (slug.slice(3).split("/") && slug.slice(3).split("/").length === 1)
 const simonShutsUp = page?.data.simonShutsUp ?? false;
+if (isBlog) {
+  Astro.props.entry.data.next = Astro.props.entry.data.next ?? {label: 'Home', link: '/'}
+  Astro.props.entry.data.prev = Astro.props.entry.data.prev ?? {label: 'Blog', link: '/blog'}
+}
 ---
 {!isBlog ?
 <Default {...Astro.props}>
@@ -80,7 +84,7 @@ const simonShutsUp = page?.data.simonShutsUp ?? false;
     display: none !important;
   }
   #starlight__sidebar > div {
-    gap: 0.25rem !important;
+    gap: 0.5rem !important;
   }
 </style>
 : null }
