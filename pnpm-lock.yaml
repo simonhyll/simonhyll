@@ -47,6 +47,9 @@ importers:
       '@lunariajs/starlight':
         specifier: ^0.1.1
         version: 0.1.1(@astrojs/starlight@0.28.6(astro@4.16.10(rollup@2.79.1)(sass@1.77.4)(terser@5.31.1)(typescript@5.4.5)))(astro@4.16.10(rollup@2.79.1)(sass@1.77.4)(terser@5.31.1)(typescript@5.4.5))
+      '@microsoft/clarity':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@simonhyll/starlight-enhanced':
         specifier: workspace:*
         version: link:../packages/starlight-enhanced
@@ -1676,6 +1679,9 @@ packages:
 
   '@mdx-js/mdx@3.1.0':
     resolution: {integrity: sha512-/QxEhPAvGwbQmy1Px8F899L5Uc2KZ6JtXwlCgJmjSTBedwOZkByYcBG4GceIGPXRDsmfxhHazuS+hlOShRLeDw==}
+
+  '@microsoft/clarity@1.0.0':
+    resolution: {integrity: sha512-2QY6SmXnqRj6dWhNY8NYCN3e53j4zCFebH4wGnNhdGV1mqAsQwql2fT0w8TISxCvwwfVp8idsWLIdrRHOms1PQ==}
 
   '@napi-rs/cli@2.18.3':
     resolution: {integrity: sha512-L0f4kP0dyG8W5Qtc7MtP73VvLLrOLyRcUEBzknIfu8Jk4Jfhrsx1ItMHgyalYqMSslWdY3ojEfAaU5sx1VyeQQ==}
@@ -7807,6 +7813,8 @@ snapshots:
     transitivePeerDependencies:
       - acorn
       - supports-color
+
+  '@microsoft/clarity@1.0.0': {}
 
   '@napi-rs/cli@2.18.3': {}
 

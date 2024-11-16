@@ -42,6 +42,7 @@
     "@astrojs/vue": "^4.5.2",
     "@lunariajs/core": "^0.1.1",
     "@lunariajs/starlight": "^0.1.1",
+    "@microsoft/clarity": "^1.0.0",
     "@simonhyll/starlight-enhanced": "workspace:*",
     "@simonhyll/starlight-glossary": "workspace:*",
     "@tauri-apps/cli": "2.0.0-beta.20",

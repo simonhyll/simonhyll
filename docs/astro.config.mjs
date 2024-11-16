@@ -100,10 +100,10 @@ export default defineConfig({
           attrs: {
             'http-equiv': 'Content-Security-Policy',
             content: `default-src 'self';
-    script-src 'self' 'unsafe-inline' 'unsafe-eval';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarity.ms;
     style-src 'self' 'unsafe-inline';
     img-src 'self' data:;
-    connect-src 'self';
+    connect-src 'self' https://a.clarity.ms;
     font-src 'self';
     object-src 'none';
     base-uri 'self';`,
