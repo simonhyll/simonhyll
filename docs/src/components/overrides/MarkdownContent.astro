@@ -35,11 +35,11 @@ let references =
     };
   }) ?? null;
 const isLandingPage = !Astro.params.slug || ['sv'].includes(Astro.params.slug);
-if (references) references = await Promise.all(references);
+let refs;
+if (references) refs = await Promise.all(references);
 const procesor = await createMarkdownProcessor();
 const content = await procesor.render(summary.join("\n\n"));
 const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
-const isRootBlog = (slug.split("/")[0] === "blog" && slug.split("/").length === 1) || (slug.slice(3).split("/") && slug.slice(3).split("/").length === 1)
 const simonShutsUp = page?.data.simonShutsUp ?? false;
 if (isBlog) {
   Astro.props.entry.data.next = Astro.props.entry.data.next ?? {label: 'Home', link: '/'}
@@ -59,11 +59,11 @@ if (isBlog) {
   }
   <slot />
   {
-    references ? (
+    refs ? (
       <>
         <h2>References</h2>
         <ul>
-          {references.map((reference: any) => (
+          {refs.map((reference: any) => (
             <li>
               <a href={reference.href}>{reference.title}</a>
               {": " + reference.description}
