@@ -1,5 +1,5 @@
 name: Simon Says
-description: 'Make something amazing!'
+description: 'Make something awesome!'
 inputs:
   says:
     description: 'An action to be performed'

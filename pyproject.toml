@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "simonhyll"
 version = "0.1.0"
-description = "Make something amazing!"
+description = "Make something awesome!"
 authors = ["Simon Hyll <hyllsimon@gmail.com>"]
 license = "Apache-2.0"
 readme = "README.md"
