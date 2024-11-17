@@ -34,7 +34,7 @@
     "astro": ">=4.2.0"
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.24.1",
+    "@astrojs/starlight": "^0.29.0",
     "astro": "^4.16.13"
   },
   "dependencies": {
