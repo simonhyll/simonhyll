@@ -7,6 +7,11 @@ article {
   border-radius: 0.5rem;
   padding: 1rem;
   transition: transform 0.3s ease;
+  gap: 0 !important;
+}
+
+article h2 {
+  margin: 0;
 }
 
 article:hover {

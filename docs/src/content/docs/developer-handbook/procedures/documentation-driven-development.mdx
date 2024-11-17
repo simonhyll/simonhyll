@@ -1,0 +1,43 @@
+---
+title: Documentation Driven Development
+description: Write the documentation before you write the code
+summary: |
+  I have seen far too many projects where the documentation for the project is an afterthought and even something the developers see as a tedious chore. It should however be the absolute top priority of any project that wants to stand the test of time.
+
+  This approach is similar to test/behavior driven development (TDD/BDD), and in fact my recommendation is all three of them, first DDD, then BDD, then finally TDD.
+banner:
+  content: Needs update
+---
+
+import {Steps} from '@astrojs/starlight/components'
+
+## The Simon Process
+
+This is the process I generally apply when I develop my most serious, high quality projects. It uses DDD, followed by BDD, then TDD. You'll spend a decent amount of time on setup and non-coding activities, but you'll also have a much easier time developing the code in the end with less iterative work and a much more stable API that won't require nearly as many breaking changes because you'll have taken the time to think through the project before you write the code.
+
+<Steps>
+1. ###### Write documentation
+   Before you can tackle the issue at hand you need to understand it, and there's no better way of making sure you understand the issue than by writing down in plain text what the code you're going to write will do.
+1. ###### Write feature files
+   XY
+1. ###### Write integration tests
+   The reason we write integration tests at this point is because it's a way of starting to experiment with the API you want to develop for your project. The intention of test driven development is that you write code that explicitly fails before the code has been written, so it's ok here that you write tests that can't compile, as long as you write code that makes sense and expresses a desired API accurately and in a realistic manner.
+   
+   Integration tests can be written in a couple different ways, depending on your choice of language and tooling available. In Rust for example you have an `examples` folder, a `tests` folder, and examples in your docstrings are also possible to run as part of your integration testing.
+
+   My rule of thumb is that any public item should raise a hard error in linting if it's undocumented, and in languages where it's available every public item must also include at least one example in its docstring that gets ran as an integration test.
+
+   If a single integration test in the docstring isn't enough to capture all edge cases then complement it using tests in the `tests/` folder.
+
+   And if your project is supposed to be used by others, make sure that every feature you develop has a corresponding `examples/` project tied to it, so that your users can see what it might look like when they develop their own project and how multiple functions come together to fulfill some grander purpose.
+1. ###### Write step definitions
+1. ###### Write docstrings
+1. ###### Write code that passes the tests
+   Now that we have all
+1. ###### Write unit tests
+   Since anything you expose publicly can be tested in an integration test there's usually little point in writing unit tests for anything that isn't a private item in your project. However, since all your private items are used by public items, if you have 100% code coverage for all your public items, then all your private items are going to be tested as well.
+
+   So when do you write a unit test? Pretty much exclusively to catch edge cases, often related to things like unsafe or platform specific code. So if you can think of any such cases this is a good time to try to add them.
+1. ###### Go back up the list
+   Now that you've gone through every step at least once it's important to take a moment at each of them to ensure that all the logic has been implemented properly at every level.
+</Steps>

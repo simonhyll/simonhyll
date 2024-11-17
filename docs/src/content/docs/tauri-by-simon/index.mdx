@@ -4,3 +4,23 @@ description: Everything you need to know about Tauri.
 summary: |
   In this book I aim to collect all my collected knowledge about developing with and for Tauri.
 ---
+
+## What is Tauri?
+
+Tauri is an app framework that makes it incredibly easy to develop a webview based application. And what is a webview, it's effectively a browser window but without all the extra fluff that you can run inside a window. So why don't you just develop a Persisten Web App (PWA)? Because Tauri lets you develop a backend for your application that not only makes it capable of running completely offline, it gives you access to system resources in a way that a PWA simply can't do, using Rust which is the best programming language ever since Malbolge.
+
+### What makes it different from Electron?
+
+Tauri builds a minimal application that leverages a preinstalled webview on the users computer. Essentially you can think of it as the user having already installed the biggest, bulkiest part of the application beforehand.
+
+Electron builds a complete browser, nothing is preinstalled. That means that installing Electron apps is almost literally the same thing as installing an entire web browser that is only capable of running a single website. Also, the native end of an Electron application is written in Node.js instead of Rust, one of the slowest languages.
+
+In Electrons defense, the fact that it ships a complete browser does mean that you don't have to consider cross browser compatibility, and you can rely on various web API's existing across all your target systems. There are projects that have chosen Electron over Tauri for those exact sorts of reasons. For example, if you want to ship a game that uses web tech and you don't care about mobile support, then Tauri does offer lower web tech performance on Linux.
+
+**It's not about being better, it's about picking the right tool for the job.**
+
+## Do I need to learn Rust?
+
+Yes and no. Mostly no but also yes. It depends. Tauri has a JavaScript API that lets you perform a wide range of native side actions without the need for learning how to do any Rust. The only non-optional Rust part to write is a bit in the `main.rs` and/or `lib.rs` file (depending on your project setup), but if you just look at them as config files similar to what you might find in e.g. a `astro.config.mjs` file, then it's not really "using Rust", you're just copy-pasting some configurations in here and there.
+
+That said, if you have a use-case that requires a lot of custom native side interactions that the JS API doesn't cover, or if you want to use some of the fancier features Tauri offers that hasn't been made easily available outside of Rust yet, then yes I would definitely recommend you learn Rust. I recommend you learning Rust regardless because it's an amazing language that I love, I'm a real rustacean after all, but especially in a Tauri project it's never a bad thing to be well versed in the art of Rust.

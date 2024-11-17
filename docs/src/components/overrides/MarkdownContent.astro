@@ -5,6 +5,7 @@ import BlogContent from 'starlight-blog/overrides/MarkdownContent.astro'
 import type { Props } from "@astrojs/starlight/props";
 import SimonSays from "@components/SimonSays.astro";
 import { getEntry, getCollection } from "astro:content";
+import { undefined } from "astro:schema";
 const slug = Astro.props.slug ?? "index"
 let page = (await getCollection(
   "docs",
@@ -41,8 +42,9 @@ const content = await procesor.render(summary.join("\n\n"));
 const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
 const simonShutsUp = page?.data.simonShutsUp ?? false;
 if (isBlog) {
-  Astro.props.entry.data.next = Astro.props.entry.data.next ?? {label: 'Home', link: '/'}
+  Astro.props.pagination.next = Astro.props.pagination.next ?? {type: 'link', label: 'Home', href: '/', isCurrent: false, badge: undefined, attrs: {}}
   Astro.props.entry.data.prev = Astro.props.entry.data.prev ?? {label: 'Blog', link: '/blog'}
+  Astro.props.pagination.next = {}
 }
 ---
 {!isBlog ?

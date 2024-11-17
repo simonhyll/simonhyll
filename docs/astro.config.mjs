@@ -142,11 +142,6 @@ export default defineConfig({
                 link: '/projects',
               },
               {
-                label: 'Tools',
-                collapsed: true,
-                autogenerate: { directory: 'projects/tools' },
-              },
-              {
                 label: 'GitHub Actions',
                 collapsed: true,
                 autogenerate: { directory: 'projects/actions' },
@@ -176,6 +171,22 @@ export default defineConfig({
                 collapsed: true,
                 autogenerate: { directory: 'projects/typescript' },
               },
+              {
+                label: 'Tools',
+                collapsed: true,
+                items: [
+                  {
+                    label: 'Life',
+                    collapsed: true,
+                    autogenerate: { directory: 'projects/tools/life' },
+                  },
+                  {
+                    label: 'Network',
+                    collapsed: true,
+                    autogenerate: { directory: 'projects/tools/network' },
+                  },
+                ],
+              },
             ],
           },
           {
@@ -188,24 +199,9 @@ export default defineConfig({
                 link: '/developer-handbook',
               },
               {
-                label: 'Best Practices',
-                collapsed: true,
-                autogenerate: { directory: 'developer-handbook/best-practices' },
-              },
-              {
-                label: 'Experiments',
-                collapsed: true,
-                autogenerate: { directory: 'developer-handbook/experiments' },
-              },
-              {
                 label: 'Procedures',
-                collapsed: true,
+                collapsed: false,
                 autogenerate: { directory: 'developer-handbook/procedures' },
-              },
-              {
-                label: 'Buzz Words',
-                collapsed: true,
-                autogenerate: { directory: 'developer-handbook/buzz-words' },
               },
             ],
           },
@@ -219,8 +215,38 @@ export default defineConfig({
                 link: '/tauri-by-simon',
               },
               {
+                label: 'Setup',
+                collapsed: false,
+                autogenerate: { directory: 'tauri-by-simon/setup' },
+              },
+              {
+                label: 'Frontend',
+                collapsed: false,
+                autogenerate: { directory: 'tauri-by-simon/frontend' },
+              },
+              {
+                label: 'Backend',
+                collapsed: false,
+                autogenerate: { directory: 'tauri-by-simon/backend' },
+              },
+              {
+                label: 'Debugging',
+                collapsed: false,
+                autogenerate: { directory: 'tauri-by-simon/debugging' },
+              },
+              {
+                label: 'Testing',
+                collapsed: false,
+                autogenerate: { directory: 'tauri-by-simon/testing' },
+              },
+              {
+                label: 'Distributing',
+                collapsed: false,
+                autogenerate: { directory: 'tauri-by-simon/distributing' },
+              },
+              {
                 label: 'Best Practices',
-                collapsed: true,
+                collapsed: false,
                 autogenerate: { directory: 'tauri-by-simon/best-practices' },
               },
             ],

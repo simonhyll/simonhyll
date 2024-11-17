@@ -57,6 +57,9 @@ const imageSrc = ref('/icon.png');
 .tip-content * {
   text-align: left;
 }
+.tip-content p {
+  text-align: justify;
+}
 .tip-content span {
   margin-bottom: 5px;
 }
