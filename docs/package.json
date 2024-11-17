@@ -27,7 +27,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "lunaria:build": "lunaria build",
-    "lunaria:preview": "lunaria preview"
+    "lunaria:preview": "lunaria preview",
+    "format": "prettier -w --cache --plugin prettier-plugin-astro ."
   },
   "engines": {
     "node": ">=20.18.0"

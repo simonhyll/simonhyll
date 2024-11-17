@@ -48,8 +48,8 @@ if (isBlog) {
 {!isBlog ?
 <Default {...Astro.props}>
   {
-    !isLandingPage ? 
-    !simonShutsUp ? 
+    !isLandingPage ?
+    !simonShutsUp ?
       <SimonSays title={page?.data.description}>
         <Fragment set:html={content.code} />
       </SimonSays>

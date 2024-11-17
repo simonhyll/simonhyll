@@ -4,13 +4,14 @@ on:
   pull_request:
 
 jobs:
-  version:
+  pre_commit:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           lfs: true
+          submodules: recursive
       - uses: actions/setup-python@v3
       - run: python -m pip install pre-commit
         shell: bash

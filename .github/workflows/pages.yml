@@ -61,8 +61,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          lfs: true
           submodules: recursive
+          fetch-depth: 0
       - name: Ping IndexNow
         uses: ./actions/index-now
         with:

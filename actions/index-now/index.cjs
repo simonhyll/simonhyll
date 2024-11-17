@@ -6,7 +6,7 @@ const key = '88241844758747d7b6ba83c7124bac31'; // Your IndexNow key
 const keyLocation = `https://${host}/88241844758747d7b6ba83c7124bac31.txt`;
 
 function getChangedFiles() {
-  console.log('Checking for changed files')
+  console.log('Checking for changed files');
   return new Promise((resolve, reject) => {
     exec('git diff --name-only HEAD HEAD~1', (error, stdout, stderr) => {
       if (error) {
@@ -23,12 +23,12 @@ function getChangedFiles() {
 }
 
 function filterDocsFiles(files) {
-  console.log('Filtering for docs content')
+  console.log('Filtering for docs content');
   return files.filter((file) => file.startsWith('docs/src/content/docs'));
 }
 
 function convertFilesToUrls(files) {
-  console.log("Converting files to URL's")
+  console.log("Converting files to URL's");
   // Implement your own logic to convert file paths to URLs
   return files.map((file) => {
     file = file.replace('docs/src/content/docs', '');
@@ -39,7 +39,7 @@ function convertFilesToUrls(files) {
 }
 
 function postToIndexNow(urls) {
-  console.log("Posting to IndexNow")
+  console.log('Posting to IndexNow');
   const data = JSON.stringify({
     host: host,
     key: key,

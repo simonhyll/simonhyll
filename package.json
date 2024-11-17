@@ -22,8 +22,7 @@
   "scripts": {
     "ci:publish": "pnpm publish -r",
     "simon": "pnpm -F create-simon",
-    "doc": "cd docs && pnpm",
-    "format": "prettier -w --cache --plugin prettier-plugin-astro ."
+    "format": "pnpm --filter simon-docs format --ignore-path ../.prettierignore"
   },
   "engines": {
     "node": ">=18.19.1"

@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -11,34 +11,34 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/psf/black
-    rev: 24.4.2
+    rev: 24.10.0
     hooks:
       - id: black
 
   - repo: https://github.com/EmbarkStudios/cargo-deny
-    rev: 0.14.24
+    rev: 0.16.2
     hooks:
       - id: cargo-deny
-        args: ['--all-features', 'check']
+        args: ['--all-features', '--workspace', 'check']
 
   - repo: local
     hooks:
-      - id: run-pnpm-script
-        name: Pnpm Audit
-        entry: pnpm format
+      - id: run-pnpm-audit-script
+        name: Audit
+        entry: pnpm audit --fix
         language: system
         pass_filenames: false
 
   - repo: local
     hooks:
-      - id: run-pnpm-script
+      - id: run-pnpm-format-script
         name: Format
         entry: pnpm format
         language: system
         pass_filenames: false
 
   - repo: https://github.com/norwoodj/helm-docs
-    rev: v1.13.1
+    rev: v1.14.2
     hooks:
       - id: helm-docs-built
         args:

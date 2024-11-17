@@ -48,6 +48,9 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          submodules: recursive
       - uses: pnpm/action-setup@v4
       - name: Setup node
         uses: actions/setup-node@v4
@@ -127,6 +130,9 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          submodules: recursive
       - uses: pnpm/action-setup@v4
       - name: Setup node
         uses: actions/setup-node@v4
@@ -159,6 +165,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          submodules: recursive
       - uses: pnpm/action-setup@v4
       - name: Setup node
         uses: actions/setup-node@v4
@@ -190,6 +199,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          submodules: recursive
       - uses: pnpm/action-setup@v4
       - name: Setup node
         uses: actions/setup-node@v4
@@ -221,6 +233,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          submodules: recursive
       - uses: pnpm/action-setup@v4
       - name: Setup node
         uses: actions/setup-node@v4
@@ -257,6 +272,9 @@ jobs:
       - universal-macOS
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          submodules: recursive
       - uses: pnpm/action-setup@v4
       - name: Setup node
         uses: actions/setup-node@v4

@@ -22,7 +22,7 @@ This is the process I generally apply when I develop my most serious, high quali
    XY
 1. ###### Write integration tests
    The reason we write integration tests at this point is because it's a way of starting to experiment with the API you want to develop for your project. The intention of test driven development is that you write code that explicitly fails before the code has been written, so it's ok here that you write tests that can't compile, as long as you write code that makes sense and expresses a desired API accurately and in a realistic manner.
-   
+
    Integration tests can be written in a couple different ways, depending on your choice of language and tooling available. In Rust for example you have an `examples` folder, a `tests` folder, and examples in your docstrings are also possible to run as part of your integration testing.
 
    My rule of thumb is that any public item should raise a hard error in linting if it's undocumented, and in languages where it's available every public item must also include at least one example in its docstring that gets ran as an integration test.

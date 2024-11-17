@@ -1,4 +1,5 @@
 **/charts/**
 **/node_modules/**
 **/dist/**
-*.mdx
+**/*.mdx
+docs/src/components/overrides/MarkdownContent.astro
