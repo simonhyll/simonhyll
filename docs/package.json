@@ -39,7 +39,7 @@
     "@astrojs/markdown-remark": "^5.3.0",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/starlight": "^0.28.0",
+    "@astrojs/starlight": "^0.29.0",
     "@astrojs/vue": "^4.5.2",
     "@lunariajs/core": "^0.1.1",
     "@lunariajs/starlight": "^0.1.1",
@@ -47,16 +47,16 @@
     "@simonhyll/starlight-glossary": "workspace:*",
     "@tauri-apps/cli": "2.0.0-beta.20",
     "@types/three": "^0.165.0",
-    "astro": "^4.14.0",
+    "astro": "^4.16.13",
     "astro-webmanifest": "^1.0.0",
     "astrojs-service-worker": "^2.0.0",
     "rehype-autolink-headings": "^7.1.0",
-    "sass": "^1.77.4",
+    "sass": "^1.81.0",
     "sharp": "^0.32.6",
     "starlight-blog": "^0.14.1",
     "starlight-sidebar-topics": "^0.2.0",
     "three": "^0.165.0",
-    "typescript": "^5.4.5",
-    "vue": "^3.5.12"
+    "typescript": "^5.6.3",
+    "vue": "^3.5.13"
   }
 }
