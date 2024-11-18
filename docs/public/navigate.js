@@ -72,7 +72,16 @@ async function interactiveCheckboxes() {
   });
 }
 
+async function fixTrailingSlash() {
+  if (document.querySelector('#_top').textContent === '404') {
+    if (window.location.pathname.slice(-1) === '/') {
+      window.location.href = window.location.href.slice(0, -1);
+    }
+  }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
+  fixTrailingSlash();
   chapterNavigation();
   interactiveCheckboxes();
 });
