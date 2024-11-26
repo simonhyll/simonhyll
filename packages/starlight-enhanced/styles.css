@@ -21,3 +21,7 @@ article:hover {
 .sidebar-content {
   padding-top: 0.25rem;
 }
+
+div[align="center"] * {
+  text-align: center !important;
+}

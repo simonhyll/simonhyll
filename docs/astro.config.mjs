@@ -220,6 +220,11 @@ export default defineConfig({
                 autogenerate: { directory: 'tauri-by-simon/setup' },
               },
               {
+                label: 'Documentation',
+                collapsed: false,
+                autogenerate: { directory: 'tauri-by-simon/documentation' },
+              },
+              {
                 label: 'Frontend',
                 collapsed: false,
                 autogenerate: { directory: 'tauri-by-simon/frontend' },
