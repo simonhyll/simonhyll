@@ -1,0 +1,9 @@
+---
+interface Props {
+  contents: string;
+}
+const { contents } = Astro.props;
+---
+
+<slot />
+<p>{contents}</p>

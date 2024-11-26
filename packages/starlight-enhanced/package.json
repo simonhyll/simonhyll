@@ -21,12 +21,14 @@
   "type": "module",
   "exports": {
     ".": "./index.ts",
-    "./components/index.ts": "./components/index.ts",
+    "./components": "./components/index.ts",
     "./components/ThemeSelect.astro": "./components/ThemeSelect.astro",
     "./components/SiteTitle.astro": "./components/SiteTitle.astro",
     "./components/Sidebar.astro": "./components/Sidebar.astro",
     "./components/Header.astro": "./components/Header.astro",
-    "./components/PageFrame.astro": "./components/PageFrame.astro"
+    "./components/PageFrame.astro": "./components/PageFrame.astro",
+    "./components/Feature.astro": "./components/Feature.astro",
+    "./components/Features.astro": "./components/Features.astro"
   },
   "scripts": {},
   "packageManager": "pnpm@9.2.0",

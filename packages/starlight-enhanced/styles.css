@@ -25,3 +25,7 @@ article:hover {
 div[align="center"] * {
   text-align: center !important;
 }
+
+h1#_top {
+  text-align: center;
+}

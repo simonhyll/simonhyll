@@ -1,0 +1,11 @@
+---
+// TODO: Take an array of glob patterns, resolve to files, load contents
+interface Props {
+  globs?: string[];
+}
+import Feature from './Feature.astro';
+const { globs = [] } = Astro.props;
+const features = ['Feature: Hello World'];
+---
+
+{features.map((val) => <Feature contents={val} />)}
