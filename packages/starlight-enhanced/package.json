@@ -45,7 +45,7 @@
     "astro": "^4.16.13"
   },
   "dependencies": {
-    "@lorenzo_lewis/starlight-utils": "^0.1.1",
+    "@lorenzo_lewis/starlight-utils": "^0.2.0",
     "astro-integration-kit": "^0.17.0",
     "starlight-blog": "^0.14.1"
   }
