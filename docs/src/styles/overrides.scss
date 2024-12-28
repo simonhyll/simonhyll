@@ -24,3 +24,33 @@ aside.starlight-aside {
   text-decoration: none;
   color: var(--sl-color-gray-2) !important;
 }
+
+.sidebar-content {
+  padding-top: 0;
+}
+
+#starlight__sidebar > div > ul {
+  background: var(--sl-color-black);
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+#starlight__sidebar > div > ul > li {
+  border: 1px solid var(--sl-color-black);
+  border-radius: 0.5rem;
+}
+
+#starlight__sidebar > div > ul > li:has(> a.starlight-sidebar-topics-current) {
+  background: var(--sl-color-gray-6);
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+}
+
+#starlight__sidebar > div > ul > li:hover {
+  background: var(--sl-color-gray-5);
+}
+
+#starlight__sidebar > div > ul::after {
+  content: unset;
+}
