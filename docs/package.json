@@ -52,7 +52,7 @@
     "astrojs-service-worker": "^2.0.0",
     "rehype-autolink-headings": "^7.1.0",
     "sass": "^1.81.0",
-    "sharp": "^0.32.6",
+    "sharp": "^0.33.5",
     "starlight-blog": "^0.14.1",
     "starlight-sidebar-topics": "^0.2.0",
     "three": "^0.165.0",
