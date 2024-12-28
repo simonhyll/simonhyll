@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import { resolve } from 'path';
 import serviceWorker from 'astrojs-service-worker';
 import starlightSidebarTopics from 'starlight-sidebar-topics';
 // import starlightGlossary from '@simonhyll/starlight-glossary';
@@ -15,6 +16,8 @@ import { rehypeHeadingIds } from '@astrojs/markdown-remark';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { getNewestCommitDate } from './src/lib/index.ts';
 
+import mdx from '@astrojs/mdx';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://simon.hyll.nu',
@@ -26,6 +29,13 @@ export default defineConfig({
   },
   build: {
     format: 'file',
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        external: [/@docker\/.*/],
+      },
+    },
   },
   markdown: {
     remarkPlugins: [],
@@ -101,13 +111,13 @@ export default defineConfig({
           attrs: {
             'http-equiv': 'Content-Security-Policy',
             content: `default-src 'self';
-    script-src 'self' 'unsafe-inline' 'unsafe-eval';
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' data:;
-    connect-src 'self';
-    font-src 'self';
-    object-src 'none';
-    base-uri 'self';`,
+  script-src 'self' 'unsafe-inline' 'unsafe-eval';
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data:;
+  connect-src 'self';
+  font-src 'self';
+  object-src 'none';
+  base-uri 'self';`,
           },
         },
       ],
@@ -120,7 +130,7 @@ export default defineConfig({
       locales: {
         root: {
           label: 'English',
-          lang: 'en', // lang is required for root locales
+          lang: 'en',
         },
         sv: {
           label: 'Svenska',
@@ -396,5 +406,6 @@ export default defineConfig({
       background_color: '#272727',
       display: 'standalone',
     }),
+    mdx(),
   ],
 });
