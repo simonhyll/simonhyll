@@ -33,20 +33,20 @@
   "scripts": {},
   "packageManager": "pnpm@9.2.0",
   "engines": {
-    "node": ">=18.19.1"
+    "node": ">=22"
   },
   "peerDependencies": {
-    "@astrojs/starlight": "^0.29.0",
-    "astro": "^4.16.13",
+    "@astrojs/starlight": "^0.30.3",
+    "astro": "^5.1.1",
     "starlight-sidebar-topics": ">=0.2.0"
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.29.0",
-    "astro": "^4.16.13"
+    "@astrojs/starlight": "^0.30.3",
+    "astro": "^5.1.1"
   },
   "dependencies": {
     "@lorenzo_lewis/starlight-utils": "^0.1.1",
     "astro-integration-kit": "^0.17.0",
-    "starlight-blog": "^0.14.1"
+    "starlight-blog": "github:HiDeoo/starlight-blog#path:/packages/starlight-blog"
   }
 }

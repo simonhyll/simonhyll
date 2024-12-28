@@ -5,14 +5,14 @@ import BlogContent from 'starlight-blog/overrides/MarkdownContent.astro'
 import type { Props } from "@astrojs/starlight/props";
 import SimonSays from "@components/SimonSays.astro";
 import { getEntry, getCollection } from "astro:content";
-const slug = Astro.props.slug ?? "index"
+const id = Astro.props.id ?? "index"
 let page = (await getCollection(
   "docs",
-)).find(val=>val.slug === slug);
+)).find(val=>val.id === id);
 if (!page) {
     page = (await getCollection(
   "docs",
-)).find(val=>val.slug === slug.slice(3))
+)).find(val=>val.id === id.slice(3))
 }
 const summary = page?.data.summary
   ? page.data.summary.split("\n\n").filter((line: string) => line !== "")
@@ -33,12 +33,12 @@ let references =
       description: refPage?.data.description,
     };
   }) ?? null;
-const isLandingPage = !Astro.params.slug || ['sv'].includes(Astro.params.slug);
+const isLandingPage = !Astro.params.id || ['sv'].includes(Astro.params.id);
 let refs;
 if (references) refs = await Promise.all(references);
 const procesor = await createMarkdownProcessor();
 const content = await procesor.render(summary.join("\n\n"));
-const isBlog = slug.split("/")[0] === "blog" || slug.slice(3).split("/")[0] === "blog";
+const isBlog = id.split("/")[0] === "blog" || id.slice(3).split("/")[0] === "blog";
 const simonShutsUp = page?.data.simonShutsUp ?? false;
 if (isBlog) {
   Astro.props.entry.data.next = Astro.props.pagination.next ?? {label: 'Home', link: '/'}
