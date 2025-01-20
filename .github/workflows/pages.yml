@@ -39,7 +39,7 @@ jobs:
       - name: Install dependencies
         run: pnpm i -r
       - name: Build
-        run: pnpm --filter simon-docs build
+        run: pnpm --filter docs build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
