@@ -47,6 +47,7 @@
     "@simonhyll/starlight-enhanced": "workspace:*",
     "@simonhyll/starlight-glossary": "workspace:*",
     "@tauri-apps/cli": "2.0.0-beta.20",
+    "@types/lodash": "^4.17.14",
     "@types/three": "^0.165.0",
     "astro": "^5.1.1",
     "astro-webmanifest": "^1.0.0",
