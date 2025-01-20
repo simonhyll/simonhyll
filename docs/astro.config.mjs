@@ -50,7 +50,7 @@ export default defineConfig({
     starlight({
       title: 'Simon Hyll',
       logo: {
-        src: '@assets/me.jpg',
+        src: '@assets/me.webp',
       },
       favicon: '/favicon.png',
       social: {
@@ -60,6 +60,7 @@ export default defineConfig({
         discord: 'https://discord.com/invite/tauri',
         stackOverflow: 'https://stackoverflow.com/users/5614602/simon-hyll',
         youtube: 'https://youtube.com/@hyllsimon',
+        patreon: 'https://patreon.com/simonhyll',
       },
       lastUpdated: true,
       editLink: {
@@ -143,11 +144,12 @@ export default defineConfig({
               en: 'Projects',
               'sv-SE': 'Projekt',
             },
+            id: 'projects',
             link: '/projects',
             icon: 'rocket',
             items: [
               {
-                label: 'Welome',
+                label: 'Introduction',
                 link: '/projects',
               },
               {
@@ -215,6 +217,57 @@ export default defineConfig({
             ],
           },
           {
+            label: 'Rust by Simon',
+            link: '/rust-by-simon',
+            icon: 'open-book',
+            items: [
+              {
+                label: 'Introduction',
+                link: '/rust-by-simon',
+              },
+              {
+                label: 'Setup',
+                collapsed: false,
+                autogenerate: { directory: 'rust-by-simon/setup' },
+              },
+              {
+                label: 'Documentation',
+                collapsed: false,
+                autogenerate: { directory: 'rust-by-simon/documentation' },
+              },
+              {
+                label: 'Frontend',
+                collapsed: false,
+                autogenerate: { directory: 'rust-by-simon/frontend' },
+              },
+              {
+                label: 'Backend',
+                collapsed: false,
+                autogenerate: { directory: 'rust-by-simon/backend' },
+              },
+              {
+                label: 'Debugging',
+                collapsed: false,
+                autogenerate: { directory: 'rust-by-simon/debugging' },
+              },
+              {
+                label: 'Testing',
+                collapsed: false,
+                autogenerate: { directory: 'rust-by-simon/testing' },
+              },
+              {
+                label: 'Distributing',
+                collapsed: false,
+                autogenerate: { directory: 'rust-by-simon/distributing' },
+              },
+              {
+                label: 'Best Practices',
+                collapsed: false,
+                autogenerate: { directory: 'rust-by-simon/best-practices' },
+              },
+            ],
+          },
+          {
             label: 'Tauri by Simon',
             link: '/tauri-by-simon',
             icon: 'open-book',
@@ -262,6 +315,57 @@ export default defineConfig({
                 label: 'Best Practices',
                 collapsed: false,
                 autogenerate: { directory: 'tauri-by-simon/best-practices' },
+              },
+            ],
+          },
+          {
+            label: 'Bevy by Simon',
+            link: '/bevy-by-simon',
+            icon: 'open-book',
+            items: [
+              {
+                label: 'Introduction',
+                link: '/bevy-by-simon',
+              },
+              {
+                label: 'Setup',
+                collapsed: false,
+                autogenerate: { directory: 'bevy-by-simon/setup' },
+              },
+              {
+                label: 'Documentation',
+                collapsed: false,
+                autogenerate: { directory: 'bevy-by-simon/documentation' },
+              },
+              {
+                label: 'Frontend',
+                collapsed: false,
+                autogenerate: { directory: 'bevy-by-simon/frontend' },
+              },
+              {
+                label: 'Backend',
+                collapsed: false,
+                autogenerate: { directory: 'bevy-by-simon/backend' },
+              },
+              {
+                label: 'Debugging',
+                collapsed: false,
+                autogenerate: { directory: 'bevy-by-simon/debugging' },
+              },
+              {
+                label: 'Testing',
+                collapsed: false,
+                autogenerate: { directory: 'bevy-by-simon/testing' },
+              },
+              {
+                label: 'Distributing',
+                collapsed: false,
+                autogenerate: { directory: 'bevy-by-simon/distributing' },
+              },
+              {
+                label: 'Best Practices',
+                collapsed: false,
+                autogenerate: { directory: 'bevy-by-simon/best-practices' },
               },
             ],
           },
@@ -346,7 +450,7 @@ export default defineConfig({
             simon: {
               name: 'Simon Hyll',
               title: 'The Blue Crab',
-              picture: '/me.jpg',
+              picture: '/me.webp',
               url: 'https://simon.hyll.nu',
             },
           },

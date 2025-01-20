@@ -1,0 +1,60 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import Pagination from '@astrojs/starlight/components/Pagination.astro';
+import Footer from '@astrojs/starlight/components/Footer.astro';
+import { getCollection, render, getEntry } from 'astro:content';
+export const prerender = true;
+
+export async function getStaticPaths() {
+  function sortEntriesByTitle(entries: any) {
+    return entries.sort((a: any, b: any) => a.data.title.localeCompare(b.data.title));
+  }
+  const sortedEntries = sortEntriesByTitle(await getCollection('features'));
+
+  let previous: any = null;
+  let next: any = null;
+  let idx = 0;
+  return sortedEntries.map((entry: any) => {
+    let e = sortedEntries[idx - 1];
+    if (e) {
+      previous = {
+        href: '/features/' + e.id,
+        label: e.data.title,
+      };
+    }
+    idx += 1;
+    let n = sortedEntries[idx + 1];
+    if (n) {
+      next = {
+        href: '/features/' + n.id,
+        label: n.data.title,
+      };
+    }
+    return {
+      params: { slug: entry.id },
+      props: {
+        editUrl: 'https://',
+        lastUpdated: new Date(),
+        sidebar: [],
+        pagination: {
+          prev: previous
+            ? { href: previous.href, label: previous.label }
+            : { href: '/features/', label: 'Features' },
+          next: next ? { href: next.href, label: next.label } : false,
+        },
+        ...entry,
+      },
+    };
+  });
+}
+const { slug } = Astro.params;
+const entry = await getEntry('features', slug);
+const { Content } = await render(entry);
+const data: any = Astro.props.data;
+---
+
+<StarlightPage frontmatter={{ title: 'Feature: ' + data.title, topic: 'projects' }}>
+  <Content />
+  <Footer {...Astro.props} />
+</StarlightPage>

@@ -14,3 +14,19 @@
   text-decoration: none;
   color: var(--sl-color-white) !important;
 }
+
+/* Style for the target element when linked */
+:target {
+  animation: highlight-fadeout 2s ease-in-out;
+  border-radius: 0.5rem;
+}
+
+/* Keyframes for the fade-out effect */
+@keyframes highlight-fadeout {
+  0% {
+    background-color: var(--sl-color-accent); /* Highlight color */
+  }
+  100% {
+    background-color: transparent; /* End with no background */
+  }
+}
