@@ -33,7 +33,7 @@ let references =
       description: refPage?.data.description,
     };
   }) ?? null;
-const isLandingPage = !Astro.params.id || ['sv'].includes(Astro.params.id);
+const isLandingPage = !Astro.props.id || ['sv'].includes(Astro.props.id);
 let refs;
 if (references) refs = await Promise.all(references);
 const procesor = await createMarkdownProcessor();
@@ -44,6 +44,7 @@ if (isBlog) {
   Astro.props.entry.data.next = Astro.props.pagination.next ?? {label: 'Home', link: '/'}
   Astro.props.entry.data.prev = Astro.props.entry.data.prev ?? {label: 'Blog', link: '/blog'}
 }
+console.log(isLandingPage, simonShutsUp)
 ---
 {!isBlog ?
 <Default {...Astro.props}>

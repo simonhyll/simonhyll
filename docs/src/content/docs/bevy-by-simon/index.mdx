@@ -3,3 +3,29 @@ title: Bevy by Simon
 description: Everything you need to know about Bevy.
 summary: |
 ---
+
+## Why Bevy?
+
+It depends entirely on what you're developing and why. I personally really enjoy Bevy because I love Rust, and once you understand the ECS system it builds on it's actually a really powerful game engine to use.
+
+Also, if you have a game you're developing that's more of a simulation than sets of scripted scenarios, then the ECS model makes a lot of sense to use.
+
+## Alternatives
+
+You should use the right tool for the job, and while Bevy is great it's also important to be aware of what other projects exist that may be a better fit for your particular project.
+
+### Unreal Engine
+
+A very good game engine with a really favorable business model. The main issues I have with Unreal Engine is that for one it's pretty difficult to get into, and if you need to do any level of custom programming for your project then you're pretty much forced to use their sub optimal Blueprints to do it, which while they're pretty easy to make there's a lot to get into in order to use them efficiently and they can never compare to the performance you get from going true native. Which means that if you want to do advanced programming for e.g. simulations then you're either doing extremely convoluted Blueprints to do it, or you're going to reach for C++, which already isn't an easy language (personally I think it's harder than Rust by quite a margin) but it also doesn't help that you're forced to learn so many specifics from the Unreal Engine source code that you're pretty much no longer learning C++, you're learning Unreal Engine C++.
+
+In short, while its rendering capabilities are astonishing, if you're making a project that relies on lots of custom coding, or if you're using an art style that only utilizes a fraction of the renderers potential, then there are other game engines you're better off using.
+
+### Godot
+
+Another great alternative that even has a community project that lets you put Rust into the game. It comes with its own language called GDScript, which is very similar to Python. It's completely free, so that's nice. The problem is that it sits in an awkward place between Unreal Engine and Bevy, because GDScript is an engine specific language, so if your project relies on a lot of coding then I'd say Bevy is the clear winner because your Rust skills directly translates to Bevy. And if your project is low on coding then Blueprints are even easier to use than GDScript. It also uses "nodes" in a way that's very similar to Unreal Engine.
+
+So in short, it's a cool project, but to me it just feels like the kind of projects I'm likely to make end up either being better fitted into a Bevy game because it's high on coding, or it's low on coding and then Unreal Engine is better.
+
+### Unity
+
+Not an alternative.
