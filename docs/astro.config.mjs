@@ -91,6 +91,13 @@ export default defineConfig({
           },
         },
         {
+          tag: 'script',
+          attrs: {
+            async: true,
+            src: 'https://fundingchoicesmessages.google.com/i/pub-2447350647052509?ers=1',
+          },
+        },
+        {
           tag: 'link',
           attrs: {
             rel: 'alternate',
