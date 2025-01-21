@@ -119,14 +119,14 @@ export default defineConfig({
           attrs: {
             'http-equiv': 'Content-Security-Policy',
             content: `default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' pagead2.googlesyndication.com ep1.adtrafficquality.google ep2.adtrafficquality.google;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' google.com googlesyndication.com adtrafficquality.google;
   style-src 'self' 'unsafe-inline';
-  img-src 'self' data: pagead2.googlesyndication.com ep1.adtrafficquality.google ep2.adtrafficquality.google;
-  connect-src 'self' pagead2.googlesyndication.com ep1.adtrafficquality.google ep2.adtrafficquality.google;
+  img-src 'self' data: google.com googlesyndication.com adtrafficquality.google;
+  connect-src 'self' google.com googlesyndication.com adtrafficquality.google;
   font-src 'self';
   object-src 'none';
   base-uri 'self';
-  frame-src 'self' pagead2.googlesyndication.com ep1.adtrafficquality.google ep2.adtrafficquality.google;`,
+  frame-src 'self' google.com googlesyndication.com adtrafficquality.google;`,
           },
         },
       ],
