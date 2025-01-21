@@ -1,8 +1,9 @@
 ---
 import SimonSaysVue from './SimonSaysVue.vue';
 let { title } = Astro.props;
+const slug = Astro.props.id ?? "index"
 import { getEntry } from 'astro:content';
-if (!title) title = (await getEntry('docs', Astro.props.id))?.data.description;
+if (!title) title = (await getEntry('docs', slug))?.data.description;
 ---
 
 <SimonSaysVue client:only="vue" title={title}>
