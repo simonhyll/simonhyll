@@ -6,9 +6,28 @@ import Default from '@simonhyll/starlight-enhanced/components/Sidebar.astro'
 <Default {...Astro.props}>
 </Default>
 
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-2447350647052509"
-data-ad-slot="6948141632"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
+<div class="sponsor-me">
+  <span>Sponsors</span>
+  <span><a href="/projects#sponsor-me">Sponsor me and get your company showing here!</a></span>
+</div>
+
+<style>
+.sponsor-me {
+  border: 1px solid var(--sl-color-gray-4);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  min-height: 5cm;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sponsor-me>span:first-child {
+  color: var(--sl-color-white);
+  font-weight: bold;
+}
+.sponsor-me span {
+  margin: 0 auto;
+  display: block;
+}
+</style>
