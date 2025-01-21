@@ -2,7 +2,7 @@
 import SimonSaysVue from './SimonSaysVue.vue';
 let { title } = Astro.props;
 import { getEntry } from 'astro:content';
-if (!title) title = (await getEntry('docs', Astro.params.slug as string))?.data.description;
+if (!title) title = (await getEntry('docs', Astro.props.id))?.data.description;
 ---
 
 <SimonSaysVue client:only="vue" title={title}>

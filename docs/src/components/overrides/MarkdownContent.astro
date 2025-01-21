@@ -44,7 +44,6 @@ if (isBlog) {
   Astro.props.entry.data.next = Astro.props.pagination.next ?? {label: 'Home', link: '/'}
   Astro.props.entry.data.prev = Astro.props.entry.data.prev ?? {label: 'Blog', link: '/blog'}
 }
-console.log(isLandingPage, simonShutsUp)
 ---
 {!isBlog ?
 <Default {...Astro.props}>

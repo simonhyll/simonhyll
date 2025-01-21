@@ -48,9 +48,9 @@ export async function getStaticPaths() {
     };
   });
 }
-const { slug } = Astro.params;
-const entry = await getEntry('features', slug);
-const { Content } = await render(entry);
+const { id } = Astro.props;
+const entry = await getEntry('features', id);
+const { Content } = await render(entry as any);
 const data: any = Astro.props.data;
 ---
 
