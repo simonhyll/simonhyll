@@ -134,6 +134,7 @@ export default defineConfig({
       components: {
         Sidebar: './src/components/overrides/Sidebar.astro',
         MarkdownContent: './src/components/overrides/MarkdownContent.astro',
+        TableOfContents: './src/components/overrides/TableOfContents.astro',
       },
       defaultLocale: 'root',
       locales: {
