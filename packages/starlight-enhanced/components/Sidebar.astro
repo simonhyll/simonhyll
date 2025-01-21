@@ -18,7 +18,7 @@ let isFeedsPath = false;
 });
 ---
 
-<TopicsSidebar {...Astro.props} slug={useBlogSidebar ? 'blog' : slug} />
+<TopicsSidebar {...Astro.props} slug={useBlogSidebar ? 'blog' : slug}><slot /></TopicsSidebar>
 
 {
   useBlogSidebar ? (

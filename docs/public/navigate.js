@@ -80,10 +80,15 @@ async function fixTrailingSlash() {
   }
 }
 
+async function adsense() {
+  (adsbygoogle = window.adsbygoogle || []).push({});
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   fixTrailingSlash();
   chapterNavigation();
   interactiveCheckboxes();
+  adsense();
 });
 
 window.onload = function () {

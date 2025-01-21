@@ -83,6 +83,14 @@ export default defineConfig({
           },
         },
         {
+          tag: 'script',
+          attrs: {
+            async: true,
+            src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2447350647052509',
+            crossorigin: 'anonymous',
+          },
+        },
+        {
           tag: 'link',
           attrs: {
             rel: 'alternate',
@@ -111,19 +119,20 @@ export default defineConfig({
           attrs: {
             'http-equiv': 'Content-Security-Policy',
             content: `default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' pagead2.googlesyndication.com ep1.adtrafficquality.google ep2.adtrafficquality.google;
   style-src 'self' 'unsafe-inline';
-  img-src 'self' data:;
-  connect-src 'self';
+  img-src 'self' data: pagead2.googlesyndication.com ep1.adtrafficquality.google ep2.adtrafficquality.google;
+  connect-src 'self' pagead2.googlesyndication.com ep1.adtrafficquality.google ep2.adtrafficquality.google;
   font-src 'self';
   object-src 'none';
-  base-uri 'self';`,
+  base-uri 'self';
+  frame-src 'self' pagead2.googlesyndication.com ep1.adtrafficquality.google ep2.adtrafficquality.google;`,
           },
         },
       ],
       customCss: ['./src/styles/main.scss'],
       components: {
-        Sidebar: '@simonhyll/starlight-enhanced/components/Sidebar.astro',
+        Sidebar: './src/components/overrides/Sidebar.astro',
         MarkdownContent: './src/components/overrides/MarkdownContent.astro',
       },
       defaultLocale: 'root',
