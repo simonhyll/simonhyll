@@ -119,7 +119,7 @@ export default defineConfig({
           attrs: {
             'http-equiv': 'Content-Security-Policy',
             content: `default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' google.com *.googlesyndication.com *.adtrafficquality.google;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.googlesyndication.com *.adtrafficquality.google;
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: *.google.com *.googlesyndication.com *.adtrafficquality.google;
   connect-src 'self' *.google.com *.googlesyndication.com *.adtrafficquality.google;
