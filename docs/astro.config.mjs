@@ -83,6 +83,13 @@ export default defineConfig({
           },
         },
         {
+          tag: 'meta',
+          attrs: {
+            name: 'google-adsense-account',
+            content: 'ca-pub-2447350647052509',
+          },
+        },
+        {
           tag: 'link',
           attrs: {
             rel: 'alternate',
